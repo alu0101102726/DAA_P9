@@ -6,7 +6,7 @@
  * @param nombreFichero Representa el nombre del fichero a abrir
  */
 Fichero::Fichero(std::string nombreFichero) {
-  grafo.open(nombreFichero, std::fstream::out);
+  ficheroGrafo.open(nombreFichero, std::fstream::out);
 }
 
 /**
@@ -14,8 +14,8 @@ Fichero::Fichero(std::string nombreFichero) {
  * 
  */
 Fichero::~Fichero() {
-  if(grafo.is_open()){
-      grafo.close();
+  if(ficheroGrafo.is_open()){
+      ficheroGrafo.close();
   }
 }
 
@@ -27,7 +27,7 @@ Fichero::~Fichero() {
  * correcto, en otro caso salta error.
  */
 int Fichero::cerrarFichero() {
-  grafo.close();
+  ficheroGrafo.close();
   return 0;
 }
 
@@ -37,18 +37,18 @@ int Fichero::cerrarFichero() {
  * @return std::vector <std::vector < std::pair <int, float> > > Devuelve un vector con la matriz
  * diagonal de la representación del grafo.
  */
-std::vector <std::vector < std::pair <int, float> > > Fichero::comprobarSintaxis() {
-  if(grafo.is_open()) {
+std::vector <std::vector < float > > Fichero::comprobarSintaxis() {
+  if(ficheroGrafo.is_open()) {
     int numVertices;
-    grafo >> numVertices;
-    std::vector <std::vector < std::pair <int, float> > > grafoAlmacenado;
+    ficheroGrafo >> numVertices;
+    std::vector <std::vector < float > > grafoAlmacenado;
     grafoAlmacenado.resize(numVertices);
     for (int currentIndex = 0; currentIndex < numVertices; currentIndex++) {
+      grafoAlmacenado[currentIndex].resize(numVertices);
       for (int nextNode = currentIndex + 1; nextNode < numVertices; nextNode++) {
-        std::pair<int, float> info;
-        grafo >> info.second;
-        info.first = nextNode;
-        grafoAlmacenado[currentIndex].push_back(info);
+        float info;
+        ficheroGrafo >> info;
+        grafoAlmacenado[currentIndex][nextNode] = (info);
       }
     }
   cerrarFichero();
