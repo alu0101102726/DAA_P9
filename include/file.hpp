@@ -11,15 +11,17 @@
  * si la sintaxis del mismo es correcta.
  * 
  */
-class Fichero {
+class File {
 
     public:
-        std::ifstream grafo;
+        std::ifstream fileGraph;
+        int nodeNumber;
 
     public:
-        Fichero(std::string nombreFichero);
-        ~Fichero();
+        File(std::string fileName);
+        ~File();
 
-        int cerrarFichero();
-        std::vector <std::vector < std::pair <int, float> > > comprobarSintaxis();
+        int closeFile();
+        std::vector < std::vector < float > > checkFileSyntax();
+        int getNumberNodes();
 };
