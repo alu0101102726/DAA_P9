@@ -2,19 +2,23 @@
 #include <vector>
 #include "algorithm.hpp"
 #include "graph.hpp"
+#include "solution.hpp"
 
 /**
  * @brief Esta clase representa el algoritmo constructivo
  * voraz del cual teniamos el pseudocódigo.
- * 
  */
 class GreedyAlgorithm : public Algorithm {
+
+  private:
+    std::string name;
     
   public:
-    GreedyAlgorithm() {}
+    GreedyAlgorithm(std::string newName);
     ~GreedyAlgorithm() {}
     
-    std::vector <int> run(Graph currentGraph);
-    std::pair <int, int> getMaxEdge(std::vector <int> solution, Graph currentGraph);
+    Solution run(Graph currentGraph);
+    std::string getAlgorithmName();
+    std::vector < int > getMaxAfinnity(Graph currentGraph);
 
 };

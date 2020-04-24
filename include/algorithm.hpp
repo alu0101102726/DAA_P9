@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "graph.hpp"
+#include "solution.hpp"
 
 /**
  * @brief Representa una clase que va a permitir aplicar
@@ -16,7 +17,7 @@ class Algorithm {
     * 
     * @return int Que contiene la mejor solucion
     */
-    virtual std::vector <int> run(Graph currentGraph) = 0;
+    virtual Solution run(Graph currentGraph) = 0;
     float getMedianDispersion(std::vector<int> solution, Graph currentGraph);
-
+    void printSolution(std::vector<int> solution, int runTime, Graph currentGraph);
 };

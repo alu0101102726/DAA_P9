@@ -22,7 +22,6 @@ class Graph {
     float getNodeValue (int positioni, int positionj);
     int getSize();
     int gentNodeNumber();
-    std::vector < int > getMaxAfinnity();
     friend std::ostream& operator <<(std::ostream& os, Graph printGraph);
 
 };

@@ -3,6 +3,9 @@
 #include "algorithm.hpp"
 #include "graph.hpp"
 #include "file.hpp"
+#include "solution.hpp"
+#include <chrono>
+#include <ctime>
 
 /**
  * @brief Al aplicar el patrón Strategy, es necesario tener una clase que actúe
@@ -21,4 +24,6 @@ class Exec {
 
     void changeAlgorithm(Algorithm *newAlgorithm);
     Graph getGraph();
+    void solve();
+    std::chrono::time_point<std::chrono::system_clock> getRunTime();
 };

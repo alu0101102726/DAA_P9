@@ -36,46 +36,6 @@ int Graph::getSize() {
   return information.size();
 }
 
-/**
- * @brief Este método se encarga de encontrar la arista que tiene
- * una mayor afinidad
- * 
- * @return std::vector < int > Representa los nodos cuya arista es la mayor
- */
-std::vector < int > Graph::getMaxAfinnity() {
-  float max = -9999999;
-  int maxi, maxj;
-  std::vector < std::pair <int, int> > maxElements;
-  for(int i = 0; i < getSize() - 1; i++) {
-    for(int j = i + 1; j < getSize(); j++) {
-      if(getNodeValue(i, j) >= max) {
-        max = getNodeValue(i, j);
-        maxi = i;
-        maxj = j;
-      }
-    }
-  }
-
-  /*for(int i = 0; i < getSize() - 1; i++) {
-    for(int j = i + 1; j < getSize(); j++) {
-      if(getNodeValue(i, j) == max) {
-        maxElements.push_back(std::make_pair(i, j));        
-      }
-    }
-  }*/
-
-  std::vector <int> aux;
-
-  /*srand(time(NULL));
-  int index = rand() % getSize();
-  aux.push_back(maxElements[index].first);
-  aux.push_back(maxElements[index].second); */
-
-  aux.push_back(maxi);
-  aux.push_back(maxj);
-
-  return aux;
-}
 
 /**
  * @brief Se encarga de devolver el número de nodos del grafo
