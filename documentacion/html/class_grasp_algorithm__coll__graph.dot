@@ -1,0 +1,9 @@
+digraph "GraspAlgorithm"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GraspAlgorithm",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Esta clase representa el algoritmo GRASP que se va a aplicar, vamos a tener tres fases en el mismo:"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Algorithm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html",tooltip="Representa una clase que va a permitir aplicar el patrón estrategia."];
+}
