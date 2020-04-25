@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <cmath>
 #include "graph.hpp"
 #include "solution.hpp"
 
@@ -19,5 +20,6 @@ class Algorithm {
     */
     virtual Solution run(Graph currentGraph) = 0;
     float getMedianDispersion(std::vector<int> solution, Graph currentGraph);
+    int getWorstMediaDispersion(std::vector<int> actualSolution, Graph currentGraph);
     void printSolution(std::vector<int> solution, int runTime, Graph currentGraph);
 };

@@ -14,6 +14,9 @@
  */
 float Algorithm::getMedianDispersion(std::vector<int> currentNodeSet, Graph currentGraph) {
   float sumOfEdges = 0;
+  if (currentNodeSet.size() == 0) {
+    return -INFINITY;
+  }
   for(int i = 0; i < currentNodeSet.size() - 1; i++) {
     for(int j = i + 1; j < currentNodeSet.size(); j++) {
       sumOfEdges += currentGraph.getNodeValue(currentNodeSet[i], currentNodeSet[j]);
@@ -22,13 +25,25 @@ float Algorithm::getMedianDispersion(std::vector<int> currentNodeSet, Graph curr
   return sumOfEdges / currentNodeSet.size();
 }
 
-/**
- * @brief Esta funcion se encarga de imprimir la solución que ha
- * obtenido el algoritmo en un determinado tiempo de ejecución
- * 
- * @param solution Representa la solución del algoritmo 
- * @param runTime Representa el tiempo de ejecución que ha tardado el
- * algoritmo en hallar la solución.
- */
-void Algorithm::printSolution(std::vector <int> solution, int runTime, Graph currentGraph) {
+
+int Algorithm::getWorstMediaDispersion(std::vector<int> actualSolution, Graph currentGraph) {
+    std::vector<int> kVertex;
+    kVertex.push_back(-1);
+    float current = getMedianDispersion(actualSolution, currentGraph);
+    for(int i = 0; i < actualSolution.size(); i++) {
+      const int vertex = actualSolution[i];
+      actualSolution.erase(actualSolution.begin() + i);
+      float testValue = getMedianDispersion(actualSolution, currentGraph);
+      actualSolution.insert(actualSolution.begin() + i, vertex);
+      if(testValue > current) {
+        current = testValue;
+        kVertex.clear();
+        kVertex.push_back(i);
+      } else if(testValue == current) {
+        kVertex.push_back(i);
+      }
+    }
+    
+    int selectedK = rand() %  (kVertex.size());
+    return kVertex[selectedK]; 
 }
