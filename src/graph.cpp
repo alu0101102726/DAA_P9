@@ -57,14 +57,14 @@ std::ostream& operator <<(std::ostream& os, Graph printGraph) {
   os << " - - - - GRAFO - - - - \n";
   os << "i|j\t";
 
-  for(int currentCol = 1; currentCol <= printGraph.getSize(); currentCol++) {
+  for(int currentCol = 0; currentCol < printGraph.getSize(); currentCol++) {
     os << currentCol << "\t";
   }
 
   os << "\n";
   
   for(int currentRow = 0; currentRow < printGraph.getSize(); currentRow++) {
-    os << currentRow + 1 << "\t";
+    os << currentRow << "\t";
     for(int currentCol = 0; currentCol < printGraph.information[currentRow].size(); currentCol++) {
       os << printGraph.getNodeValue(currentRow,currentCol) << "\t";
     }

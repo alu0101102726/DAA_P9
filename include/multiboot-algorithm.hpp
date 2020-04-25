@@ -2,16 +2,13 @@
 #include <vector>
 #include "algorithm.hpp"
 #include "graph.hpp"
-#include <cmath>
+#include "solution.hpp"
+#include <algorithm>
 
 /**
- * @brief Esta clase representa el algoritmo GRASP que se va a aplicar,
- * vamos a tener tres fases en el mismo:
- *  - Preprocesamiento
- *  - Construcción
- *  - Búsqueda
+ * @brief Esta clase representa el algoritmo multiarranque
  */
-class GraspAlgorithm : public Algorithm {
+class MultibootAlgorithm : public Algorithm {
 
   private:
     std::string name;
@@ -19,8 +16,8 @@ class GraspAlgorithm : public Algorithm {
     int noImprovementiterationsLimit;
     
   public:
-    GraspAlgorithm(std::string newName, int newIterationsLimit, int noImprovementiterationsLimit);
-    ~GraspAlgorithm() {}
+    MultibootAlgorithm(std::string newName, int newIterationsLimit, int noImprovementiterationsLimit);
+    ~MultibootAlgorithm() {}
 
     std::string getAlgorithmName();
     int getIterationsLimit();
@@ -29,7 +26,6 @@ class GraspAlgorithm : public Algorithm {
     Solution run(Graph currentGraph);
     std::vector <int> preprocessing(Graph currentGraph);
     std::vector <int> constructSolution(std::vector <int> solution, Graph currentGraph);
-    std::vector <int> makeRCL(std::vector<int> currentSolution, std::vector <int> RCL, Graph currentGraph);
     std::vector <int> greedyLocalSearch(std::vector <int> solution, Graph currentGraph);
     std::vector <int> anxiousLocalSearch(std::vector <int> solution, Graph currentGraph);
 

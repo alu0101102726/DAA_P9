@@ -2,11 +2,27 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-
+ /**
+  * @brief Construye el algoritmo grady, asignando un nombre.
+  * 
+  * @param newName Representa el nombre del algoritmo
+  */
 GreedyAlgorithm::GreedyAlgorithm(std::string newName) {
   name = newName;
 }
 
+/**
+ * @brief Se va a encargar de ejecutar el algoritmo greedy, para
+ * ello se van a hacer iteraciones hasta que las soluciones sean
+ * iguales, determinando en otro bucle (que recorre el número de
+ * nodos del grafo), hallando la dispersion media en cada momento
+ * y comrpobando si es la máxima. En caso de que lo sea se vuelve
+ * a asignar al máximo.
+ * 
+ * @param currentGraph Representa el grafo con las distancias entre nodos
+ * @return Solution Representa el objeto solución que contiene la solución del
+ * problema
+ */
 Solution GreedyAlgorithm::run(Graph currentGraph) {
   std::vector < int > solution = getMaxAfinnity(currentGraph);
   std::vector < int > auxSolution;

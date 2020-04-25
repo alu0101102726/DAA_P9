@@ -25,7 +25,16 @@ float Algorithm::getMedianDispersion(std::vector<int> currentNodeSet, Graph curr
   return sumOfEdges / currentNodeSet.size();
 }
 
-
+/**
+ * @brief Esta funcion se va a encargar de devolver el valor peor de la dispersión
+ * media, además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que
+ * será el que usemos apra gestionar ese caso.
+ * 
+ * @param actualSolution Representa el vector sobre el que se va a evaluar
+ * @param currentGraph Representa el grafo que contiene las distancias entre los nodos
+ * @return int Devuelve un elemento aleatorio dentro del vector, debido a que puede que hayan
+ * varias soluciones con el mismo valor y para evitar siempre devolver la primera.
+ */
 int Algorithm::getWorstMediaDispersion(std::vector<int> actualSolution, Graph currentGraph) {
     std::vector<int> kVertex;
     kVertex.push_back(-1);

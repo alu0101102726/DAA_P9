@@ -3,6 +3,11 @@
 #include <cmath>
 #include <algorithm>
 
+/**
+ * @brief Construye la variante del algoritmo greedy con un nombre
+ * 
+ * @param newName Nombre del algoritmo
+ */
 SecondGreedyAlgorithm::SecondGreedyAlgorithm(std::string newName) {
   name = newName;
 }
