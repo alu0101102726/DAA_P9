@@ -1,0 +1,95 @@
+.TH "GreedyAlgorithm" 3 "Sun Apr 26 2020" "Max-mean dispersion problem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GreedyAlgorithm \- Esta clase representa el algoritmo constructivo voraz del cual teniamos el pseudocódigo\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <greedy\-algorithm\&.hpp>\fP
+.PP
+Inherits \fBAlgorithm\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGreedyAlgorithm\fP (std::string newName)"
+.br
+.RI "Construye el algoritmo grady, asignando un nombre\&. "
+.ti -1c
+.RI "\fBSolution\fP \fBrun\fP (\fBGraph\fP currentGraph)"
+.br
+.RI "Se va a encargar de ejecutar el algoritmo greedy, para ello se van a hacer iteraciones hasta que las soluciones sean iguales, determinando en otro bucle (que recorre el número de nodos del grafo), hallando la dispersion media en cada momento y comrpobando si es la máxima\&. En caso de que lo sea se vuelve a asignar al máximo\&. "
+.ti -1c
+.RI "std::string \fBgetAlgorithmName\fP ()"
+.br
+.RI "Devuelve el nombre del algoritmo\&. "
+.ti -1c
+.RI "std::vector< int > \fBgetMaxAfinnity\fP (\fBGraph\fP currentGraph)"
+.br
+.RI "Este método se encarga de encontrar la arista que tiene una mayor afinidad\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Esta clase representa el algoritmo constructivo voraz del cual teniamos el pseudocódigo\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GreedyAlgorithm::GreedyAlgorithm (std::string newName)"
+
+.PP
+Construye el algoritmo grady, asignando un nombre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewName\fP Representa el nombre del algoritmo 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string GreedyAlgorithm::getAlgorithmName ()"
+
+.PP
+Devuelve el nombre del algoritmo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string nombre del algoritmo 
+.RE
+.PP
+
+.SS "std::vector< int > GreedyAlgorithm::getMaxAfinnity (\fBGraph\fP currentGraph)"
+
+.PP
+Este método se encarga de encontrar la arista que tiene una mayor afinidad\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::vector < int > Representa los nodos cuya arista es la mayor 
+.RE
+.PP
+
+.SS "\fBSolution\fP GreedyAlgorithm::run (\fBGraph\fP currentGraph)\fC [virtual]\fP"
+
+.PP
+Se va a encargar de ejecutar el algoritmo greedy, para ello se van a hacer iteraciones hasta que las soluciones sean iguales, determinando en otro bucle (que recorre el número de nodos del grafo), hallando la dispersion media en cada momento y comrpobando si es la máxima\&. En caso de que lo sea se vuelve a asignar al máximo\&. En el caso de la solución se pasa un 2 para indicar que en las búsquedas greedy no hay distinción de búsqueda local greedy o ansiosa\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrentGraph\fP Representa el grafo con las distancias entre nodos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSolution\fP Representa el objeto solución que contiene la solución del problema 
+.RE
+.PP
+
+.PP
+Implements \fBAlgorithm\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Max-mean dispersion problem from the source code\&.

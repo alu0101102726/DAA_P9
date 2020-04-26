@@ -77,9 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a16d3be698431454dc8fefbdb2371f9eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a16d3be698431454dc8fefbdb2371f9eb">Solution</a> (std::vector&lt; int &gt; currentSolution, float currentMedia, std::string newAlgorithmName)</td></tr>
-<tr class="memdesc:a16d3be698431454dc8fefbdb2371f9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye la solución, a partir de un vector, un valor y un nombre de un algoritmo.  <a href="class_solution.html#a16d3be698431454dc8fefbdb2371f9eb">More...</a><br /></td></tr>
-<tr class="separator:a16d3be698431454dc8fefbdb2371f9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25faf2022b8a774f9f870630c9789d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#aa25faf2022b8a774f9f870630c9789d2">Solution</a> (std::vector&lt; int &gt; currentSolution, float currentMedia, std::string newAlgorithmName, int localSearch)</td></tr>
+<tr class="memdesc:aa25faf2022b8a774f9f870630c9789d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye la solución, a partir de un vector, un valor y un nombre de un algoritmo.  <a href="class_solution.html#aa25faf2022b8a774f9f870630c9789d2">More...</a><br /></td></tr>
+<tr class="separator:aa25faf2022b8a774f9f870630c9789d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f992b64cf1cf3721a8e8484a67775b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a93f992b64cf1cf3721a8e8484a67775b">getMedia</a> ()</td></tr>
 <tr class="memdesc:a93f992b64cf1cf3721a8e8484a67775b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el valor de la media de dispersión.  <a href="class_solution.html#a93f992b64cf1cf3721a8e8484a67775b">More...</a><br /></td></tr>
 <tr class="separator:a93f992b64cf1cf3721a8e8484a67775b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02d51bbbffdd65f73c1ef8e8c946fafe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a02d51bbbffdd65f73c1ef8e8c946fafe">getSolutionValue</a> (int position)</td></tr>
 <tr class="memdesc:a02d51bbbffdd65f73c1ef8e8c946fafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el valor de la solución en la posición que se haya obtenido por parámetro.  <a href="class_solution.html#a02d51bbbffdd65f73c1ef8e8c946fafe">More...</a><br /></td></tr>
 <tr class="separator:a02d51bbbffdd65f73c1ef8e8c946fafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a088c1c77bc055012873112e56ec8c421"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a088c1c77bc055012873112e56ec8c421">getLocalSearch</a> ()</td></tr>
+<tr class="memdesc:a088c1c77bc055012873112e56ec8c421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un 0 si la búsqueda local es ansiosa y un 1 si la búsqueda local es greedy.  <a href="class_solution.html#a088c1c77bc055012873112e56ec8c421">More...</a><br /></td></tr>
+<tr class="separator:a088c1c77bc055012873112e56ec8c421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -108,8 +111,8 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el tiempomque ha tardado en hallarla. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a16d3be698431454dc8fefbdb2371f9eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d3be698431454dc8fefbdb2371f9eb">&#9670;&nbsp;</a></span>Solution()</h2>
+<a id="aa25faf2022b8a774f9f870630c9789d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25faf2022b8a774f9f870630c9789d2">&#9670;&nbsp;</a></span>Solution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +133,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>newAlgorithmName</em>&#160;</td>
+          <td class="paramname"><em>newAlgorithmName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newLocalSearch</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -146,6 +155,7 @@ Friends</h2></td></tr>
     <tr><td class="paramname">currentSolution</td><td>Representa el vector que contiene la solución </td></tr>
     <tr><td class="paramname">currentMedia</td><td>Representa el valor de la media de dispersión de la solución </td></tr>
     <tr><td class="paramname">newAlgorithmName</td><td>Representa el nombre del algoritmo </td></tr>
+    <tr><td class="paramname">newLocalSearch</td><td>Representa la búsqueda local usada por el algoritmo </td></tr>
   </table>
   </dd>
 </dl>
@@ -170,6 +180,26 @@ Friends</h2></td></tr>
 
 <p>Devuelve el nombre del algoritmo de la solución. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string Valor del nombre del nombre del algoritmo </dd></dl>
+
+</div>
+</div>
+<a id="a088c1c77bc055012873112e56ec8c421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a088c1c77bc055012873112e56ec8c421">&#9670;&nbsp;</a></span>getLocalSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Solution::getLocalSearch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un 0 si la búsqueda local es ansiosa y un 1 si la búsqueda local es greedy. </p>
+<dl class="section return"><dt>Returns</dt><dd>int Valor de la búsqueda </dd></dl>
 
 </div>
 </div>
@@ -283,6 +313,11 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_solution_a2a7fe426df2bb50f69f55084b4e99f85_icgraph.png" border="0" usemap="#class_solution_a2a7fe426df2bb50f69f55084b4e99f85_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -334,8 +369,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/carlo/Desktop/DAA/DAA_P8/include/<a class="el" href="solution_8hpp_source.html">solution.hpp</a></li>
-<li>solution.cpp</li>
+<li>include/<a class="el" href="solution_8hpp_source.html">solution.hpp</a></li>
+<li>src/solution.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7efile_86',['~File',['../class_file.html#ac704ebdf5f57d7a1c5ddf409d797fb69',1,'File']]]
+  ['variableneighborhoodsearch_91',['VariableNeighborhoodSearch',['../class_variable_neighborhood_search.html#acb8beff356e5805773d6cce10c65ebd7',1,'VariableNeighborhoodSearch']]]
 ];

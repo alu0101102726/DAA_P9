@@ -1,0 +1,36 @@
+digraph "MultibootAlgorithm::run"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MultibootAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Este método se encarga de ejecutar el algoritmo multiarranque, para ello se hace un preprocesamiento,..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MultibootAlgorithm\l::constructSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a49462e8dc4630e383aa8e1db106c087e",tooltip="Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número tot..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MultibootAlgorithm\l::getAlgorithmName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a66869b040b9e6994cc914187b4fb832b",tooltip="Devuelve el nombre del algoritmo."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MultibootAlgorithm\l::getChoosenLocalSearch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a02a958037ce7775775f47f9ffb01a9dc",tooltip="Devuelve la búsqueda local que se ha seleccionado."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MultibootAlgorithm\l::getIterationsLimit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a684e8d63d274d71c9e76a39b80db2b70",tooltip="Devuelve el límite de iteraciones."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Algorithm::getMedianDispersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a675939191b1136107cd43634d6c9df18",tooltip="Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,..."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Graph::getNodeValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graph.html#ae20c9adb9e7aa7773656d6d6fbdaa5e1",tooltip="Se encarga de devolver el valor de la distancia que hay entre el nodo position."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="MultibootAlgorithm\l::getnoImprovementiterations\lLimit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a5dadef0ec3df41b0cf791cb181240a83",tooltip="Obtiene el número de iteracions sin mejora."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="MultibootAlgorithm\l::localSearch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a2d286b059b5752f0da963e0ece89204e",tooltip="Representa la búsqueda local greedy."];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Algorithm::getWorstMedia\lDispersionAnxious",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2",tooltip="Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma an..."];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Algorithm::getWorstMedia\lDispersionGreedy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528",tooltip="Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma gr..."];
+  Node11 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="MultibootAlgorithm\l::preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a3bcea30f3f236079b0f40e88e624e19a",tooltip="Esta funcion se encarga de hacer el preprocesamiento, para ello, va a escoger los nodos cuyas aristas..."];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Graph::getSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graph.html#ab7d965333f0ae9e6727676db3224ec4b",tooltip="Se encarga de devolver el tamaño del vector."];
+}

@@ -1,0 +1,208 @@
+.TH "VariableNeighborhoodSearch" 3 "Sun Apr 26 2020" "Max-mean dispersion problem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VariableNeighborhoodSearch \- Esta clase representa el algoritmo multiarranque\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variable\-neighborhood\-search\-algorithm\&.hpp>\fP
+.PP
+Inherits \fBAlgorithm\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVariableNeighborhoodSearch\fP (int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax)"
+.br
+.RI "Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora\&. Además recibe el valor de kmax que representa el tamaño máximo del entorno\&. "
+.ti -1c
+.RI "std::string \fBgetAlgorithmName\fP ()"
+.br
+.RI "Devuelve el nombre del algoritmo\&. "
+.ti -1c
+.RI "int \fBgetIterationsLimit\fP ()"
+.br
+.RI "Devuelve el límite de iteraciones\&. "
+.ti -1c
+.RI "int \fBgetnoImprovementiterationsLimit\fP ()"
+.br
+.RI "Obtiene el número de iteracions sin mejora\&. "
+.ti -1c
+.RI "int \fBgetKmax\fP ()"
+.br
+.RI "Devvuelve el tamaño del entorno máximo\&. "
+.ti -1c
+.RI "int \fBgetChoosenLocalSearch\fP ()"
+.br
+.RI "Devuelve la búsqueda local que se ha seleccionado\&. "
+.ti -1c
+.RI "\fBSolution\fP \fBrun\fP (\fBGraph\fP currentGraph)"
+.br
+.RI "Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos\&. Luego, una vez que hayamos hecho esto construimos la solución inicial, usando el numero aleatorio que habíamos generado, hacemos una búsqueda local greedy en el vector y buscamos el valor de la dispersión media\&. "
+.ti -1c
+.RI "std::vector< int > \fBshake\fP (std::vector< int > solution, int currentK, int newSolution)"
+.br
+.RI "Esta es la función encargada de coger una solución aleatoria en un determinado entorno\&. "
+.ti -1c
+.RI "std::vector< int > \fBconstructSolution\fP (std::vector< int > candidates, int size)"
+.br
+.RI "Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, cogiendo el valor del entorno y cogiendo un elemento del mismo\&. "
+.ti -1c
+.RI "std::vector< int > \fBlocalSearch\fP (std::vector< int > solution, \fBGraph\fP currentGraph)"
+.br
+.RI "Representa la búsqueda local greedy\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Esta clase representa el algoritmo multiarranque\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "VariableNeighborhoodSearch::VariableNeighborhoodSearch (int currentLocalSearch, std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit, int newKmax)"
+
+.PP
+Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora\&. Además recibe el valor de kmax que representa el tamaño máximo del entorno\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewName\fP Nuevo nombre del algoritmo 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::vector< int > VariableNeighborhoodSearch::constructSolution (std::vector< int > candidates, int size)"
+
+.PP
+Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, cogiendo el valor del entorno y cogiendo un elemento del mismo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcandidates\fP Vector del que se parte para construir la solución 
+.br
+\fIsize\fP Tamaño del entorno 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector <int> Vector con la solución construida 
+.RE
+.PP
+
+.SS "std::string VariableNeighborhoodSearch::getAlgorithmName ()"
+
+.PP
+Devuelve el nombre del algoritmo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string nombre del algoritmo 
+.RE
+.PP
+
+.SS "int VariableNeighborhoodSearch::getChoosenLocalSearch ()"
+
+.PP
+Devuelve la búsqueda local que se ha seleccionado\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Valor de la búsqueda local seleccionda, en caso de que sea 0 es ansiosa y 1 es greedy\&. 
+.RE
+.PP
+
+.SS "int VariableNeighborhoodSearch::getIterationsLimit ()"
+
+.PP
+Devuelve el límite de iteraciones\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Valor del límite de iteraciones 
+.RE
+.PP
+
+.SS "int VariableNeighborhoodSearch::getKmax ()"
+
+.PP
+Devvuelve el tamaño del entorno máximo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Valor del entorno máximo 
+.RE
+.PP
+
+.SS "int VariableNeighborhoodSearch::getnoImprovementiterationsLimit ()"
+
+.PP
+Obtiene el número de iteracions sin mejora\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Devuelve el valor de las iteraciones sin mejora 
+.RE
+.PP
+
+.SS "std::vector< int > VariableNeighborhoodSearch::localSearch (std::vector< int > solution, \fBGraph\fP currentGraph)"
+
+.PP
+Representa la búsqueda local greedy\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsolution\fP Representa el vector sobre el que vamos a generar la búsqueda local 
+.br
+\fIcurrentGraph\fP Grafo con la información de las distacias entre nodos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector <int> Valor del vector 
+.RE
+.PP
+
+.SS "\fBSolution\fP VariableNeighborhoodSearch::run (\fBGraph\fP currentGraph)\fC [virtual]\fP"
+
+.PP
+Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos\&. Luego, una vez que hayamos hecho esto construimos la solución inicial, usando el numero aleatorio que habíamos generado, hacemos una búsqueda local greedy en el vector y buscamos el valor de la dispersión media\&. Una vez que tenemos esto, vamos a iterar hasta llegar a las iteraciones con o sin mejora, en cada una de ellas habrán iteraciones hasta que se llegue al tamaño de entorno máximo\&. En cada una de ellas se hará shake, luego se hará una búsqueda local y por último se buscará si la nueva solución tiene una dispersion media mejor que las anteriores y se asignará\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrentGraph\fP Representa las distancias entre los nodos del grafo 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSolution\fP Solución al aplicar el GVNS 
+.RE
+.PP
+
+.PP
+Implements \fBAlgorithm\fP\&.
+.SS "std::vector< int > VariableNeighborhoodSearch::shake (std::vector< int > candidates, int currentK, int newSolution)"
+
+.PP
+Esta es la función encargada de coger una solución aleatoria en un determinado entorno\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcandidates\fP Representa el vector de candidatos 
+.br
+\fIcurrentK\fP Representa el valor actual de la variable de entorno 
+.br
+\fInewSolution\fP Represenyta el valor del valor de la solucion 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector <int> Vector con la nueva solucion construida 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Max-mean dispersion problem from the source code\&.

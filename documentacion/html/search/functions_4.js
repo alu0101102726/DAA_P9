@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['makercl_76',['makeRCL',['../class_grasp_algorithm.html#a4121623ca3c64ebff0728af1db2222ba',1,'GraspAlgorithm']]],
-  ['multibootalgorithm_77',['MultibootAlgorithm',['../class_multiboot_algorithm.html#a30a2b172c8b5b61c6bc2e68e466c1e2f',1,'MultibootAlgorithm']]]
+  ['localsearch_81',['localSearch',['../class_grasp_algorithm.html#a24f6d267a249db7c3616084430bc1a0b',1,'GraspAlgorithm::localSearch()'],['../class_multiboot_algorithm.html#a2d286b059b5752f0da963e0ece89204e',1,'MultibootAlgorithm::localSearch()'],['../class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253',1,'VariableNeighborhoodSearch::localSearch()']]]
 ];

@@ -1,15 +1,19 @@
 #include "variable-neighborhood-search-algorithm.hpp"
 
 /**
- * @brief Crea el objeto y le asigna un nombre del algoritmo
+ * @brief Crea el objeto y le asigna un nombre del algoritmo, además
+ * de la búsqueda local seleccionada, el número de iteraciones con y
+ * sin mejora. Además recibe el valor de kmax que representa el tamaño
+ * máximo del entorno.
  * 
  * @param newName Nuevo nombre del algoritmo
  */
-VariableNeighborhoodSearch::VariableNeighborhoodSearch(std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit, int newKmax) {
+VariableNeighborhoodSearch::VariableNeighborhoodSearch(int currentLocalSearch, std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit, int newKmax) {
   name = newName;
   iterationsLimit = newIterationsLimit;
   noImprovementiterationsLimit = newnoImprovementIterationLimit;
   kmax = newKmax;
+  choosenLocalSearch = currentLocalSearch;
 }
 
 /**
@@ -35,8 +39,8 @@ Solution VariableNeighborhoodSearch::run(Graph currentGraph) {
   }
   int solutionSize = rand() % (currentGraph.gentNodeNumber() - 2) + 2;
   std::vector <int> solution = constructSolution(candidates, solutionSize);
-  solution = greedyLocalSearch(solution, currentGraph);
-  float bestMd = getMedianDispersion(solution, currentGraph);
+  solution = localSearch(solution, currentGraph);
+  float bestMd = getMeanDispersion(solution, currentGraph);
   int iterations = 0;
   int noImprovement = 0;
   while( iterations < getIterationsLimit() && noImprovement < getnoImprovementiterationsLimit()) {
@@ -44,13 +48,14 @@ Solution VariableNeighborhoodSearch::run(Graph currentGraph) {
     int k = 1;
     while (k < getKmax()) {
       std::vector<int> newSolution = shake(candidates, k, solutionSize);
-      std::vector<int> localOptimum = greedyLocalSearch(newSolution, currentGraph);
-      float currentMd = getMedianDispersion(localOptimum, currentGraph);
+      std::vector<int> localOptimum = localSearch(newSolution, currentGraph);
+      float currentMd = getMeanDispersion(localOptimum, currentGraph);
       if (currentMd > bestMd) {
         solution = localOptimum;
         bestMd = currentMd;
         solutionSize = localOptimum.size();
         k = 1;
+        noImprovement = 0;
       }
       else {
         noImprovement++;
@@ -58,7 +63,7 @@ Solution VariableNeighborhoodSearch::run(Graph currentGraph) {
       }
     }
   }
-  Solution newSol(solution, getMedianDispersion(solution, currentGraph), getAlgorithmName());
+  Solution newSol(solution, getMeanDispersion(solution, currentGraph), getAlgorithmName(), getChoosenLocalSearch());
   return newSol;
 }
 
@@ -113,11 +118,11 @@ std::vector <int> VariableNeighborhoodSearch::constructSolution(std::vector <int
  * @param currentGraph Grafo con la información de las distacias entre nodos
  * @return std::vector <int> Valor del vector
  */
-std::vector <int> VariableNeighborhoodSearch::greedyLocalSearch(std::vector <int> solution, Graph currentGraph) {
+std::vector <int> VariableNeighborhoodSearch::localSearch(std::vector <int> solution, Graph currentGraph) {
   bool localOptimum = true;
   while(localOptimum) {
     localOptimum = false;
-    int worstNode = getWorstMediaDispersion(solution, currentGraph);
+    int worstNode = (getChoosenLocalSearch() == 0) ? getWorstMeanDispersionAnxious(solution, currentGraph) : getWorstMeanDispersionGreedy(solution, currentGraph);
     if (worstNode != -1 ) {
       localOptimum = true;
       solution.erase(solution.begin() + worstNode);
@@ -161,4 +166,14 @@ int VariableNeighborhoodSearch::getIterationsLimit() {
  */
 int VariableNeighborhoodSearch::getnoImprovementiterationsLimit() {
   return noImprovementiterationsLimit;
+}
+
+/**
+ * @brief Devuelve la búsqueda local que se ha seleccionado
+ * 
+ * @return int Valor de la búsqueda local seleccionda, en caso
+ * de que sea 0 es ansiosa y 1 es greedy.
+ */
+int VariableNeighborhoodSearch::getChoosenLocalSearch() {
+  return choosenLocalSearch;
 }

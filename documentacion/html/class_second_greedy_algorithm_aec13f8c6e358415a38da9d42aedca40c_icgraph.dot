@@ -1,0 +1,10 @@
+digraph "SecondGreedyAlgorithm::getAlgorithmName"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="SecondGreedyAlgorithm\l::getAlgorithmName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Devuelve el nombre del algoritmo."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SecondGreedyAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_second_greedy_algorithm.html#a762a19742a6cf9d39fe5e4080103b5ce",tooltip="Representa la variante del algoritmo voraz que consiste en partir de un vector que está lleno de todo..."];
+}

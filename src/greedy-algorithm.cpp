@@ -19,11 +19,15 @@ GreedyAlgorithm::GreedyAlgorithm(std::string newName) {
  * y comrpobando si es la máxima. En caso de que lo sea se vuelve
  * a asignar al máximo.
  * 
+ * En el caso de la solución se pasa un 2 para indicar que en las búsquedas
+ * greedy no hay distinción de búsqueda local greedy o ansiosa.
+ * 
  * @param currentGraph Representa el grafo con las distancias entre nodos
  * @return Solution Representa el objeto solución que contiene la solución del
  * problema
  */
 Solution GreedyAlgorithm::run(Graph currentGraph) {
+  const int HASNOTLOCALSEARCH = 2;
   std::vector < int > solution = getMaxAfinnity(currentGraph);
   std::vector < int > auxSolution;
 
@@ -36,7 +40,7 @@ Solution GreedyAlgorithm::run(Graph currentGraph) {
       if(std::find(solution.begin(), solution.end(), currentRow) == solution.end()) {
         auxPossibleEdge = solution;
         auxPossibleEdge.push_back(currentRow);
-        float auxK = getMedianDispersion(auxPossibleEdge, currentGraph);
+        float auxK = getMeanDispersion(auxPossibleEdge, currentGraph);
 
         if (auxK > max) {
           max = auxK;
@@ -45,12 +49,12 @@ Solution GreedyAlgorithm::run(Graph currentGraph) {
       }
     }
 
-    if(max >= getMedianDispersion(solution, currentGraph)) {
+    if(max >= getMeanDispersion(solution, currentGraph)) {
       solution.push_back(Kmax);
     }
   }
 
-  Solution newSolution(auxSolution, getMedianDispersion(auxSolution, currentGraph), getAlgorithmName());
+  Solution newSolution(auxSolution, getMeanDispersion(auxSolution, currentGraph), getAlgorithmName(), HASNOTLOCALSEARCH);
 
   return newSolution;
 }

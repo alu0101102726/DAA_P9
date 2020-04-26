@@ -86,9 +86,9 @@ Collaboration diagram for VariableNeighborhoodSearch:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c246a6b89a9eea5f3b17352f7cc7178"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#a7c246a6b89a9eea5f3b17352f7cc7178">VariableNeighborhoodSearch</a> (std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax)</td></tr>
-<tr class="memdesc:a7c246a6b89a9eea5f3b17352f7cc7178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo.  <a href="class_variable_neighborhood_search.html#a7c246a6b89a9eea5f3b17352f7cc7178">More...</a><br /></td></tr>
-<tr class="separator:a7c246a6b89a9eea5f3b17352f7cc7178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8beff356e5805773d6cce10c65ebd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#acb8beff356e5805773d6cce10c65ebd7">VariableNeighborhoodSearch</a> (int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax)</td></tr>
+<tr class="memdesc:acb8beff356e5805773d6cce10c65ebd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. Además recibe el valor de kmax que representa el tamaño máximo del entorno.  <a href="class_variable_neighborhood_search.html#acb8beff356e5805773d6cce10c65ebd7">More...</a><br /></td></tr>
+<tr class="separator:acb8beff356e5805773d6cce10c65ebd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa545a238609462a4e45120dbc7c10cde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#aa545a238609462a4e45120dbc7c10cde">getAlgorithmName</a> ()</td></tr>
 <tr class="memdesc:aa545a238609462a4e45120dbc7c10cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre del algoritmo.  <a href="class_variable_neighborhood_search.html#aa545a238609462a4e45120dbc7c10cde">More...</a><br /></td></tr>
 <tr class="separator:aa545a238609462a4e45120dbc7c10cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,8 +101,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6daf77e6bafdd0991a07ba116f2a788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#aa6daf77e6bafdd0991a07ba116f2a788">getKmax</a> ()</td></tr>
 <tr class="memdesc:aa6daf77e6bafdd0991a07ba116f2a788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devvuelve el tamaño del entorno máximo.  <a href="class_variable_neighborhood_search.html#aa6daf77e6bafdd0991a07ba116f2a788">More...</a><br /></td></tr>
 <tr class="separator:aa6daf77e6bafdd0991a07ba116f2a788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d34acb040a0a72440f7065d453b1b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#ac4d34acb040a0a72440f7065d453b1b5">getChoosenLocalSearch</a> ()</td></tr>
+<tr class="memdesc:ac4d34acb040a0a72440f7065d453b1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la búsqueda local que se ha seleccionado.  <a href="class_variable_neighborhood_search.html#ac4d34acb040a0a72440f7065d453b1b5">More...</a><br /></td></tr>
+<tr class="separator:ac4d34acb040a0a72440f7065d453b1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9801bff3a36806d818d300010e0cd529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_solution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">run</a> (<a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a9801bff3a36806d818d300010e0cd529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos. Una vez que tenemos esto, vamos a iterar hasta llegar a las iteraciones con o sin mejora, en cada una de ellas habrán iteraciones hasta que se llegue al tamaño de entorno máximo. En cada una de ellas se hará shake, luego se hará una búsqueda local y por último se buscará si la nueva solución tiene una dispersion media mejor que las anteriores y se asignará.  <a href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">More...</a><br /></td></tr>
+<tr class="memdesc:a9801bff3a36806d818d300010e0cd529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos. Luego, una vez que hayamos hecho esto construimos la solución inicial, usando el numero aleatorio que habíamos generado, hacemos una búsqueda local greedy en el vector y buscamos el valor de la dispersión media.  <a href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">More...</a><br /></td></tr>
 <tr class="separator:a9801bff3a36806d818d300010e0cd529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f4646dcde00cb2efd2f41c34b40465"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#a05f4646dcde00cb2efd2f41c34b40465">shake</a> (std::vector&lt; int &gt; solution, int currentK, int newSolution)</td></tr>
 <tr class="memdesc:a05f4646dcde00cb2efd2f41c34b40465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta es la función encargada de coger una solución aleatoria en un determinado entorno.  <a href="class_variable_neighborhood_search.html#a05f4646dcde00cb2efd2f41c34b40465">More...</a><br /></td></tr>
@@ -110,16 +113,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae90362e88ab783f076b3da025bac0014"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#ae90362e88ab783f076b3da025bac0014">constructSolution</a> (std::vector&lt; int &gt; candidates, int size)</td></tr>
 <tr class="memdesc:ae90362e88ab783f076b3da025bac0014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, cogiendo el valor del entorno y cogiendo un elemento del mismo.  <a href="class_variable_neighborhood_search.html#ae90362e88ab783f076b3da025bac0014">More...</a><br /></td></tr>
 <tr class="separator:ae90362e88ab783f076b3da025bac0014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab550c3635409191558d7cc2c9ae8a8b9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#ab550c3635409191558d7cc2c9ae8a8b9">greedyLocalSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:ab550c3635409191558d7cc2c9ae8a8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local greedy.  <a href="class_variable_neighborhood_search.html#ab550c3635409191558d7cc2c9ae8a8b9">More...</a><br /></td></tr>
-<tr class="separator:ab550c3635409191558d7cc2c9ae8a8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eae863f1a404d79215d1ad9d2134253"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253">localSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a9eae863f1a404d79215d1ad9d2134253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local greedy.  <a href="class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253">More...</a><br /></td></tr>
+<tr class="separator:a9eae863f1a404d79215d1ad9d2134253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_algorithm')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_algorithm.html">Algorithm</a></td></tr>
 <tr class="memitem:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">getMedianDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">More...</a><br /></td></tr>
 <tr class="separator:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">getWorstMediaDispersion</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">More...</a><br /></td></tr>
-<tr class="separator:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">getWorstMediaDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">More...</a><br /></td></tr>
+<tr class="separator:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">getWorstMediaDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">More...</a><br /></td></tr>
+<tr class="separator:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top"><a id="a1e9eff334377933946a3fb2e6ae638be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (std::vector&lt; int &gt; solution, int runTime, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="separator:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,8 +133,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Esta clase representa el algoritmo multiarranque. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7c246a6b89a9eea5f3b17352f7cc7178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c246a6b89a9eea5f3b17352f7cc7178">&#9670;&nbsp;</a></span>VariableNeighborhoodSearch()</h2>
+<a id="acb8beff356e5805773d6cce10c65ebd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8beff356e5805773d6cce10c65ebd7">&#9670;&nbsp;</a></span>VariableNeighborhoodSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,6 +142,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
         <tr>
           <td class="memname">VariableNeighborhoodSearch::VariableNeighborhoodSearch </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentLocalSearch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>newName</em>, </td>
         </tr>
@@ -165,7 +177,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
       </table>
 </div><div class="memdoc">
 
-<p>Crea el objeto y le asigna un nombre del algoritmo. </p>
+<p>Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. Además recibe el valor de kmax que representa el tamaño máximo del entorno. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newName</td><td>Nuevo nombre del algoritmo </td></tr>
@@ -211,6 +223,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Vector con la solución construida </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_ae90362e88ab783f076b3da025bac0014_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_ae90362e88ab783f076b3da025bac0014_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -231,6 +248,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el nombre del algoritmo. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string nombre del algoritmo </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_aa545a238609462a4e45120dbc7c10cde_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_aa545a238609462a4e45120dbc7c10cde_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac4d34acb040a0a72440f7065d453b1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d34acb040a0a72440f7065d453b1b5">&#9670;&nbsp;</a></span>getChoosenLocalSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VariableNeighborhoodSearch::getChoosenLocalSearch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la búsqueda local que se ha seleccionado. </p>
+<dl class="section return"><dt>Returns</dt><dd>int Valor de la búsqueda local seleccionda, en caso de que sea 0 es ansiosa y 1 es greedy. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_ac4d34acb040a0a72440f7065d453b1b5_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_ac4d34acb040a0a72440f7065d453b1b5_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -251,6 +298,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el límite de iteraciones. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Valor del límite de iteraciones </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_af731669d721090aec1cdb79c4f8da891_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_af731669d721090aec1cdb79c4f8da891_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -271,6 +323,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devvuelve el tamaño del entorno máximo. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Valor del entorno máximo </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_aa6daf77e6bafdd0991a07ba116f2a788_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_aa6daf77e6bafdd0991a07ba116f2a788_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -291,17 +348,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Obtiene el número de iteracions sin mejora. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Devuelve el valor de las iteraciones sin mejora </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a2a9260611826afa9fc98e533f4e14fcd_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_a2a9260611826afa9fc98e533f4e14fcd_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="ab550c3635409191558d7cc2c9ae8a8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab550c3635409191558d7cc2c9ae8a8b9">&#9670;&nbsp;</a></span>greedyLocalSearch()</h2>
+<a id="a9eae863f1a404d79215d1ad9d2134253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eae863f1a404d79215d1ad9d2134253">&#9670;&nbsp;</a></span>localSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; VariableNeighborhoodSearch::greedyLocalSearch </td>
+          <td class="memname">std::vector&lt; int &gt; VariableNeighborhoodSearch::localSearch </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>solution</em>, </td>
@@ -329,6 +391,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Valor del vector </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a9eae863f1a404d79215d1ad9d2134253_cgraph.png" border="0" usemap="#class_variable_neighborhood_search_a9eae863f1a404d79215d1ad9d2134253_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a9eae863f1a404d79215d1ad9d2134253_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_a9eae863f1a404d79215d1ad9d2134253_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -356,7 +428,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 </table>
 </div><div class="memdoc">
 
-<p>Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos. Una vez que tenemos esto, vamos a iterar hasta llegar a las iteraciones con o sin mejora, en cada una de ellas habrán iteraciones hasta que se llegue al tamaño de entorno máximo. En cada una de ellas se hará shake, luego se hará una búsqueda local y por último se buscará si la nueva solución tiene una dispersion media mejor que las anteriores y se asignará. </p>
+<p>Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser todo el conjunto de nodos. Luego, una vez que hayamos hecho esto construimos la solución inicial, usando el numero aleatorio que habíamos generado, hacemos una búsqueda local greedy en el vector y buscamos el valor de la dispersión media. </p>
+<p>Una vez que tenemos esto, vamos a iterar hasta llegar a las iteraciones con o sin mejora, en cada una de ellas habrán iteraciones hasta que se llegue al tamaño de entorno máximo. En cada una de ellas se hará shake, luego se hará una búsqueda local y por último se buscará si la nueva solución tiene una dispersion media mejor que las anteriores y se asignará.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentGraph</td><td>Representa las distancias entre los nodos del grafo </td></tr>
@@ -366,6 +439,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_solution.html" title="Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...">Solution</a> Solución al aplicar el GVNS </dd></dl>
 
 <p>Implements <a class="el" href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">Algorithm</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a9801bff3a36806d818d300010e0cd529_cgraph.png" border="0" usemap="#class_variable_neighborhood_search_a9801bff3a36806d818d300010e0cd529_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -411,12 +489,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Vector con la nueva solucion construida </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a05f4646dcde00cb2efd2f41c34b40465_cgraph.png" border="0" usemap="#class_variable_neighborhood_search_a05f4646dcde00cb2efd2f41c34b40465_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_variable_neighborhood_search_a05f4646dcde00cb2efd2f41c34b40465_icgraph.png" border="0" usemap="#class_variable_neighborhood_search_a05f4646dcde00cb2efd2f41c34b40465_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/carlo/Desktop/DAA/DAA_P8/include/<a class="el" href="variable-neighborhood-search-algorithm_8hpp_source.html">variable-neighborhood-search-algorithm.hpp</a></li>
-<li>variable-neighborhood-search-algorithm.cpp</li>
+<li>include/<a class="el" href="variable-neighborhood-search-algorithm_8hpp_source.html">variable-neighborhood-search-algorithm.hpp</a></li>
+<li>src/variable-neighborhood-search-algorithm.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

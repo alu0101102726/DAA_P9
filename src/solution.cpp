@@ -7,11 +7,13 @@
   * @param currentSolution Representa el vector que contiene la solución
   * @param currentMedia Representa el valor de la media de dispersión de la solución
   * @param newAlgorithmName Representa el nombre del algoritmo
+  * @param newLocalSearch Representa la búsqueda local usada por el algoritmo
   */
-Solution::Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName):
+Solution::Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName, int newLocalSearch):
   solution(currentSolution) {
     mediaValue = currentMedia;
     algorithmName = newAlgorithmName;
+    currentLocalSearch = newLocalSearch;
 }
 
 /**
@@ -62,6 +64,16 @@ std::string Solution::getAlgorithmName() {
 }
 
 /**
+ * @brief Devuelve un 0 si la búsqueda local es ansiosa
+ * y un 1 si la búsqueda local es greedy.
+ * 
+ * @return int Valor de la búsqueda
+ */
+int Solution::getLocalSearch() {
+  return currentLocalSearch;
+}
+
+/**
  * @brief Modifica el valor de tiempo de ejecución
  * 
  * @param newRunTime Nuevo tiempo de ejecución
@@ -81,10 +93,19 @@ void Solution::setRunTime(int newRunTime) {
 std::ostream& operator <<(std::ostream& os, Solution currentSolution) {
   std::cout << "La solución al aplicar el algoritmo " << currentSolution.getAlgorithmName() << " es: S = { ";
   for(int i = 0; i < currentSolution.solution.size(); i++) {
-    std::cout << currentSolution.getSolutionValue(i) << " ";
+    std::cout << currentSolution.getSolutionValue(i) << ", ";
   }
   std::cout << "} \n";
   std::cout << "Median dispersion: " << currentSolution.getMedia() << "\n";
-  std::cout << "Run Time: " << currentSolution.getRunTime() << " milliseconds \n";
+  if (currentSolution.getLocalSearch() != 2) {
+    std::cout << "Búsqueda local: ";
+    if (currentSolution.getLocalSearch() == 0) {
+      std::cout << "Greedy\n";
+    }
+    else {
+      std::cout << "Ansiosa\n";
+    }
+  }
+  std::cout << "Run Time: " << currentSolution.getRunTime() << " microseconds \n";
   std::cout << " - - - - - - - - - - - - - - - - - - - \n";
 }

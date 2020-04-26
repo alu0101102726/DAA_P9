@@ -1,0 +1,50 @@
+digraph "Graph::getNodeValue"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Graph::getNodeValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Se encarga de devolver el valor de la distancia que hay entre el nodo position."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GreedyAlgorithm::getMaxAfinnity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_greedy_algorithm.html#a9995277d03648a0294832d250fa7510f",tooltip="Este método se encarga de encontrar la arista que tiene una mayor afinidad."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GreedyAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_greedy_algorithm.html#a8ef295f33ddb4136ebe0cf39e642f61f",tooltip="Se va a encargar de ejecutar el algoritmo greedy, para ello se van a hacer iteraciones hasta que las ..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Algorithm::getMedianDispersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a675939191b1136107cd43634d6c9df18",tooltip="Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,..."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Algorithm::getWorstMedia\lDispersionAnxious",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2",tooltip="Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma an..."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MultibootAlgorithm\l::localSearch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a2d286b059b5752f0da963e0ece89204e",tooltip="Representa la búsqueda local greedy."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MultibootAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#aa80ce488f75d97a6a208be3f6c94d08a",tooltip="Este método se encarga de ejecutar el algoritmo multiarranque, para ello se hace un preprocesamiento,..."];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VariableNeighborhoodSearch\l::localSearch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253",tooltip="Representa la búsqueda local greedy."];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VariableNeighborhoodSearch::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529",tooltip="Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un..."];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GraspAlgorithm::localSearch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grasp_algorithm.html#a24f6d267a249db7c3616084430bc1a0b",tooltip="Representa la búsqueda local."];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GraspAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9",tooltip="Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento,..."];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Algorithm::getWorstMedia\lDispersionGreedy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528",tooltip="Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma gr..."];
+  Node12 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="GraspAlgorithm::makeRCL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grasp_algorithm.html#a4121623ca3c64ebff0728af1db2222ba",tooltip="Crea el RCL, para ello se le pasa un vector que es del que va a partir para obtener el RCL...."];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="GraspAlgorithm::construct\lSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grasp_algorithm.html#a9e43f37e0115356e9864dc4232852abb",tooltip="Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número tot..."];
+  Node14 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="SecondGreedyAlgorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_second_greedy_algorithm.html#a762a19742a6cf9d39fe5e4080103b5ce",tooltip="Representa la variante del algoritmo voraz que consiste en partir de un vector que está lleno de todo..."];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="MultibootAlgorithm\l::preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_multiboot_algorithm.html#a3bcea30f3f236079b0f40e88e624e19a",tooltip="Esta funcion se encarga de hacer el preprocesamiento, para ello, va a escoger los nodos cuyas aristas..."];
+  Node16 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="GraspAlgorithm::preprocessing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grasp_algorithm.html#a975351fb7367e8f382c7973e92c47e64",tooltip="Esta funcion se encarga de hacer el preprocesamiento, para ello, va a escoger los nodos cuyas aristas..."];
+  Node17 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

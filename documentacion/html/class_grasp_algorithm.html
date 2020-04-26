@@ -86,9 +86,9 @@ Collaboration diagram for GraspAlgorithm:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6fd62d03d3e3fc1e0d8947aa619df6d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a6fd62d03d3e3fc1e0d8947aa619df6d2">GraspAlgorithm</a> (std::string newName, int newIterationsLimit, int noImprovementiterationsLimit)</td></tr>
-<tr class="memdesc:a6fd62d03d3e3fc1e0d8947aa619df6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo.  <a href="class_grasp_algorithm.html#a6fd62d03d3e3fc1e0d8947aa619df6d2">More...</a><br /></td></tr>
-<tr class="separator:a6fd62d03d3e3fc1e0d8947aa619df6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6768e8301b1d8179bf80d92ffbd3e571"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a6768e8301b1d8179bf80d92ffbd3e571">GraspAlgorithm</a> (int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit)</td></tr>
+<tr class="memdesc:a6768e8301b1d8179bf80d92ffbd3e571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora.  <a href="class_grasp_algorithm.html#a6768e8301b1d8179bf80d92ffbd3e571">More...</a><br /></td></tr>
+<tr class="separator:a6768e8301b1d8179bf80d92ffbd3e571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a9389a159bce26036ae5bf21bf326d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#ad0a9389a159bce26036ae5bf21bf326d">getAlgorithmName</a> ()</td></tr>
 <tr class="memdesc:ad0a9389a159bce26036ae5bf21bf326d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre del algoritmo.  <a href="class_grasp_algorithm.html#ad0a9389a159bce26036ae5bf21bf326d">More...</a><br /></td></tr>
 <tr class="separator:ad0a9389a159bce26036ae5bf21bf326d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,8 +98,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12d3f59aca629a5272ecd373fb00cd4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a12d3f59aca629a5272ecd373fb00cd4b">getnoImprovementiterationsLimit</a> ()</td></tr>
 <tr class="memdesc:a12d3f59aca629a5272ecd373fb00cd4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el número de iteracions sin mejora.  <a href="class_grasp_algorithm.html#a12d3f59aca629a5272ecd373fb00cd4b">More...</a><br /></td></tr>
 <tr class="separator:a12d3f59aca629a5272ecd373fb00cd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217a7a4e965086b529d88d4aeb1f94f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a217a7a4e965086b529d88d4aeb1f94f5">getChoosenLocalSearch</a> ()</td></tr>
+<tr class="memdesc:a217a7a4e965086b529d88d4aeb1f94f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la búsqueda local que se ha seleccionado.  <a href="class_grasp_algorithm.html#a217a7a4e965086b529d88d4aeb1f94f5">More...</a><br /></td></tr>
+<tr class="separator:a217a7a4e965086b529d88d4aeb1f94f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f8240237fd9bece51eeb6b7f8ffd3c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_solution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9">run</a> (<a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a1f8240237fd9bece51eeb6b7f8ffd3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones con y sin mejora, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local (greedy) y se asigna al máximo la solución que tenga mayor dispersión media.  <a href="class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9">More...</a><br /></td></tr>
+<tr class="memdesc:a1f8240237fd9bece51eeb6b7f8ffd3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones con y sin mejora, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local y se asigna al máximo la solución que tenga mayor dispersión media.  <a href="class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9">More...</a><br /></td></tr>
 <tr class="separator:a1f8240237fd9bece51eeb6b7f8ffd3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a975351fb7367e8f382c7973e92c47e64"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a975351fb7367e8f382c7973e92c47e64">preprocessing</a> (<a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a975351fb7367e8f382c7973e92c47e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se encarga de hacer el preprocesamiento, para ello, va a escoger los nodos cuyas aristas (todas), sean no negativas, es decir, mayores o iguales a 0.  <a href="class_grasp_algorithm.html#a975351fb7367e8f382c7973e92c47e64">More...</a><br /></td></tr>
@@ -110,12 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4121623ca3c64ebff0728af1db2222ba"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a4121623ca3c64ebff0728af1db2222ba">makeRCL</a> (std::vector&lt; int &gt; currentSolution, std::vector&lt; int &gt; RCL, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a4121623ca3c64ebff0728af1db2222ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el RCL, para ello se le pasa un vector que es del que va a partir para obtener el RCL. En nuestro caso, se ha decidido, que se escojan aquellos valores que sean mayores al 60 % del valor máximo.  <a href="class_grasp_algorithm.html#a4121623ca3c64ebff0728af1db2222ba">More...</a><br /></td></tr>
 <tr class="separator:a4121623ca3c64ebff0728af1db2222ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45e87f91f9733b78e3f35648a163009b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a45e87f91f9733b78e3f35648a163009b">greedyLocalSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a45e87f91f9733b78e3f35648a163009b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local greedy.  <a href="class_grasp_algorithm.html#a45e87f91f9733b78e3f35648a163009b">More...</a><br /></td></tr>
-<tr class="separator:a45e87f91f9733b78e3f35648a163009b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bbd888561a750327c03472f3c48bdb1"><td class="memItemLeft" align="right" valign="top"><a id="a4bbd888561a750327c03472f3c48bdb1"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>anxiousLocalSearch</b> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="separator:a4bbd888561a750327c03472f3c48bdb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f6d267a249db7c3616084430bc1a0b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grasp_algorithm.html#a24f6d267a249db7c3616084430bc1a0b">localSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a24f6d267a249db7c3616084430bc1a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local.  <a href="class_grasp_algorithm.html#a24f6d267a249db7c3616084430bc1a0b">More...</a><br /></td></tr>
+<tr class="separator:a24f6d267a249db7c3616084430bc1a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08f9f06863ffbc46dd3854f82a348d7b"><td class="memItemLeft" align="right" valign="top"><a id="a08f9f06863ffbc46dd3854f82a348d7b"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notSelectedNodes</b> (std::vector&lt; int &gt; checkSelected, int nodeNumber)</td></tr>
 <tr class="separator:a08f9f06863ffbc46dd3854f82a348d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,9 +123,12 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <tr class="memitem:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">getMedianDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">More...</a><br /></td></tr>
 <tr class="separator:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">getWorstMediaDispersion</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">More...</a><br /></td></tr>
-<tr class="separator:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">getWorstMediaDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">More...</a><br /></td></tr>
+<tr class="separator:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">getWorstMediaDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">More...</a><br /></td></tr>
+<tr class="separator:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top"><a id="a1e9eff334377933946a3fb2e6ae638be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (std::vector&lt; int &gt; solution, int runTime, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="separator:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,8 +141,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <li>Búsqueda </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6fd62d03d3e3fc1e0d8947aa619df6d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fd62d03d3e3fc1e0d8947aa619df6d2">&#9670;&nbsp;</a></span>GraspAlgorithm()</h2>
+<a id="a6768e8301b1d8179bf80d92ffbd3e571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6768e8301b1d8179bf80d92ffbd3e571">&#9670;&nbsp;</a></span>GraspAlgorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,6 +150,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
         <tr>
           <td class="memname">GraspAlgorithm::GraspAlgorithm </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentLocalSearch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>newName</em>, </td>
         </tr>
@@ -170,7 +179,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
       </table>
 </div><div class="memdoc">
 
-<p>Crea el objeto y le asigna un nombre del algoritmo. </p>
+<p>Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newName</td><td>Nuevo nombre del algoritmo </td></tr>
@@ -216,6 +225,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Vector con la solución construida </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a9e43f37e0115356e9864dc4232852abb_cgraph.png" border="0" usemap="#class_grasp_algorithm_a9e43f37e0115356e9864dc4232852abb_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a9e43f37e0115356e9864dc4232852abb_icgraph.png" border="0" usemap="#class_grasp_algorithm_a9e43f37e0115356e9864dc4232852abb_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -236,6 +255,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el nombre del algoritmo. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string nombre del algoritmo </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_ad0a9389a159bce26036ae5bf21bf326d_icgraph.png" border="0" usemap="#class_grasp_algorithm_ad0a9389a159bce26036ae5bf21bf326d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a217a7a4e965086b529d88d4aeb1f94f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217a7a4e965086b529d88d4aeb1f94f5">&#9670;&nbsp;</a></span>getChoosenLocalSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GraspAlgorithm::getChoosenLocalSearch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la búsqueda local que se ha seleccionado. </p>
+<dl class="section return"><dt>Returns</dt><dd>int Valor de la búsqueda local seleccionda, en caso de que sea 0 es ansiosa y 1 es greedy. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a217a7a4e965086b529d88d4aeb1f94f5_icgraph.png" border="0" usemap="#class_grasp_algorithm_a217a7a4e965086b529d88d4aeb1f94f5_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -256,6 +305,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el límite de iteraciones. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Valor del límite de iteraciones </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a78160b170e957d926a18679f2d293d43_icgraph.png" border="0" usemap="#class_grasp_algorithm_a78160b170e957d926a18679f2d293d43_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -276,17 +330,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Obtiene el número de iteracions sin mejora. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Devuelve el valor de las iteraciones sin mejora </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a12d3f59aca629a5272ecd373fb00cd4b_icgraph.png" border="0" usemap="#class_grasp_algorithm_a12d3f59aca629a5272ecd373fb00cd4b_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="a45e87f91f9733b78e3f35648a163009b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45e87f91f9733b78e3f35648a163009b">&#9670;&nbsp;</a></span>greedyLocalSearch()</h2>
+<a id="a24f6d267a249db7c3616084430bc1a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f6d267a249db7c3616084430bc1a0b">&#9670;&nbsp;</a></span>localSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; GraspAlgorithm::greedyLocalSearch </td>
+          <td class="memname">std::vector&lt; int &gt; GraspAlgorithm::localSearch </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>solution</em>, </td>
@@ -305,7 +364,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
       </table>
 </div><div class="memdoc">
 
-<p>Representa la búsqueda local greedy. </p>
+<p>Representa la búsqueda local. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">solution</td><td>Representa el vector sobre el que vamos a generar la búsqueda local </td></tr>
@@ -314,6 +373,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Valor del vector </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a24f6d267a249db7c3616084430bc1a0b_cgraph.png" border="0" usemap="#class_grasp_algorithm_a24f6d267a249db7c3616084430bc1a0b_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a24f6d267a249db7c3616084430bc1a0b_icgraph.png" border="0" usemap="#class_grasp_algorithm_a24f6d267a249db7c3616084430bc1a0b_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -357,6 +426,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Nuevo RCL que se ha creado </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a4121623ca3c64ebff0728af1db2222ba_cgraph.png" border="0" usemap="#class_grasp_algorithm_a4121623ca3c64ebff0728af1db2222ba_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a4121623ca3c64ebff0728af1db2222ba_icgraph.png" border="0" usemap="#class_grasp_algorithm_a4121623ca3c64ebff0728af1db2222ba_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -384,6 +463,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Representa un vector con el resultado del preprocesamiento </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a975351fb7367e8f382c7973e92c47e64_cgraph.png" border="0" usemap="#class_grasp_algorithm_a975351fb7367e8f382c7973e92c47e64_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a975351fb7367e8f382c7973e92c47e64_icgraph.png" border="0" usemap="#class_grasp_algorithm_a975351fb7367e8f382c7973e92c47e64_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -411,7 +500,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 </table>
 </div><div class="memdoc">
 
-<p>Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones con y sin mejora, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local (greedy) y se asigna al máximo la solución que tenga mayor dispersión media. </p>
+<p>Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones con y sin mejora, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local y se asigna al máximo la solución que tenga mayor dispersión media. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentGraph</td><td>Representa el grafo actual </td></tr>
@@ -421,12 +510,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_solution.html" title="Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...">Solution</a> Solucion del problema </dd></dl>
 
 <p>Implements <a class="el" href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">Algorithm</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_grasp_algorithm_a1f8240237fd9bece51eeb6b7f8ffd3c9_cgraph.png" border="0" usemap="#class_grasp_algorithm_a1f8240237fd9bece51eeb6b7f8ffd3c9_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/carlo/Desktop/DAA/DAA_P8/include/<a class="el" href="grasp-algorithm_8hpp_source.html">grasp-algorithm.hpp</a></li>
-<li>grasp-algorithm.cpp</li>
+<li>include/<a class="el" href="grasp-algorithm_8hpp_source.html">grasp-algorithm.hpp</a></li>
+<li>src/grasp-algorithm.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

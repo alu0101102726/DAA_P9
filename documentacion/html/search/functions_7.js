@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['secondgreedyalgorithm_80',['SecondGreedyAlgorithm',['../class_second_greedy_algorithm.html#a37f9a18ac997d4e9b5e6ba9102be27ed',1,'SecondGreedyAlgorithm']]],
-  ['setruntime_81',['setRunTime',['../class_solution.html#a2a7fe426df2bb50f69f55084b4e99f85',1,'Solution']]],
-  ['shake_82',['shake',['../class_variable_neighborhood_search.html#a05f4646dcde00cb2efd2f41c34b40465',1,'VariableNeighborhoodSearch']]],
-  ['solution_83',['Solution',['../class_solution.html#a16d3be698431454dc8fefbdb2371f9eb',1,'Solution']]],
-  ['solve_84',['solve',['../class_exec.html#a62f6b5b2a742456e0ae07786823729c8',1,'Exec']]]
+  ['run_85',['run',['../class_algorithm.html#af16e663628d3e98d251acc53798bd299',1,'Algorithm::run()'],['../class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9',1,'GraspAlgorithm::run()'],['../class_greedy_algorithm.html#a8ef295f33ddb4136ebe0cf39e642f61f',1,'GreedyAlgorithm::run()'],['../class_multiboot_algorithm.html#aa80ce488f75d97a6a208be3f6c94d08a',1,'MultibootAlgorithm::run()'],['../class_second_greedy_algorithm.html#a762a19742a6cf9d39fe5e4080103b5ce',1,'SecondGreedyAlgorithm::run()'],['../class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529',1,'VariableNeighborhoodSearch::run()']]]
 ];

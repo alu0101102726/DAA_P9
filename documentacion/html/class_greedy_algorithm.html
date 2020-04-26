@@ -102,9 +102,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">getMedianDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">More...</a><br /></td></tr>
 <tr class="separator:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">getWorstMediaDispersion</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">More...</a><br /></td></tr>
-<tr class="separator:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">getWorstMediaDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">More...</a><br /></td></tr>
+<tr class="separator:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">getWorstMediaDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">More...</a><br /></td></tr>
+<tr class="separator:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top"><a id="a1e9eff334377933946a3fb2e6ae638be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (std::vector&lt; int &gt; solution, int runTime, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="separator:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +159,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el nombre del algoritmo. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string nombre del algoritmo </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_greedy_algorithm_ac43029ca1aed2bc762c74a7b375dc525_icgraph.png" border="0" usemap="#class_greedy_algorithm_ac43029ca1aed2bc762c74a7b375dc525_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -177,6 +185,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Este método se encarga de encontrar la arista que tiene una mayor afinidad. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt; int &gt; Representa los nodos cuya arista es la mayor </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_greedy_algorithm_a9995277d03648a0294832d250fa7510f_cgraph.png" border="0" usemap="#class_greedy_algorithm_a9995277d03648a0294832d250fa7510f_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_greedy_algorithm_a9995277d03648a0294832d250fa7510f_icgraph.png" border="0" usemap="#class_greedy_algorithm_a9995277d03648a0294832d250fa7510f_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -205,6 +223,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 </div><div class="memdoc">
 
 <p>Se va a encargar de ejecutar el algoritmo greedy, para ello se van a hacer iteraciones hasta que las soluciones sean iguales, determinando en otro bucle (que recorre el número de nodos del grafo), hallando la dispersion media en cada momento y comrpobando si es la máxima. En caso de que lo sea se vuelve a asignar al máximo. </p>
+<p>En el caso de la solución se pasa un 2 para indicar que en las búsquedas greedy no hay distinción de búsqueda local greedy o ansiosa.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentGraph</td><td>Representa el grafo con las distancias entre nodos </td></tr>
@@ -214,12 +233,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_solution.html" title="Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...">Solution</a> Representa el objeto solución que contiene la solución del problema </dd></dl>
 
 <p>Implements <a class="el" href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">Algorithm</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_greedy_algorithm_a8ef295f33ddb4136ebe0cf39e642f61f_cgraph.png" border="0" usemap="#class_greedy_algorithm_a8ef295f33ddb4136ebe0cf39e642f61f_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/carlo/Desktop/DAA/DAA_P8/include/<a class="el" href="greedy-algorithm_8hpp_source.html">greedy-algorithm.hpp</a></li>
-<li>greedy-algorithm.cpp</li>
+<li>include/<a class="el" href="greedy-algorithm_8hpp_source.html">greedy-algorithm.hpp</a></li>
+<li>src/greedy-algorithm.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

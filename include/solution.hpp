@@ -17,9 +17,10 @@ class Solution {
     float mediaValue;
     int runTime;
     std::string algorithmName;
+    int currentLocalSearch;
 
   public:
-    Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName);
+    Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName, int localSearch);
     ~Solution() {}
 
     float getMedia ();
@@ -28,6 +29,8 @@ class Solution {
     void setRunTime(int newRunTime);
     std::string getAlgorithmName();
     int getSolutionValue(int position);
+    int getLocalSearch();
+
     friend std::ostream& operator <<(std::ostream& os, Solution currentSolution);
 
 };

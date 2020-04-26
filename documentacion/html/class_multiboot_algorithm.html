@@ -86,9 +86,9 @@ Collaboration diagram for MultibootAlgorithm:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30a2b172c8b5b61c6bc2e68e466c1e2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a30a2b172c8b5b61c6bc2e68e466c1e2f">MultibootAlgorithm</a> (std::string newName, int newIterationsLimit, int noImprovementiterationsLimit)</td></tr>
-<tr class="memdesc:a30a2b172c8b5b61c6bc2e68e466c1e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo.  <a href="class_multiboot_algorithm.html#a30a2b172c8b5b61c6bc2e68e466c1e2f">More...</a><br /></td></tr>
-<tr class="separator:a30a2b172c8b5b61c6bc2e68e466c1e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8812a5210c5cecac1c1f545bdd99df78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a8812a5210c5cecac1c1f545bdd99df78">MultibootAlgorithm</a> (int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit)</td></tr>
+<tr class="memdesc:a8812a5210c5cecac1c1f545bdd99df78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora.  <a href="class_multiboot_algorithm.html#a8812a5210c5cecac1c1f545bdd99df78">More...</a><br /></td></tr>
+<tr class="separator:a8812a5210c5cecac1c1f545bdd99df78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66869b040b9e6994cc914187b4fb832b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a66869b040b9e6994cc914187b4fb832b">getAlgorithmName</a> ()</td></tr>
 <tr class="memdesc:a66869b040b9e6994cc914187b4fb832b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre del algoritmo.  <a href="class_multiboot_algorithm.html#a66869b040b9e6994cc914187b4fb832b">More...</a><br /></td></tr>
 <tr class="separator:a66869b040b9e6994cc914187b4fb832b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5dadef0ec3df41b0cf791cb181240a83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a5dadef0ec3df41b0cf791cb181240a83">getnoImprovementiterationsLimit</a> ()</td></tr>
 <tr class="memdesc:a5dadef0ec3df41b0cf791cb181240a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el número de iteracions sin mejora.  <a href="class_multiboot_algorithm.html#a5dadef0ec3df41b0cf791cb181240a83">More...</a><br /></td></tr>
 <tr class="separator:a5dadef0ec3df41b0cf791cb181240a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a958037ce7775775f47f9ffb01a9dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a02a958037ce7775775f47f9ffb01a9dc">getChoosenLocalSearch</a> ()</td></tr>
+<tr class="memdesc:a02a958037ce7775775f47f9ffb01a9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la búsqueda local que se ha seleccionado.  <a href="class_multiboot_algorithm.html#a02a958037ce7775775f47f9ffb01a9dc">More...</a><br /></td></tr>
+<tr class="separator:a02a958037ce7775775f47f9ffb01a9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa80ce488f75d97a6a208be3f6c94d08a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_solution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#aa80ce488f75d97a6a208be3f6c94d08a">run</a> (<a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:aa80ce488f75d97a6a208be3f6c94d08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de ejecutar el algoritmo multiarranque, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones con y sin mejora, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local (greedy) y se asigna al máximo la solución que tenga mayor dispersión media.  <a href="class_multiboot_algorithm.html#aa80ce488f75d97a6a208be3f6c94d08a">More...</a><br /></td></tr>
 <tr class="separator:aa80ce488f75d97a6a208be3f6c94d08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,12 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a49462e8dc4630e383aa8e1db106c087e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a49462e8dc4630e383aa8e1db106c087e">constructSolution</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a49462e8dc4630e383aa8e1db106c087e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, luego se asigna a un elemento una posición aleatoria del vector de candidatos, y en caso que ese elemento en el array no esté en la solución, pues se añade en la misma.  <a href="class_multiboot_algorithm.html#a49462e8dc4630e383aa8e1db106c087e">More...</a><br /></td></tr>
 <tr class="separator:a49462e8dc4630e383aa8e1db106c087e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a546a7315f30848600974e3c82c26cf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a4a546a7315f30848600974e3c82c26cf">greedyLocalSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a4a546a7315f30848600974e3c82c26cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local greedy.  <a href="class_multiboot_algorithm.html#a4a546a7315f30848600974e3c82c26cf">More...</a><br /></td></tr>
-<tr class="separator:a4a546a7315f30848600974e3c82c26cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a89608917d636f0750c400ab6720c92"><td class="memItemLeft" align="right" valign="top"><a id="a6a89608917d636f0750c400ab6720c92"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>anxiousLocalSearch</b> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="separator:a6a89608917d636f0750c400ab6720c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d286b059b5752f0da963e0ece89204e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiboot_algorithm.html#a2d286b059b5752f0da963e0ece89204e">localSearch</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a2d286b059b5752f0da963e0ece89204e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa la búsqueda local greedy.  <a href="class_multiboot_algorithm.html#a2d286b059b5752f0da963e0ece89204e">More...</a><br /></td></tr>
+<tr class="separator:a2d286b059b5752f0da963e0ece89204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a596f70362450576463ecb31aebdf9fd5"><td class="memItemLeft" align="right" valign="top"><a id="a596f70362450576463ecb31aebdf9fd5"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notSelectedNodes</b> (std::vector&lt; int &gt; checkSelected, int nodeNumber)</td></tr>
 <tr class="separator:a596f70362450576463ecb31aebdf9fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +120,12 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <tr class="memitem:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">getMedianDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="memdesc:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">More...</a><br /></td></tr>
 <tr class="separator:a675939191b1136107cd43634d6c9df18 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">getWorstMediaDispersion</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#ab695aa19342c5cc63685e98de5a828ac">More...</a><br /></td></tr>
-<tr class="separator:ab695aa19342c5cc63685e98de5a828ac inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">getWorstMediaDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">More...</a><br /></td></tr>
+<tr class="separator:a94433d3be0e1f212f4fb5ea6a360d528 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">getWorstMediaDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">More...</a><br /></td></tr>
+<tr class="separator:a9ba2b3302571277bac3eeb1070cf3cb2 inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memItemLeft" align="right" valign="top"><a id="a1e9eff334377933946a3fb2e6ae638be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (std::vector&lt; int &gt; solution, int runTime, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="separator:a1e9eff334377933946a3fb2e6ae638be inherit pub_methods_class_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,8 +133,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Esta clase representa el algoritmo multiarranque. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a30a2b172c8b5b61c6bc2e68e466c1e2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30a2b172c8b5b61c6bc2e68e466c1e2f">&#9670;&nbsp;</a></span>MultibootAlgorithm()</h2>
+<a id="a8812a5210c5cecac1c1f545bdd99df78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8812a5210c5cecac1c1f545bdd99df78">&#9670;&nbsp;</a></span>MultibootAlgorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,6 +142,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
         <tr>
           <td class="memname">MultibootAlgorithm::MultibootAlgorithm </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentLocalSearch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>newName</em>, </td>
         </tr>
@@ -162,7 +171,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
       </table>
 </div><div class="memdoc">
 
-<p>Crea el objeto y le asigna un nombre del algoritmo. </p>
+<p>Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newName</td><td>Nuevo nombre del algoritmo </td></tr>
@@ -208,6 +217,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Vector con la solución construida </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a49462e8dc4630e383aa8e1db106c087e_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a49462e8dc4630e383aa8e1db106c087e_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -228,6 +242,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el nombre del algoritmo. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string nombre del algoritmo </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a66869b040b9e6994cc914187b4fb832b_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a66869b040b9e6994cc914187b4fb832b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a02a958037ce7775775f47f9ffb01a9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a958037ce7775775f47f9ffb01a9dc">&#9670;&nbsp;</a></span>getChoosenLocalSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MultibootAlgorithm::getChoosenLocalSearch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la búsqueda local que se ha seleccionado. </p>
+<dl class="section return"><dt>Returns</dt><dd>int Valor de la búsqueda local seleccionda, en caso de que sea 0 es ansiosa y 1 es greedy. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a02a958037ce7775775f47f9ffb01a9dc_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a02a958037ce7775775f47f9ffb01a9dc_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -248,6 +292,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Devuelve el límite de iteraciones. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Valor del límite de iteraciones </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a684e8d63d274d71c9e76a39b80db2b70_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a684e8d63d274d71c9e76a39b80db2b70_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -268,17 +317,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 
 <p>Obtiene el número de iteracions sin mejora. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Devuelve el valor de las iteraciones sin mejora </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a5dadef0ec3df41b0cf791cb181240a83_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a5dadef0ec3df41b0cf791cb181240a83_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<a id="a4a546a7315f30848600974e3c82c26cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a546a7315f30848600974e3c82c26cf">&#9670;&nbsp;</a></span>greedyLocalSearch()</h2>
+<a id="a2d286b059b5752f0da963e0ece89204e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d286b059b5752f0da963e0ece89204e">&#9670;&nbsp;</a></span>localSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; MultibootAlgorithm::greedyLocalSearch </td>
+          <td class="memname">std::vector&lt; int &gt; MultibootAlgorithm::localSearch </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>solution</em>, </td>
@@ -306,6 +360,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Valor del vector </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a2d286b059b5752f0da963e0ece89204e_cgraph.png" border="0" usemap="#class_multiboot_algorithm_a2d286b059b5752f0da963e0ece89204e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a2d286b059b5752f0da963e0ece89204e_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a2d286b059b5752f0da963e0ece89204e_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -333,6 +397,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector &lt;int&gt; Representa un vector con el resultado del preprocesamiento </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a3bcea30f3f236079b0f40e88e624e19a_cgraph.png" border="0" usemap="#class_multiboot_algorithm_a3bcea30f3f236079b0f40e88e624e19a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_a3bcea30f3f236079b0f40e88e624e19a_icgraph.png" border="0" usemap="#class_multiboot_algorithm_a3bcea30f3f236079b0f40e88e624e19a_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -370,12 +444,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_solution.html" title="Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...">Solution</a> Solucion del problema </dd></dl>
 
 <p>Implements <a class="el" href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">Algorithm</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiboot_algorithm_aa80ce488f75d97a6a208be3f6c94d08a_cgraph.png" border="0" usemap="#class_multiboot_algorithm_aa80ce488f75d97a6a208be3f6c94d08a_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/carlo/Desktop/DAA/DAA_P8/include/<a class="el" href="multiboot-algorithm_8hpp_source.html">multiboot-algorithm.hpp</a></li>
-<li>multiboot-algorithm.cpp</li>
+<li>include/<a class="el" href="multiboot-algorithm_8hpp_source.html">multiboot-algorithm.hpp</a></li>
+<li>src/multiboot-algorithm.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

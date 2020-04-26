@@ -3,14 +3,17 @@
 #include <cmath>
 
 /**
- * @brief Crea el objeto y le asigna un nombre del algoritmo
+ * @brief Crea el objeto y le asigna un nombre del algoritmo, además
+ * de la búsqueda local seleccionada, el número de iteraciones con y
+ * sin mejora.
  * 
  * @param newName Nuevo nombre del algoritmo
  */
-GraspAlgorithm::GraspAlgorithm(std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit) {
+GraspAlgorithm::GraspAlgorithm(int currentLocalSearch, std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit) {
   name = newName;
   iterationsLimit = newIterationsLimit;
   noImprovementiterationsLimit = newnoImprovementIterationLimit;
+  choosenLocalSearch = currentLocalSearch;
 }
 
 /**
@@ -18,7 +21,7 @@ GraspAlgorithm::GraspAlgorithm(std::string newName, int newIterationsLimit, int 
  * para ello se hace un preprocesamiento, teniendo un conjunto de candidatos.
  * Una vez esto, se definen como condiciones de parada las iteraciones con y
  * sin mejora, y luego en cada iteración se va construyendo la solución, se hace
- * la búsqueda local (greedy) y se asigna al máximo la solución que tenga mayor
+ * la búsqueda local y se asigna al máximo la solución que tenga mayor
  * dispersión media.
  * 
  * @param currentGraph Representa el grafo actual
@@ -33,8 +36,8 @@ Solution GraspAlgorithm::run(Graph currentGraph) {
   while( iterations < getIterationsLimit() && noImprovement < getnoImprovementiterationsLimit()) {
     iterations++;
     std::vector<int> solution = constructSolution(candidates, currentGraph);
-    solution = anxiousLocalSearch(solution, currentGraph);
-    float newMax = getMedianDispersion(solution, currentGraph);
+    solution = localSearch(solution, currentGraph);
+    float newMax = getMeanDispersion(solution, currentGraph);
     if (newMax > max) {
       max = newMax;
       bestSolution = solution;
@@ -44,8 +47,8 @@ Solution GraspAlgorithm::run(Graph currentGraph) {
       noImprovement++;
     }
   }
-
-  Solution newSolution(bestSolution, getMedianDispersion(bestSolution, currentGraph), getAlgorithmName());
+  
+  Solution newSolution(bestSolution, getMeanDispersion(bestSolution, currentGraph), getAlgorithmName(), getChoosenLocalSearch());
   return newSolution;
 }
 
@@ -114,7 +117,7 @@ std::vector <int> GraspAlgorithm::makeRCL(std::vector<int> currentSolution, std:
   for (int i = 0; i < candidates.size(); i++) {
     if (std::find(currentSolution.begin(), currentSolution.end(), candidates[i]) == currentSolution.end()) {
       currentSolution.push_back(candidates[i]);
-      temp = getMedianDispersion(currentSolution, currentGraph);
+      temp = getMeanDispersion(currentSolution, currentGraph);
       currentSolution.pop_back();
       int pos = 0;
       for (int j = 0; j < media.size(); j++) {
@@ -136,18 +139,18 @@ std::vector <int> GraspAlgorithm::makeRCL(std::vector<int> currentSolution, std:
 }
 
 /**
- * @brief Representa la búsqueda local greedy
+ * @brief Representa la búsqueda local
  * 
  * @param solution Representa el vector sobre el que vamos a generar la
  * búsqueda local
  * @param currentGraph Grafo con la información de las distacias entre nodos
  * @return std::vector <int> Valor del vector
  */
-std::vector <int> GraspAlgorithm::greedyLocalSearch(std::vector <int> solution, Graph currentGraph) {
+std::vector <int> GraspAlgorithm::localSearch(std::vector <int> solution, Graph currentGraph) {
   bool localOptimum = true;
   while(localOptimum) {
     localOptimum = false;
-    int worstNode = getWorstMediaDispersion(solution, currentGraph);
+    int worstNode = (getChoosenLocalSearch() == 0) ? getWorstMeanDispersionAnxious(solution, currentGraph) : getWorstMeanDispersionGreedy(solution, currentGraph);
     if (worstNode != -1 ) {
       localOptimum = true;
       solution.erase(solution.begin() + worstNode);
@@ -155,28 +158,6 @@ std::vector <int> GraspAlgorithm::greedyLocalSearch(std::vector <int> solution, 
   }
 
   return solution;
-}
-
-/**
- * @brief Representa la búsqueda local ansiosa
- * 
- * @param solution Representa el vector sobre el que vamos a generar la
- * búsqueda local
- * @param currentGraph Grafo con la información de las distacias entre nodos
- * @return std::vector <int> Valor del vector
- */
-std::vector <int> GraspAlgorithm::anxiousLocalSearch(std::vector <int> solution, Graph currentGraph) {
-  bool localOptimum = true;
-  while(localOptimum) {
-    localOptimum = false;
-    int worstNode = getWorstMediaDispersion(solution, currentGraph);
-    if (worstNode != -1 ) {
-      localOptimum = true;
-      solution.erase(solution.begin() + worstNode);
-    }
-    return solution;
-  }
-
 }
 
 /**
@@ -204,4 +185,14 @@ int GraspAlgorithm::getIterationsLimit() {
  */
 int GraspAlgorithm::getnoImprovementiterationsLimit() {
   return noImprovementiterationsLimit;
+}
+
+/**
+ * @brief Devuelve la búsqueda local que se ha seleccionado
+ * 
+ * @return int Valor de la búsqueda local seleccionda, en caso
+ * de que sea 0 es ansiosa y 1 es greedy.
+ */
+int GraspAlgorithm::getChoosenLocalSearch() {
+  return choosenLocalSearch;
 }

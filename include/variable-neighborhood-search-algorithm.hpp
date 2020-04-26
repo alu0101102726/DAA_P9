@@ -15,18 +15,20 @@ class VariableNeighborhoodSearch : public Algorithm {
     int iterationsLimit;
     int noImprovementiterationsLimit;
     int kmax;
+    int choosenLocalSearch;
     
   public:
-    VariableNeighborhoodSearch(std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax);
+    VariableNeighborhoodSearch(int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax);
     ~VariableNeighborhoodSearch() {}
 
     std::string getAlgorithmName();
     int getIterationsLimit();
     int getnoImprovementiterationsLimit();
     int getKmax();
+    int getChoosenLocalSearch();
     
     Solution run(Graph currentGraph);
     std::vector <int> shake(std::vector <int> solution, int currentK, int newSolution);
     std::vector <int> constructSolution(std::vector <int> candidates, int size);
-    std::vector <int> greedyLocalSearch(std::vector <int> solution, Graph currentGraph);
+    std::vector <int> localSearch(std::vector <int> solution, Graph currentGraph);
 };

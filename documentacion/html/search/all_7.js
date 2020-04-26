@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['preprocessing_31',['preprocessing',['../class_grasp_algorithm.html#a975351fb7367e8f382c7973e92c47e64',1,'GraspAlgorithm::preprocessing()'],['../class_multiboot_algorithm.html#a3bcea30f3f236079b0f40e88e624e19a',1,'MultibootAlgorithm::preprocessing()']]]
+  ['operator_3c_3c_33',['operator&lt;&lt;',['../class_graph.html#aab773d199f1ebc88c20f2eb518411a8a',1,'Graph::operator&lt;&lt;()'],['../class_solution.html#ad400127785a150945093e58505afc375',1,'Solution::operator&lt;&lt;()']]]
 ];

@@ -53,6 +53,7 @@ void Exec::solve() {
   start = getRunTime();
   Solution solution = algorithm->run(getGraph());
   end = getRunTime();
-  solution.setRunTime(std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count());
+  solution.setRunTime(std::chrono::duration_cast<std::chrono::microseconds>(end-start).count());
   std::cout << solution;
+  
 }

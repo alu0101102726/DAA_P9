@@ -15,12 +15,16 @@ SecondGreedyAlgorithm::SecondGreedyAlgorithm(std::string newName) {
 /**
  * @brief Representa la variante del algoritmo voraz que consiste
  * en partir de un vector que está lleno de todos los elementos y
- * en vez de ir añadiendo, en este caso se van eliminando
+ * en vez de ir añadiendo, en este caso se van eliminando.
+ * 
+ * En el caso de la solución se pasa un 2 para indicar que en las búsquedas
+ * greedy no hay distinción de búsqueda local greedy o ansiosa.
  * 
  * @param currentGraph Representa el grafo actual
  * @return std::vector <int> Representa la solución
  */
-Solution SecondGreedyAlgorithm::run(Graph currentGraph) {
+Solution SecondGreedyAlgorithm::run(Graph currentGraph) {  
+  const int HASNOTLOCALSEARCH = 2;
   std::vector < int > solution;
   for (int currentNode = 0; currentNode < currentGraph.gentNodeNumber(); currentNode++) {
     solution.push_back(currentNode);
@@ -36,7 +40,7 @@ Solution SecondGreedyAlgorithm::run(Graph currentGraph) {
       if(std::find(solution.begin(), solution.end(), currentRow) != solution.end()) {
         auxPossibleEdge = solution;
         auxPossibleEdge.erase(std::find(auxPossibleEdge.begin(), auxPossibleEdge.end(), currentRow));
-        float auxK = getMedianDispersion(auxPossibleEdge, currentGraph);
+        float auxK = getMeanDispersion(auxPossibleEdge, currentGraph);
         if (auxK > max) {
           max = auxK;
           Kmax = currentRow;
@@ -44,12 +48,12 @@ Solution SecondGreedyAlgorithm::run(Graph currentGraph) {
       } 
     }
 
-    if(max >= getMedianDispersion(solution, currentGraph)) {
+    if(max >= getMeanDispersion(solution, currentGraph)) {
       solution.erase(std::find(solution.begin(), solution.end(), Kmax));
     }
   }
 
-  Solution newSolution(auxSolution, getMedianDispersion(auxSolution, currentGraph), getAlgorithmName());
+  Solution newSolution(auxSolution, getMeanDispersion(auxSolution, currentGraph), getAlgorithmName(), HASNOTLOCALSEARCH);
   
   return newSolution;
 }

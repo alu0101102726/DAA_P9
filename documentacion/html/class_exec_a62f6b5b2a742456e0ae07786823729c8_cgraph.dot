@@ -1,0 +1,16 @@
+digraph "Exec::solve"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Exec::solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo,..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Exec::getGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_exec.html#a012cb6046ebaf0aa3ce1e635e70b23e3",tooltip="Devuelve un grafo."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Exec::getRunTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_exec.html#adbbf0db08479905330f6c980b680e1fd",tooltip="Devuelve el tiempo de ejecución actual."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Algorithm::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_algorithm.html#af16e663628d3e98d251acc53798bd299",tooltip="Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas,..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Solution::setRunTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_solution.html#a2a7fe426df2bb50f69f55084b4e99f85",tooltip="Modifica el valor de tiempo de ejecución."];
+}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c_30',['operator&lt;&lt;',['../class_graph.html#aab773d199f1ebc88c20f2eb518411a8a',1,'Graph::operator&lt;&lt;()'],['../class_solution.html#ad400127785a150945093e58505afc375',1,'Solution::operator&lt;&lt;()']]]
+  ['makercl_31',['makeRCL',['../class_grasp_algorithm.html#a4121623ca3c64ebff0728af1db2222ba',1,'GraspAlgorithm']]],
+  ['multibootalgorithm_32',['MultibootAlgorithm',['../class_multiboot_algorithm.html',1,'MultibootAlgorithm'],['../class_multiboot_algorithm.html#a8812a5210c5cecac1c1f545bdd99df78',1,'MultibootAlgorithm::MultibootAlgorithm()']]]
 ];

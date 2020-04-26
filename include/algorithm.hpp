@@ -19,7 +19,9 @@ class Algorithm {
     * @return int Que contiene la mejor solucion
     */
     virtual Solution run(Graph currentGraph) = 0;
-    float getMedianDispersion(std::vector<int> solution, Graph currentGraph);
-    int getWorstMediaDispersion(std::vector<int> actualSolution, Graph currentGraph);
+    float getMeanDispersion(std::vector<int> solution, Graph currentGraph);
+    int getWorstMeanDispersionGreedy(std::vector<int> actualSolution, Graph currentGraph);
+    int getWorstMeanDispersionAnxious(std::vector<int> actualSolution, Graph currentGraph);
+    float getNewMeanDispersionErase(std::vector<int> solution, float currentEdgeSum, int currentNode, Graph currentGraph);
     void printSolution(std::vector<int> solution, int runTime, Graph currentGraph);
 };

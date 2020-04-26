@@ -1,0 +1,121 @@
+.TH "Graph" 3 "Sun Apr 26 2020" "Max-mean dispersion problem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Graph \- Representa un grafo de al que se le van a aplicar los diferentes algoritmos\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <graph\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGraph\fP (std::string fileName)"
+.br
+.RI "Construye un objeto grafo y almacena la información de los nodos y sus distancias en su atributo informacion\&. "
+.ti -1c
+.RI "float \fBgetNodeValue\fP (int positioni, int positionj)"
+.br
+.RI "Se encarga de devolver el valor de la distancia que hay entre el nodo position\&. "
+.ti -1c
+.RI "int \fBgetSize\fP ()"
+.br
+.RI "Se encarga de devolver el tamaño del vector\&. "
+.ti -1c
+.RI "int \fBgentNodeNumber\fP ()"
+.br
+.RI "Se encarga de devolver el número de nodos del grafo\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &os, \fBGraph\fP printGraph)"
+.br
+.RI "Sobrecarga del operador de salida para poder mostrar el grafo\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Representa un grafo de al que se le van a aplicar los diferentes algoritmos\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Graph::Graph (std::string fileName)"
+
+.PP
+Construye un objeto grafo y almacena la información de los nodos y sus distancias en su atributo informacion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInombreFichero\fP Representa el nombre del fichero que se va a abrir para poder extraer los datos\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int Graph::gentNodeNumber ()"
+
+.PP
+Se encarga de devolver el número de nodos del grafo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Representa el número de nodos del grafo 
+.RE
+.PP
+
+.SS "float Graph::getNodeValue (int positioni, int positionj)"
+
+.PP
+Se encarga de devolver el valor de la distancia que hay entre el nodo position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP Representa la posición en el vector del nodo\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float Devuelve el valor de la distancia 
+.RE
+.PP
+
+.SS "int Graph::getSize ()"
+
+.PP
+Se encarga de devolver el tamaño del vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Valor del tamaño del vector 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & os, \fBGraph\fP printGraph)\fC [friend]\fP"
+
+.PP
+Sobrecarga del operador de salida para poder mostrar el grafo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP Representa el std::cout para la impresión 
+.br
+\fIgrafoImprimir\fP El grafo que se va a imprimir 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::ostream& Valor de lo que ha impreso 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Max-mean dispersion problem from the source code\&.

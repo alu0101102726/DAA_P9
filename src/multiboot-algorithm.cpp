@@ -1,13 +1,16 @@
 #include "multiboot-algorithm.hpp"
 /**
- * @brief Crea el objeto y le asigna un nombre del algoritmo
+ * @brief Crea el objeto y le asigna un nombre del algoritmo, además
+ * de la búsqueda local seleccionada, el número de iteraciones con y
+ * sin mejora.
  * 
  * @param newName Nuevo nombre del algoritmo
  */
-MultibootAlgorithm::MultibootAlgorithm(std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit) {
+MultibootAlgorithm::MultibootAlgorithm(int currentLocalSearch, std::string newName, int newIterationsLimit, int newnoImprovementIterationLimit) {
   name = newName;
   iterationsLimit = newIterationsLimit;
   noImprovementiterationsLimit = newnoImprovementIterationLimit;
+  choosenLocalSearch = currentLocalSearch;
 }
 
 /**
@@ -30,8 +33,8 @@ Solution MultibootAlgorithm::run(Graph currentGraph) {
   while( iterations < getIterationsLimit() && noImprovement < getnoImprovementiterationsLimit()) {
     iterations++;
     std::vector<int> solution = constructSolution(candidates, currentGraph);
-    solution = greedyLocalSearch(solution, currentGraph);
-    float newMax = getMedianDispersion(solution, currentGraph);
+    solution = localSearch(solution, currentGraph);
+    float newMax = getMeanDispersion(solution, currentGraph);
     if (newMax > max) {
       max = newMax;
       bestSolution = solution;
@@ -42,7 +45,7 @@ Solution MultibootAlgorithm::run(Graph currentGraph) {
     }
   }
 
-  Solution newSolution(bestSolution, getMedianDispersion(bestSolution, currentGraph), getAlgorithmName());
+  Solution newSolution(bestSolution, getMeanDispersion(bestSolution, currentGraph), getAlgorithmName(), getChoosenLocalSearch());
   return newSolution;
 }
 
@@ -104,11 +107,11 @@ std::vector <int> MultibootAlgorithm::constructSolution(std::vector <int> candid
  * @param currentGraph Grafo con la información de las distacias entre nodos
  * @return std::vector <int> Valor del vector
  */
-std::vector <int> MultibootAlgorithm::greedyLocalSearch(std::vector <int> solution, Graph currentGraph) {
+std::vector <int> MultibootAlgorithm::localSearch(std::vector <int> solution, Graph currentGraph) {
   bool localOptimum = true;
   while(localOptimum) {
     localOptimum = false;
-    int worstNode = getWorstMediaDispersion(solution, currentGraph);
+    int worstNode = (getChoosenLocalSearch() == 0) ? getWorstMeanDispersionAnxious(solution, currentGraph) : getWorstMeanDispersionGreedy(solution, currentGraph);
     if (worstNode != -1 ) {
       localOptimum = true;
       solution.erase(solution.begin() + worstNode);
@@ -143,4 +146,14 @@ int MultibootAlgorithm::getIterationsLimit() {
  */
 int MultibootAlgorithm::getnoImprovementiterationsLimit() {
   return noImprovementiterationsLimit;
+}
+
+/**
+ * @brief Devuelve la búsqueda local que se ha seleccionado
+ * 
+ * @return int Valor de la búsqueda local seleccionda, en caso
+ * de que sea 0 es ansiosa y 1 es greedy.
+ */
+int MultibootAlgorithm::getChoosenLocalSearch() {
+  return choosenLocalSearch;
 }

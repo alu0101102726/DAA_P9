@@ -1,0 +1,114 @@
+.TH "Algorithm" 3 "Sun Apr 26 2020" "Max-mean dispersion problem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Algorithm \- Representa una clase que va a permitir aplicar el patrón estrategia\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <algorithm\&.hpp>\fP
+.PP
+Inherited by \fBGraspAlgorithm\fP, \fBGreedyAlgorithm\fP, \fBMultibootAlgorithm\fP, \fBSecondGreedyAlgorithm\fP, and \fBVariableNeighborhoodSearch\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBSolution\fP \fBrun\fP (\fBGraph\fP currentGraph)=0"
+.br
+.RI "Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta\&. "
+.ti -1c
+.RI "float \fBgetMedianDispersion\fP (std::vector< int > solution, \fBGraph\fP currentGraph)"
+.br
+.RI "Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j) "
+.ti -1c
+.RI "int \fBgetWorstMediaDispersionGreedy\fP (std::vector< int > actualSolution, \fBGraph\fP currentGraph)"
+.br
+.RI "Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso\&. "
+.ti -1c
+.RI "int \fBgetWorstMediaDispersionAnxious\fP (std::vector< int > actualSolution, \fBGraph\fP currentGraph)"
+.br
+.RI "Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver\&. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1\&. "
+.ti -1c
+.RI "void \fBprintSolution\fP (std::vector< int > solution, int runTime, \fBGraph\fP currentGraph)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Representa una clase que va a permitir aplicar el patrón estrategia\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float Algorithm::getMedianDispersion (std::vector< int > currentNodeSet, \fBGraph\fP currentGraph)"
+
+.PP
+Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j) 
+.PP
+ |S|
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrentNodeSet\fP Representa el conjunto de nodos que contiene actualmente, sobre el que va a medir la dispersión media 
+.br
+\fIcurrentGraph\fP Representa el grafo con las distancias (aristas) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float Devuelve el valor de la dispersión media 
+.RE
+.PP
+
+.SS "int Algorithm::getWorstMediaDispersionAnxious (std::vector< int > actualSolution, \fBGraph\fP currentGraph)"
+
+.PP
+Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver\&. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactualSolution\fP Representa el vector sobre el que se va a evaluar 
+.br
+\fIcurrentGraph\fP Representa el grafo que contiene las distancias entre los nodos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Devuelve un elemento aleatorio dentro del vector, debido a que puede que hayan varias soluciones con el mismo valor y para evitar siempre devolver la primera\&. 
+.RE
+.PP
+
+.SS "int Algorithm::getWorstMediaDispersionGreedy (std::vector< int > actualSolution, \fBGraph\fP currentGraph)"
+
+.PP
+Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactualSolution\fP Representa el vector sobre el que se va a evaluar 
+.br
+\fIcurrentGraph\fP Representa el grafo que contiene las distancias entre los nodos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int Devuelve un elemento aleatorio dentro del vector, debido a que puede que hayan varias soluciones con el mismo valor y para evitar siempre devolver la primera\&. 
+.RE
+.PP
+
+.SS "virtual \fBSolution\fP Algorithm::run (\fBGraph\fP currentGraph)\fC [pure virtual]\fP"
+
+.PP
+Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int Que contiene la mejor solucion 
+.RE
+.PP
+
+.PP
+Implemented in \fBGraspAlgorithm\fP, \fBVariableNeighborhoodSearch\fP, \fBMultibootAlgorithm\fP, \fBSecondGreedyAlgorithm\fP, and \fBGreedyAlgorithm\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Max-mean dispersion problem from the source code\&.
