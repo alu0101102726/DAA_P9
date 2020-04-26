@@ -1,4 +1,4 @@
-#include "../include/greedy-algorithm.hpp"
+#include "greedy-algorithm.hpp"
 #include <vector>
 #include <cmath>
 #include <algorithm>

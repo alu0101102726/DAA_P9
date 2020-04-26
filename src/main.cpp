@@ -20,7 +20,7 @@
  * @return int Devuelvve un 0 si el programa se ha ejecutado correctamente.
  */
 int main(void) {
-  std::string fileName = "../ejemplos/max-mean-div-15.txt";
+  std::string fileName = "../ejemplos/max-mean-div-10.txt";
   Exec newExec(fileName);
   Algorithm *algoritmo = new GreedyAlgorithm("Greedy");
   newExec.changeAlgorithm(algoritmo);
@@ -42,7 +42,7 @@ int main(void) {
   newExec.solve();
   delete algoritmo;
   
-  algoritmo = new VariableNeighborhoodSearch("GVNS", 1000, 50, 10);
+  algoritmo = new VariableNeighborhoodSearch("GVNS", 1000, 50, 3);
   newExec.changeAlgorithm(algoritmo);
   newExec.solve();
   delete algoritmo;

@@ -15,7 +15,11 @@ VariableNeighborhoodSearch::VariableNeighborhoodSearch(std::string newName, int 
 /**
  * @brief Representa el método que va a realizar la ejecución del algorimo
  * GVNS, para ello se va a partir de un conjunto de candidatos, que va a ser
- * todo el conjunto de nodos. Una vez que tenemos esto, vamos a iterar hasta
+ * todo el conjunto de nodos. Luego, una vez que hayamos hecho esto construimos
+ * la solución inicial, usando el numero aleatorio que habíamos generado, hacemos una
+ * búsqueda local greedy en el vector y buscamos el valor de la dispersión media.
+ * 
+ * Una vez que tenemos esto, vamos a iterar hasta
  * llegar a las iteraciones con o sin mejora, en cada una de ellas habrán iteraciones
  * hasta que se llegue al tamaño de entorno máximo. En cada una de ellas se hará shake,
  * luego se hará una búsqueda local y por último se buscará si la nueva solución tiene
@@ -29,22 +33,22 @@ Solution VariableNeighborhoodSearch::run(Graph currentGraph) {
   for (int currentNode = 0; currentNode < currentGraph.gentNodeNumber(); currentNode++) {
     candidates.push_back(currentNode);
   }
-  float max = -INFINITY;
-  std::vector<int> newSolution;
   int solutionSize = rand() % (currentGraph.gentNodeNumber() - 2) + 2;
-  std::vector <int> solution;
+  std::vector <int> solution = constructSolution(candidates, solutionSize);
+  solution = greedyLocalSearch(solution, currentGraph);
+  float bestMd = getMedianDispersion(solution, currentGraph);
   int iterations = 0;
   int noImprovement = 0;
   while( iterations < getIterationsLimit() && noImprovement < getnoImprovementiterationsLimit()) {
     iterations++;
     int k = 1;
     while (k < getKmax()) {
-      newSolution = shake(candidates, k, solutionSize);
+      std::vector<int> newSolution = shake(candidates, k, solutionSize);
       std::vector<int> localOptimum = greedyLocalSearch(newSolution, currentGraph);
       float currentMd = getMedianDispersion(localOptimum, currentGraph);
-      if (currentMd > max) {
+      if (currentMd > bestMd) {
         solution = localOptimum;
-        max = currentMd;
+        bestMd = currentMd;
         solutionSize = localOptimum.size();
         k = 1;
       }
@@ -70,8 +74,8 @@ Solution VariableNeighborhoodSearch::run(Graph currentGraph) {
 std::vector <int> VariableNeighborhoodSearch::shake(std::vector <int> candidates, int currentK, int newSolution) {
   int size = (rand() % 2 == 1) ? newSolution + currentK : newSolution - currentK;
 
-  if ( size < 2) {
-    size = 2;
+  if ( size < newSolution + currentK) {
+    size = newSolution + currentK;
   }
   else if (size >= candidates.size()) {
     size = candidates.size();
