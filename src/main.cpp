@@ -23,6 +23,8 @@
  * @return int Devuelvve un 0 si el programa se ha ejecutado correctamente.
  */
 int main(void) {
+  srand(time(NULL));
+  
   int totalIterations, noImprovementIterations = 100, improvementIterations = 1000, env = 3, defaultValues;
   int localSearch = 0;
   std::string fileName = "../ejemplos/";

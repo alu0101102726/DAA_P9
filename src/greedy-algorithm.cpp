@@ -80,7 +80,6 @@ std::vector < int > GreedyAlgorithm::getMaxAfinnity(Graph currentGraph) {
     }
   }
 
-  srand(time(NULL));
   std::vector <int> aux;
 
   int index = rand() % maxElements.size();
