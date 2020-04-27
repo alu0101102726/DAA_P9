@@ -7,6 +7,8 @@
  */
 File::File(std::string fileName) {
   fileGraph.open(fileName, std::fstream::out);
+  if (!fileGraph.good())
+    throw std::runtime_error("Error al abrir el fichero");
 }
 
 /**

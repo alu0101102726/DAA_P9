@@ -5,6 +5,7 @@
 #include "multiboot-algorithm.hpp"
 #include "variable-neighborhood-search-algorithm.hpp"
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <chrono>
 #include <ctime>
@@ -22,10 +23,50 @@
  * @return int Devuelvve un 0 si el programa se ha ejecutado correctamente.
  */
 int main(void) {
-  int iterations = 10;
-  std::string fileName = "../ejemplos/max-mean-div-20.txt";
+  int totalIterations, noImprovementIterations = 100, improvementIterations = 1000, env = 3, defaultValues;
+  int localSearch = 0;
+  std::string fileName = "../ejemplos/";
+  std::string newFileName;
+  system("clear");
+  std::cout << "Introduce el grafo a ejecutar: \n";
+  std::cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
+  std::cout << "Grafos disponibles: \n";
+  system("ls ../ejemplos");
+  std::cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
+  std::cout << " >> "; std::cin >> newFileName;
+  fileName += newFileName;
+
+  try {
+    File file(fileName);
+  }
+  catch (const std::exception& e) {
+     std::cout << e.what();   
+  }
+
   Exec newExec(fileName);
-  for(int i = 0; i < iterations; i++) {
+  system("clear");
+  std::cout << " - - PRÁCTICA 8: MAX-MEAN DISPERSION PROBLEM - -\n";
+  std::cout << " Autor: Carlos Díaz Calzadilla \n";
+  std::cout << " Introduce el número de iteraciones a ejecutar por cada algoritmo: " << "\n >> ";
+  std::cin >> totalIterations;
+
+  std::cout << "\n Introduce un 0 para usar los valores por defecto y otro número real para modificarlos:\n ";
+  std::cout << "\t- Iteraciones sin mejora -> " << noImprovementIterations << "\n";
+  std::cout << "\t- Iteraciones con mejora -> " << improvementIterations << "\n";
+  std::cout << "\t- Tamaño del entorno (VNS) -> " << env << "\n";
+  std::cout << "\t- Busqueda Local (0: Greedy | 1: Ansioso) -> " << localSearch << "\n" << " >> ";
+  std::cin >> defaultValues;
+
+  if (defaultValues != 0) {
+    std::cout << "\n\t- Iteraciones sin mejora -> "; std::cin >> noImprovementIterations;
+    std::cout << "\n\t- Iteraciones con mejora -> "; std::cin >> improvementIterations;
+    std::cout << "\n\t- Tamaño del entorno (VNS) -> "; std::cin >> env;
+    std::cout << "\n\t- Busqueda Local (0: Greedy | 1: Ansioso) -> "; std::cin >> localSearch;
+  }
+
+  std::cout << "\n";
+  system("clear");
+  for(int i = 0; i < totalIterations; i++) {
     std::cout << " - - - - - - - - - - ITERACION [" << i + 1 << "] - - - - - - - - - - \n";
     std::cout << "El numero de nodos es: " << newExec.getGraph().gentNodeNumber() << "\n\n";
     Algorithm *algoritmo = new GreedyAlgorithm("Greedy");
@@ -38,17 +79,17 @@ int main(void) {
     newExec.solve();
     delete algoritmo;
 
-    algoritmo = new GraspAlgorithm(0, "Grasp", 1000, 100);
+    algoritmo = new GraspAlgorithm(localSearch, "Grasp", improvementIterations, noImprovementIterations);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;
     
-    algoritmo = new MultibootAlgorithm(0, "Multiarranque", 1000, 100);
+    algoritmo = new MultibootAlgorithm(localSearch, "Multiarranque", improvementIterations, noImprovementIterations);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;
     
-    algoritmo = new VariableNeighborhoodSearch(0, "VNS", 1000, 100, 7);
+    algoritmo = new VariableNeighborhoodSearch(localSearch, "VNS", improvementIterations, noImprovementIterations, env);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;

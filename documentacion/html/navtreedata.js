@@ -24,8 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Max-mean Dispersion Problem", "index.html", [
-    [ "Arbol de directorios", "md__r_e_a_d_m_e.html", null ],
+  [ "Max-Mean Dispersion Problem", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

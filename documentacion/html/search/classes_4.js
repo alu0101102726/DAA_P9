@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multibootalgorithm_50',['MultibootAlgorithm',['../class_multiboot_algorithm.html',1,'']]]
+  ['multibootalgorithm_49',['MultibootAlgorithm',['../class_multiboot_algorithm.html',1,'']]]
 ];
