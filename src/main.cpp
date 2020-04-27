@@ -23,7 +23,7 @@
  */
 int main(void) {
   int iterations = 10;
-  std::string fileName = "../ejemplos/max-mean-div-100.txt";
+  std::string fileName = "../ejemplos/max-mean-div-20.txt";
   Exec newExec(fileName);
   for(int i = 0; i < iterations; i++) {
     std::cout << " - - - - - - - - - - ITERACION [" << i + 1 << "] - - - - - - - - - - \n";
@@ -38,17 +38,17 @@ int main(void) {
     newExec.solve();
     delete algoritmo;
 
-    algoritmo = new GraspAlgorithm(0, "Grasp", 100, 10);
+    algoritmo = new GraspAlgorithm(0, "Grasp", 1000, 100);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;
     
-    algoritmo = new MultibootAlgorithm(1, "Multiarranque", 100, 10);
+    algoritmo = new MultibootAlgorithm(0, "Multiarranque", 1000, 100);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;
     
-    algoritmo = new VariableNeighborhoodSearch(0, "GVNS", 1000, 50, 4);
+    algoritmo = new VariableNeighborhoodSearch(0, "VNS", 1000, 100, 7);
     newExec.changeAlgorithm(algoritmo);
     newExec.solve();
     delete algoritmo;

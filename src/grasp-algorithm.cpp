@@ -103,7 +103,7 @@ std::vector <int> GraspAlgorithm::constructSolution(std::vector <int> candidates
 /**
  * @brief Crea el RCL, para ello se le pasa un vector que es del que va a partir
  * para obtener el RCL. En nuestro caso, se ha decidido, que se escojan aquellos valores
- * que sean mayores al 60 % del valor máximo.
+ * que sean mayores al 80 % del valor máximo.
  * 
  * @param RCL Vector del que se va a hallar el RCL
  * @return std::vector <int> Nuevo RCL que se ha creado
@@ -112,7 +112,7 @@ std::vector <int> GraspAlgorithm::makeRCL(std::vector<int> currentSolution, std:
   std::vector<int> aux;
   std::vector<float> media;
   float temp;
-  float alfa = 0.6;
+  float alfa = 0.8;
 
   for (int i = 0; i < candidates.size(); i++) {
     if (std::find(currentSolution.begin(), currentSolution.end(), candidates[i]) == currentSolution.end()) {

@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Max-mean dispersion problem: Algorithm Class Reference</title>
+<title>Max-mean Dispersion Problem: Algorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Max-mean dispersion problem
+   <div id="projectname">Max-mean Dispersion Problem
    </div>
   </td>
  </tr>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_algorithm.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,38 +96,51 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Algorithm:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_algorithm__inherit__graph.png" border="0" usemap="#_algorithm_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="class_algorithm.png" usemap="#Algorithm_map" alt=""/>
+  <map id="Algorithm_map" name="Algorithm_map">
+<area href="class_grasp_algorithm.html" title="Esta clase representa el algoritmo GRASP que se va a aplicar, vamos a tener tres fases en el mismo:" alt="GraspAlgorithm" shape="rect" coords="0,56,181,80"/>
+<area href="class_greedy_algorithm.html" title="Esta clase representa el algoritmo constructivo voraz del cual teniamos el pseudocódigo." alt="GreedyAlgorithm" shape="rect" coords="191,56,372,80"/>
+<area href="class_multiboot_algorithm.html" title="Esta clase representa el algoritmo multiarranque." alt="MultibootAlgorithm" shape="rect" coords="382,56,563,80"/>
+<area href="class_second_greedy_algorithm.html" title="Esta clase representa el segundo algoritmo constructivo voraz del cual la idea ha sido partir de una ..." alt="SecondGreedyAlgorithm" shape="rect" coords="573,56,754,80"/>
+<area href="class_variable_neighborhood_search.html" title="Esta clase representa el algoritmo multiarranque." alt="VariableNeighborhoodSearch" shape="rect" coords="764,56,945,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af16e663628d3e98d251acc53798bd299"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_solution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">run</a> (<a class="el" href="class_graph.html">Graph</a> currentGraph)=0</td></tr>
 <tr class="memdesc:af16e663628d3e98d251acc53798bd299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta.  <a href="class_algorithm.html#af16e663628d3e98d251acc53798bd299">More...</a><br /></td></tr>
 <tr class="separator:af16e663628d3e98d251acc53798bd299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675939191b1136107cd43634d6c9df18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">getMedianDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a675939191b1136107cd43634d6c9df18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#a675939191b1136107cd43634d6c9df18">More...</a><br /></td></tr>
-<tr class="separator:a675939191b1136107cd43634d6c9df18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94433d3be0e1f212f4fb5ea6a360d528"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">getWorstMediaDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a94433d3be0e1f212f4fb5ea6a360d528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a94433d3be0e1f212f4fb5ea6a360d528">More...</a><br /></td></tr>
-<tr class="separator:a94433d3be0e1f212f4fb5ea6a360d528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba2b3302571277bac3eeb1070cf3cb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">getWorstMediaDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
-<tr class="memdesc:a9ba2b3302571277bac3eeb1070cf3cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a9ba2b3302571277bac3eeb1070cf3cb2">More...</a><br /></td></tr>
-<tr class="separator:a9ba2b3302571277bac3eeb1070cf3cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02fb1e35175cba5460e5d7d42fd516b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#aa02fb1e35175cba5460e5d7d42fd516b">getMeanDispersion</a> (std::vector&lt; int &gt; solution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:aa02fb1e35175cba5460e5d7d42fd516b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de determinar la dispersión media, que se define por: Σi,j∈S d(i,j)  <a href="class_algorithm.html#aa02fb1e35175cba5460e5d7d42fd516b">More...</a><br /></td></tr>
+<tr class="separator:aa02fb1e35175cba5460e5d7d42fd516b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4203c20046a30301c49a81c8374a5e19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a4203c20046a30301c49a81c8374a5e19">getWorstMeanDispersionGreedy</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a4203c20046a30301c49a81c8374a5e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma greedy además en caso de que el tamaño del vector sea nulo, devuelve un valor -1, que será el que usemos apra gestionar ese caso.  <a href="class_algorithm.html#a4203c20046a30301c49a81c8374a5e19">More...</a><br /></td></tr>
+<tr class="separator:a4203c20046a30301c49a81c8374a5e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b6d07a6798a45a01620d1dd6b72810"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a33b6d07a6798a45a01620d1dd6b72810">getWorstMeanDispersionAnxious</a> (std::vector&lt; int &gt; actualSolution, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:a33b6d07a6798a45a01620d1dd6b72810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esta funcion se va a encargar de devolver el valor peor de la dispersión media, se aplica de forma ansiosa, es decir, desde que se encuentre alguno mejor se va a devolver. En caso de que el vector esté vacío o no haya ninguno mejor se va a retornar un -1.  <a href="class_algorithm.html#a33b6d07a6798a45a01620d1dd6b72810">More...</a><br /></td></tr>
+<tr class="separator:a33b6d07a6798a45a01620d1dd6b72810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8a7f96824f0a27b12a127e677666fc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#aaf8a7f96824f0a27b12a127e677666fc">getNewMeanDispersionErase</a> (std::vector&lt; int &gt; solution, float currentEdgeSum, int currentNode, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
+<tr class="memdesc:aaf8a7f96824f0a27b12a127e677666fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se ha creado para que no sea necesario calcular desde 0 la dispersion media sino que se parta del resultado anterior.  <a href="class_algorithm.html#aaf8a7f96824f0a27b12a127e677666fc">More...</a><br /></td></tr>
+<tr class="separator:aaf8a7f96824f0a27b12a127e677666fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9eff334377933946a3fb2e6ae638be"><td class="memItemLeft" align="right" valign="top"><a id="a1e9eff334377933946a3fb2e6ae638be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (std::vector&lt; int &gt; solution, int runTime, <a class="el" href="class_graph.html">Graph</a> currentGraph)</td></tr>
 <tr class="separator:a1e9eff334377933946a3fb2e6ae638be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representa una clase que va a permitir aplicar el patrón estrategia. </p>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8hpp_source.html#l00011">11</a> of file <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a675939191b1136107cd43634d6c9df18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a675939191b1136107cd43634d6c9df18">&#9670;&nbsp;</a></span>getMedianDispersion()</h2>
+<a id="aa02fb1e35175cba5460e5d7d42fd516b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02fb1e35175cba5460e5d7d42fd516b">&#9670;&nbsp;</a></span>getMeanDispersion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Algorithm::getMedianDispersion </td>
+          <td class="memname">float Algorithm::getMeanDispersion </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>currentNodeSet</em>, </td>
@@ -137,27 +170,73 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (st
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float Devuelve el valor de la dispersión media </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a675939191b1136107cd43634d6c9df18_cgraph.png" border="0" usemap="#class_algorithm_a675939191b1136107cd43634d6c9df18_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a675939191b1136107cd43634d6c9df18_icgraph.png" border="0" usemap="#class_algorithm_a675939191b1136107cd43634d6c9df18_icgraph" alt=""/></div>
-</div>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00015">15</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9ba2b3302571277bac3eeb1070cf3cb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ba2b3302571277bac3eeb1070cf3cb2">&#9670;&nbsp;</a></span>getWorstMediaDispersionAnxious()</h2>
+<a id="aaf8a7f96824f0a27b12a127e677666fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8a7f96824f0a27b12a127e677666fc">&#9670;&nbsp;</a></span>getNewMeanDispersionErase()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Algorithm::getWorstMediaDispersionAnxious </td>
+          <td class="memname">float Algorithm::getNewMeanDispersionErase </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>currentSol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>currentEdgeSum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graph.html">Graph</a>&#160;</td>
+          <td class="paramname"><em>currentGraph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este método se ha creado para que no sea necesario calcular desde 0 la dispersion media sino que se parta del resultado anterior. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentSol</td><td>Representa el vector sobre el que se va a calcular la dispersion media. </td></tr>
+    <tr><td class="paramname">currentEdgeSum</td><td>Representa el valor del sumatorio de las aristas </td></tr>
+    <tr><td class="paramname">currentNode</td><td>Representa el nodo que se va a eliminar de la solución </td></tr>
+    <tr><td class="paramname">currentGraph</td><td>Representa el grafo con las distancias entre nodos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float Devuelve el valor de la dispersión media </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00039">39</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a33b6d07a6798a45a01620d1dd6b72810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b6d07a6798a45a01620d1dd6b72810">&#9670;&nbsp;</a></span>getWorstMeanDispersionAnxious()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Algorithm::getWorstMeanDispersionAnxious </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>actualSolution</em>, </td>
@@ -185,27 +264,19 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Devuelve un elemento aleatorio dentro del vector, debido a que puede que hayan varias soluciones con el mismo valor y para evitar siempre devolver la primera. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a9ba2b3302571277bac3eeb1070cf3cb2_cgraph.png" border="0" usemap="#class_algorithm_a9ba2b3302571277bac3eeb1070cf3cb2_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a9ba2b3302571277bac3eeb1070cf3cb2_icgraph.png" border="0" usemap="#class_algorithm_a9ba2b3302571277bac3eeb1070cf3cb2_icgraph" alt=""/></div>
-</div>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00091">91</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a94433d3be0e1f212f4fb5ea6a360d528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94433d3be0e1f212f4fb5ea6a360d528">&#9670;&nbsp;</a></span>getWorstMediaDispersionGreedy()</h2>
+<a id="a4203c20046a30301c49a81c8374a5e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4203c20046a30301c49a81c8374a5e19">&#9670;&nbsp;</a></span>getWorstMeanDispersionGreedy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Algorithm::getWorstMediaDispersionGreedy </td>
+          <td class="memname">int Algorithm::getWorstMeanDispersionGreedy </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
           <td class="paramname"><em>actualSolution</em>, </td>
@@ -233,16 +304,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Devuelve un elemento aleatorio dentro del vector, debido a que puede que hayan varias soluciones con el mismo valor y para evitar siempre devolver la primera. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a94433d3be0e1f212f4fb5ea6a360d528_cgraph.png" border="0" usemap="#class_algorithm_a94433d3be0e1f212f4fb5ea6a360d528_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_a94433d3be0e1f212f4fb5ea6a360d528_icgraph.png" border="0" usemap="#class_algorithm_a94433d3be0e1f212f4fb5ea6a360d528_icgraph" alt=""/></div>
-</div>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00060">60</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,24 +337,23 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>int Que contiene la mejor solucion </dd></dl>
 
 <p>Implemented in <a class="el" href="class_grasp_algorithm.html#a1f8240237fd9bece51eeb6b7f8ffd3c9">GraspAlgorithm</a>, <a class="el" href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">VariableNeighborhoodSearch</a>, <a class="el" href="class_multiboot_algorithm.html#aa80ce488f75d97a6a208be3f6c94d08a">MultibootAlgorithm</a>, <a class="el" href="class_second_greedy_algorithm.html#a762a19742a6cf9d39fe5e4080103b5ce">SecondGreedyAlgorithm</a>, and <a class="el" href="class_greedy_algorithm.html#a8ef295f33ddb4136ebe0cf39e642f61f">GreedyAlgorithm</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_algorithm_af16e663628d3e98d251acc53798bd299_icgraph.png" border="0" usemap="#class_algorithm_af16e663628d3e98d251acc53798bd299_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a></li>
-<li>src/algorithm.cpp</li>
+<li>src/<a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_algorithm.html">Algorithm</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

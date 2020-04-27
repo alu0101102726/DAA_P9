@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Max-mean dispersion problem: include/variable-neighborhood-search-algorithm.hpp Source File</title>
+<title>Max-mean Dispersion Problem: include/variable-neighborhood-search-algorithm.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Max-mean dispersion problem
+   <div id="projectname">Max-mean Dispersion Problem
    </div>
   </td>
  </tr>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('variable-neighborhood-search-algorithm_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">variable-neighborhood-search-algorithm.hpp</div>  </div>
@@ -101,25 +117,29 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253">localSearch</a>(std::vector &lt;int&gt; solution, <a class="code" href="class_graph.html">Graph</a> currentGraph);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_variable_neighborhood_search_html_ae90362e88ab783f076b3da025bac0014"><div class="ttname"><a href="class_variable_neighborhood_search.html#ae90362e88ab783f076b3da025bac0014">VariableNeighborhoodSearch::constructSolution</a></div><div class="ttdeci">std::vector&lt; int &gt; constructSolution(std::vector&lt; int &gt; candidates, int size)</div><div class="ttdoc">Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número tot...</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:101</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_acb8beff356e5805773d6cce10c65ebd7"><div class="ttname"><a href="class_variable_neighborhood_search.html#acb8beff356e5805773d6cce10c65ebd7">VariableNeighborhoodSearch::VariableNeighborhoodSearch</a></div><div class="ttdeci">VariableNeighborhoodSearch(int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax)</div><div class="ttdoc">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada,...</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:11</div></div>
-<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:11</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_aa6daf77e6bafdd0991a07ba116f2a788"><div class="ttname"><a href="class_variable_neighborhood_search.html#aa6daf77e6bafdd0991a07ba116f2a788">VariableNeighborhoodSearch::getKmax</a></div><div class="ttdeci">int getKmax()</div><div class="ttdoc">Devvuelve el tamaño del entorno máximo.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:149</div></div>
-<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">Representa un grafo de al que se le van a aplicar los diferentes algoritmos.</div><div class="ttdef"><b>Definition:</b> graph.hpp:12</div></div>
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:13</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_a2a9260611826afa9fc98e533f4e14fcd"><div class="ttname"><a href="class_variable_neighborhood_search.html#a2a9260611826afa9fc98e533f4e14fcd">VariableNeighborhoodSearch::getnoImprovementiterationsLimit</a></div><div class="ttdeci">int getnoImprovementiterationsLimit()</div><div class="ttdoc">Obtiene el número de iteracions sin mejora.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:167</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html"><div class="ttname"><a href="class_variable_neighborhood_search.html">VariableNeighborhoodSearch</a></div><div class="ttdoc">Esta clase representa el algoritmo multiarranque.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.hpp:11</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_af731669d721090aec1cdb79c4f8da891"><div class="ttname"><a href="class_variable_neighborhood_search.html#af731669d721090aec1cdb79c4f8da891">VariableNeighborhoodSearch::getIterationsLimit</a></div><div class="ttdeci">int getIterationsLimit()</div><div class="ttdoc">Devuelve el límite de iteraciones.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:158</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_ac4d34acb040a0a72440f7065d453b1b5"><div class="ttname"><a href="class_variable_neighborhood_search.html#ac4d34acb040a0a72440f7065d453b1b5">VariableNeighborhoodSearch::getChoosenLocalSearch</a></div><div class="ttdeci">int getChoosenLocalSearch()</div><div class="ttdoc">Devuelve la búsqueda local que se ha seleccionado.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:177</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_a9801bff3a36806d818d300010e0cd529"><div class="ttname"><a href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">VariableNeighborhoodSearch::run</a></div><div class="ttdeci">Solution run(Graph currentGraph)</div><div class="ttdoc">Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un...</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:35</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_aa545a238609462a4e45120dbc7c10cde"><div class="ttname"><a href="class_variable_neighborhood_search.html#aa545a238609462a4e45120dbc7c10cde">VariableNeighborhoodSearch::getAlgorithmName</a></div><div class="ttdeci">std::string getAlgorithmName()</div><div class="ttdoc">Devuelve el nombre del algoritmo.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:140</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_a05f4646dcde00cb2efd2f41c34b40465"><div class="ttname"><a href="class_variable_neighborhood_search.html#a05f4646dcde00cb2efd2f41c34b40465">VariableNeighborhoodSearch::shake</a></div><div class="ttdeci">std::vector&lt; int &gt; shake(std::vector&lt; int &gt; solution, int currentK, int newSolution)</div><div class="ttdoc">Esta es la función encargada de coger una solución aleatoria en un determinado entorno.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:79</div></div>
-<div class="ttc" id="aclass_variable_neighborhood_search_html_a9eae863f1a404d79215d1ad9d2134253"><div class="ttname"><a href="class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253">VariableNeighborhoodSearch::localSearch</a></div><div class="ttdeci">std::vector&lt; int &gt; localSearch(std::vector&lt; int &gt; solution, Graph currentGraph)</div><div class="ttdoc">Representa la búsqueda local greedy.</div><div class="ttdef"><b>Definition:</b> variable-neighborhood-search-algorithm.cpp:121</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_variable_neighborhood_search_html_ae90362e88ab783f076b3da025bac0014"><div class="ttname"><a href="class_variable_neighborhood_search.html#ae90362e88ab783f076b3da025bac0014">VariableNeighborhoodSearch::constructSolution</a></div><div class="ttdeci">std::vector&lt; int &gt; constructSolution(std::vector&lt; int &gt; candidates, int size)</div><div class="ttdoc">Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número tot...</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00101">variable-neighborhood-search-algorithm.cpp:101</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_acb8beff356e5805773d6cce10c65ebd7"><div class="ttname"><a href="class_variable_neighborhood_search.html#acb8beff356e5805773d6cce10c65ebd7">VariableNeighborhoodSearch::VariableNeighborhoodSearch</a></div><div class="ttdeci">VariableNeighborhoodSearch(int currentLocalSearch, std::string newName, int newIterationsLimit, int noImprovementiterationsLimit, int newKmax)</div><div class="ttdoc">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada,...</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00011">variable-neighborhood-search-algorithm.cpp:11</a></div></div>
+<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> <a href="algorithm_8hpp_source.html#l00011">algorithm.hpp:11</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_aa6daf77e6bafdd0991a07ba116f2a788"><div class="ttname"><a href="class_variable_neighborhood_search.html#aa6daf77e6bafdd0991a07ba116f2a788">VariableNeighborhoodSearch::getKmax</a></div><div class="ttdeci">int getKmax()</div><div class="ttdoc">Devvuelve el tamaño del entorno máximo.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00149">variable-neighborhood-search-algorithm.cpp:149</a></div></div>
+<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">Representa un grafo de al que se le van a aplicar los diferentes algoritmos.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8hpp_source.html#l00012">graph.hpp:12</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00013">solution.hpp:13</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_a2a9260611826afa9fc98e533f4e14fcd"><div class="ttname"><a href="class_variable_neighborhood_search.html#a2a9260611826afa9fc98e533f4e14fcd">VariableNeighborhoodSearch::getnoImprovementiterationsLimit</a></div><div class="ttdeci">int getnoImprovementiterationsLimit()</div><div class="ttdoc">Obtiene el número de iteracions sin mejora.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00167">variable-neighborhood-search-algorithm.cpp:167</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html"><div class="ttname"><a href="class_variable_neighborhood_search.html">VariableNeighborhoodSearch</a></div><div class="ttdoc">Esta clase representa el algoritmo multiarranque.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8hpp_source.html#l00011">variable-neighborhood-search-algorithm.hpp:11</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_af731669d721090aec1cdb79c4f8da891"><div class="ttname"><a href="class_variable_neighborhood_search.html#af731669d721090aec1cdb79c4f8da891">VariableNeighborhoodSearch::getIterationsLimit</a></div><div class="ttdeci">int getIterationsLimit()</div><div class="ttdoc">Devuelve el límite de iteraciones.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00158">variable-neighborhood-search-algorithm.cpp:158</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_ac4d34acb040a0a72440f7065d453b1b5"><div class="ttname"><a href="class_variable_neighborhood_search.html#ac4d34acb040a0a72440f7065d453b1b5">VariableNeighborhoodSearch::getChoosenLocalSearch</a></div><div class="ttdeci">int getChoosenLocalSearch()</div><div class="ttdoc">Devuelve la búsqueda local que se ha seleccionado.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00177">variable-neighborhood-search-algorithm.cpp:177</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_a9801bff3a36806d818d300010e0cd529"><div class="ttname"><a href="class_variable_neighborhood_search.html#a9801bff3a36806d818d300010e0cd529">VariableNeighborhoodSearch::run</a></div><div class="ttdeci">Solution run(Graph currentGraph)</div><div class="ttdoc">Representa el método que va a realizar la ejecución del algorimo GVNS, para ello se va a partir de un...</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00035">variable-neighborhood-search-algorithm.cpp:35</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_aa545a238609462a4e45120dbc7c10cde"><div class="ttname"><a href="class_variable_neighborhood_search.html#aa545a238609462a4e45120dbc7c10cde">VariableNeighborhoodSearch::getAlgorithmName</a></div><div class="ttdeci">std::string getAlgorithmName()</div><div class="ttdoc">Devuelve el nombre del algoritmo.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00140">variable-neighborhood-search-algorithm.cpp:140</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_a05f4646dcde00cb2efd2f41c34b40465"><div class="ttname"><a href="class_variable_neighborhood_search.html#a05f4646dcde00cb2efd2f41c34b40465">VariableNeighborhoodSearch::shake</a></div><div class="ttdeci">std::vector&lt; int &gt; shake(std::vector&lt; int &gt; solution, int currentK, int newSolution)</div><div class="ttdoc">Esta es la función encargada de coger una solución aleatoria en un determinado entorno.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00079">variable-neighborhood-search-algorithm.cpp:79</a></div></div>
+<div class="ttc" id="aclass_variable_neighborhood_search_html_a9eae863f1a404d79215d1ad9d2134253"><div class="ttname"><a href="class_variable_neighborhood_search.html#a9eae863f1a404d79215d1ad9d2134253">VariableNeighborhoodSearch::localSearch</a></div><div class="ttdeci">std::vector&lt; int &gt; localSearch(std::vector&lt; int &gt; solution, Graph currentGraph)</div><div class="ttdoc">Representa la búsqueda local greedy.</div><div class="ttdef"><b>Definition:</b> <a href="variable-neighborhood-search-algorithm_8cpp_source.html#l00121">variable-neighborhood-search-algorithm.cpp:121</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>variable-neighborhood-search-algorithm.hpp</b></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>
