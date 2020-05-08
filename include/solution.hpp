@@ -5,6 +5,8 @@
 #include <chrono>
 #include <ctime>
 
+#include "vectors.hpp"
+
 /**
  * @brief Representa una solucion, que va a contener el vector donde se
  * almacena la misma , la media y luego el tiempomque ha tardado en hallarla.
@@ -13,23 +15,22 @@
 class Solution {
 
   private:
-    std::vector < int > solution;
-    float mediaValue;
+    Vectors data;
+    std::vector<int> solution;
     int runTime;
     std::string algorithmName;
-    int currentLocalSearch;
+    float distance;
 
   public:
-    Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName, int localSearch);
+    Solution(Vectors currentSolution, std::vector<int> newSolution, std::string newAlgorithmName);
     ~Solution() {}
 
-    float getMedia ();
+    Vectors getInfo();
     std::vector <int> getSolution();
     int getRunTime();
     void setRunTime(int newRunTime);
     std::string getAlgorithmName();
     int getSolutionValue(int position);
-    int getLocalSearch();
 
     friend std::ostream& operator <<(std::ostream& os, Solution currentSolution);
 

@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "algorithm.hpp"
-#include "graph.hpp"
+#include "vectors.hpp"
 #include "file.hpp"
 #include "solution.hpp"
 #include <chrono>
@@ -15,7 +15,7 @@
  */
 class Exec {
   private:
-    Graph currentGraph;
+    Vectors currentVectors;
     Algorithm *algorithm;
 
   public:
@@ -23,7 +23,7 @@ class Exec {
     ~Exec() {}
 
     void changeAlgorithm(Algorithm *newAlgorithm);
-    Graph getGraph();
+    Vectors getData();
     void solve();
     std::chrono::time_point<std::chrono::system_clock> getRunTime();
 };

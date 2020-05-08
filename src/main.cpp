@@ -1,14 +1,13 @@
-#include "exec.hpp"
-#include "greedy-algorithm.hpp"
-#include "second-greedy-algorithm.hpp"
-#include "grasp-algorithm.hpp"
-#include "multiboot-algorithm.hpp"
-#include "variable-neighborhood-search-algorithm.hpp"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <chrono>
 #include <ctime>
+#include "file.hpp"
+#include "exec.hpp"
+#include "algorithm.hpp"
+#include "greedy-algorithm.hpp"
+#include "greedy-algorithm-2.hpp"
 
 /**
  * @brief Función principal del programa que se encarga de hacer
@@ -46,56 +45,17 @@ int main(void) {
   }
 
   Exec newExec(fileName);
-  system("clear");
-  std::cout << " - - PRÁCTICA 8: MAX-MEAN DISPERSION PROBLEM - -\n";
-  std::cout << " Autor: Carlos Díaz Calzadilla \n";
-  std::cout << " Introduce el número de iteraciones a ejecutar por cada algoritmo: " << "\n >> ";
-  std::cin >> totalIterations;
+  Algorithm* algoritmo = new GreedyAlgorithm("Greedy", 3);
 
-  std::cout << "\n Introduce un 0 para usar los valores por defecto y otro número real para modificarlos:\n ";
-  std::cout << "\t- Iteraciones sin mejora -> " << noImprovementIterations << "\n";
-  std::cout << "\t- Iteraciones con mejora -> " << improvementIterations << "\n";
-  std::cout << "\t- Tamaño del entorno (VNS) -> " << env << "\n";
-  std::cout << "\t- Busqueda Local (0: Greedy | 1: Ansioso) -> " << localSearch << "\n" << " >> ";
-  std::cin >> defaultValues;
+  newExec.changeAlgorithm(algoritmo);
+  newExec.solve();
+  delete algoritmo;
 
-  if (defaultValues != 0) {
-    std::cout << "\n\t- Iteraciones sin mejora -> "; std::cin >> noImprovementIterations;
-    std::cout << "\n\t- Iteraciones con mejora -> "; std::cin >> improvementIterations;
-    std::cout << "\n\t- Tamaño del entorno (VNS) -> "; std::cin >> env;
-    std::cout << "\n\t- Busqueda Local (0: Greedy | 1: Ansioso) -> "; std::cin >> localSearch;
-  }
+  algoritmo = new NewGreedyAlgorithm("New Greedy", 3);
 
-  std::cout << "\n";
-  system("clear");
-  for(int i = 0; i < totalIterations; i++) {
-    std::cout << " - - - - - - - - - - ITERACION [" << i + 1 << "] - - - - - - - - - - \n";
-    std::cout << "El numero de nodos es: " << newExec.getGraph().gentNodeNumber() << "\n\n";
-    Algorithm *algoritmo = new GreedyAlgorithm("Greedy");
-    newExec.changeAlgorithm(algoritmo);
-    newExec.solve();
-    delete algoritmo;
+  newExec.changeAlgorithm(algoritmo);
+  newExec.solve();
+  delete algoritmo;
 
-    algoritmo = new SecondGreedyAlgorithm("Segundo Greedy");
-    newExec.changeAlgorithm(algoritmo);
-    newExec.solve();
-    delete algoritmo;
-
-    algoritmo = new GraspAlgorithm(localSearch, "Grasp", improvementIterations, noImprovementIterations);
-    newExec.changeAlgorithm(algoritmo);
-    newExec.solve();
-    delete algoritmo;
-    
-    algoritmo = new MultibootAlgorithm(localSearch, "Multiarranque", improvementIterations, noImprovementIterations);
-    newExec.changeAlgorithm(algoritmo);
-    newExec.solve();
-    delete algoritmo;
-    
-    algoritmo = new VariableNeighborhoodSearch(localSearch, "VNS", improvementIterations, noImprovementIterations, env);
-    newExec.changeAlgorithm(algoritmo);
-    newExec.solve();
-    delete algoritmo;
-    std::cout << "\n\n";
-  }
   return 0;
 }

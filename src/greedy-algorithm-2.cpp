@@ -1,34 +1,34 @@
-#include "greedy-algorithm.hpp"
+#include "greedy-algorithm-2.hpp"
 
-GreedyAlgorithm::GreedyAlgorithm(std::string newName, int newM):
+NewGreedyAlgorithm::NewGreedyAlgorithm(std::string newName, int newM):
   currentVectors() {
   name = newName;
   m = newM;
 }
 
-int GreedyAlgorithm::getMvalue() {
+int NewGreedyAlgorithm::getMvalue() {
   return m;
 }
 
-std::string GreedyAlgorithm::getAlgorithmName() {
+std::string NewGreedyAlgorithm::getAlgorithmName() {
   return name;
 }
 
-void GreedyAlgorithm::setInfo(Vectors newVector) {
+void NewGreedyAlgorithm::setInfo(Vectors newVector) {
   currentVectors = newVector;
 }
 
-Solution GreedyAlgorithm::run() {
+Solution NewGreedyAlgorithm::run() {
   std::vector <int> Elem;
-  std::vector <int> S;
   for (int i = 0; i < currentVectors.getSize(); i++) {
     Elem.push_back(i);
   }
+  std::vector <int> S = Elem;
   std::vector <float> SC = getGravityCenter(Elem, currentVectors);
   while(S.size() != getMvalue()) {
-    int furthest = getFurthestElement(Elem, SC);
-    S.push_back(furthest);
-    Elem.erase(std::find(Elem.begin(), Elem.end(), furthest));
+    int closest = getClosestElement(Elem, SC);
+    S.erase(std::find(S.begin(), S.end(), closest));
+    Elem.erase(std::find(Elem.begin(), Elem.end(), closest));
     SC = getGravityCenter(S, currentVectors);
   }
 
@@ -36,8 +36,8 @@ Solution GreedyAlgorithm::run() {
   return newSolution;
 }
 
-int GreedyAlgorithm::getFurthestElement(std::vector <int> currentElem, std::vector <float> currentSC) {
-    float distance = 0;
+int NewGreedyAlgorithm::getClosestElement(std::vector <int> currentElem, std::vector <float> currentSC) {
+    float distance = INFINITY;
     int sol;
     std::vector<int> repeat;
 
@@ -48,7 +48,7 @@ int GreedyAlgorithm::getFurthestElement(std::vector <int> currentElem, std::vect
       }
 
       aux = sqrt(aux);
-      if (aux > distance) {
+      if (aux < distance) {
         distance = aux;
         sol = currentElem[i];
         repeat.clear();

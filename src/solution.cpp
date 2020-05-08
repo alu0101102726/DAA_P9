@@ -7,22 +7,11 @@
   * @param currentSolution Representa el vector que contiene la solución
   * @param currentMedia Representa el valor de la media de dispersión de la solución
   * @param newAlgorithmName Representa el nombre del algoritmo
-  * @param newLocalSearch Representa la búsqueda local usada por el algoritmo
   */
-Solution::Solution(std::vector <int> currentSolution, float currentMedia, std::string newAlgorithmName, int newLocalSearch):
+Solution::Solution(Vectors newData, std::vector <int> currentSolution, std::string newAlgorithmName):
+  data(newData.getData()),
   solution(currentSolution) {
-    mediaValue = currentMedia;
     algorithmName = newAlgorithmName;
-    currentLocalSearch = newLocalSearch;
-}
-
-/**
- * @brief Devuelve el valor de la media de dispersión
- * 
- * @return float Valor de la media de dispersión
- */
-float Solution::getMedia () {
-  return mediaValue;
 }
 
 /**
@@ -54,6 +43,10 @@ int Solution::getRunTime() {
   return runTime;
 }
 
+Vectors Solution::getInfo() {
+  return data;
+}
+
 /**
  * @brief Devuelve el nombre del algoritmo de la solución
  * 
@@ -61,16 +54,6 @@ int Solution::getRunTime() {
  */
 std::string Solution::getAlgorithmName() {
   return algorithmName;
-}
-
-/**
- * @brief Devuelve un 0 si la búsqueda local es ansiosa
- * y un 1 si la búsqueda local es greedy.
- * 
- * @return int Valor de la búsqueda
- */
-int Solution::getLocalSearch() {
-  return currentLocalSearch;
 }
 
 /**
@@ -91,21 +74,24 @@ void Solution::setRunTime(int newRunTime) {
  * @return std::ostream& valor de impresión
  */
 std::ostream& operator <<(std::ostream& os, Solution currentSolution) {
-  std::cout << "La solución al aplicar el algoritmo " << currentSolution.getAlgorithmName() << " es: S = { ";
-  for(int i = 0; i < currentSolution.solution.size(); i++) {
-    std::cout << currentSolution.getSolutionValue(i) << ", ";
-  }
-  std::cout << "} \n";
-  std::cout << "Median dispersion: " << currentSolution.getMedia() << "\n";
-  if (currentSolution.getLocalSearch() != 2) {
-    std::cout << "Búsqueda local: ";
-    if (currentSolution.getLocalSearch() == 0) {
-      std::cout << "Greedy\n";
-    }
-    else {
-      std::cout << "Ansiosa\n";
+  std::cout << "La solución al aplicar el algoritmo " << currentSolution.getAlgorithmName() << " es:  \n";
+  float maxValue = 0;
+  for (int i = 0; i < currentSolution.getSolution().size(); i++) {
+    std::cout << "\n[" << currentSolution.getSolution()[i] << "]: ";
+    for (int j = 0; j < currentSolution.getInfo().getElementSize(i); j++) {
+      std::cout << currentSolution.getInfo().getDataValue(currentSolution.getSolution()[i],j) << " ";
     }
   }
+  std::cout << "\n";
+
+  float distance = 0;
+  for(int i = 0; i < currentSolution.getSolution().size(); i++) {
+    for(int j = i + 1; j < currentSolution.getSolution().size(); j++) {
+      distance += currentSolution.getInfo().getEuclideanDistance(currentSolution.getSolution()[i], currentSolution.getSolution()[j]);
+    }
+  }
+
+  std::cout << "Distancia: " << distance << "\n";  
   std::cout << "Run Time: " << currentSolution.getRunTime() << " microseconds \n";
   std::cout << " - - - - - - - - - - - - - - - - - - - \n";
 }

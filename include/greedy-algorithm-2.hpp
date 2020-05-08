@@ -2,7 +2,7 @@
 #include "vectors.hpp"
 #include <algorithm>
 
-class GreedyAlgorithm : public Algorithm {
+class NewGreedyAlgorithm : public Algorithm {
 
   private:
     std::string name;
@@ -10,8 +10,8 @@ class GreedyAlgorithm : public Algorithm {
     Vectors currentVectors;
   
   public:
-    GreedyAlgorithm(std::string newName, int newM);
-    ~GreedyAlgorithm() {}
+    NewGreedyAlgorithm(std::string newName, int newM);
+    ~NewGreedyAlgorithm() {}
 
     int getMvalue();
     std::string getAlgorithmName();
@@ -19,5 +19,5 @@ class GreedyAlgorithm : public Algorithm {
     float get_total(std::vector<int> sol);
 
     Solution run();
-    int getFurthestElement(std::vector <int> currentElem, std::vector <float> currentSC);
+    int getClosestElement(std::vector <int> currentElem, std::vector <float> currentSC);
 };

@@ -51,18 +51,14 @@ int File::getNumberNodes() {
 std::vector < std::vector < float > > File::checkFileSyntax() {
   if(fileGraph.is_open()) {
     fileGraph >> nodeNumber;
+    int dimension;
+    fileGraph >> dimension;
     std::vector < std::vector < float > > graph;
     graph.resize(nodeNumber);
     for (int currentIndex = 0; currentIndex < nodeNumber; currentIndex++) {
-      graph[currentIndex].resize(nodeNumber);
-      for( int nextNode = currentIndex + 1; nextNode < nodeNumber; nextNode++) {
+      graph[currentIndex].resize(dimension);
+      for( int nextNode = 0; nextNode < graph[currentIndex].size(); nextNode++) {
         fileGraph >> graph[currentIndex][nextNode];
-      }
-    }
-
-    for (int currentIndex = 0; currentIndex < nodeNumber; currentIndex++) {
-      for( int nextNode = currentIndex + 1; nextNode < nodeNumber; nextNode++) {
-        graph[nextNode][currentIndex] = graph[currentIndex][nextNode];
       }
     }
   closeFile();

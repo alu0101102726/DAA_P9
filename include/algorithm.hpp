@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <cmath>
-#include "graph.hpp"
+#include "vectors.hpp"
 #include "solution.hpp"
 
 /**
@@ -18,10 +18,9 @@ class Algorithm {
     * 
     * @return int Que contiene la mejor solucion
     */
-    virtual Solution run(Graph currentGraph) = 0;
-    float getMeanDispersion(std::vector<int> solution, Graph currentGraph);
-    int getWorstMeanDispersionGreedy(std::vector<int> actualSolution, Graph currentGraph);
-    int getWorstMeanDispersionAnxious(std::vector<int> actualSolution, Graph currentGraph);
-    float getNewMeanDispersionErase(std::vector<int> solution, float currentEdgeSum, int currentNode, Graph currentGraph);
-    void printSolution(std::vector<int> solution, int runTime, Graph currentGraph);
+    virtual Solution run() = 0;
+    virtual void setInfo(Vectors newVector) = 0;
+    float getMaxDiversity(Vectors currentVectors);
+    std::vector <float> getGravityCenter(std::vector <int> currentElement, Vectors currentVector);
+    float getEuclideanDistance(int firstVect, int secondVect, std::vector < std::vector <float> > data);
 };

@@ -9,7 +9,7 @@
  * @param fileName Nombre del fichero
  */
 Exec::Exec(std::string fileName):
-  currentGraph(fileName) {}
+  currentVectors(fileName) {}
 
 
 /**
@@ -25,12 +25,12 @@ void Exec::changeAlgorithm(Algorithm *newAlgorithm) {
 }
 
 /**
- * @brief Devuelve un grafo
+ * @brief Devuelve un vector con la información
  * 
- * @return Graph 
+ * @return Vectors 
  */
-Graph Exec::getGraph() {
-  return currentGraph;
+Vectors Exec::getData() {
+  return currentVectors;
 }
 
 /**
@@ -51,7 +51,8 @@ std::chrono::time_point<std::chrono::system_clock> Exec::getRunTime() {
 void Exec::solve() {
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = getRunTime();
-  Solution solution = algorithm->run(getGraph());
+  algorithm->setInfo(getData());
+  Solution solution = algorithm->run();
   end = getRunTime();
   solution.setRunTime(std::chrono::duration_cast<std::chrono::microseconds>(end-start).count());
   std::cout << solution;
