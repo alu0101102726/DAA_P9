@@ -76,18 +76,19 @@ void Solution::setRunTime(int newRunTime) {
 std::ostream& operator <<(std::ostream& os, Solution currentSolution) {
   std::cout << "La solución al aplicar el algoritmo " << currentSolution.getAlgorithmName() << " es:  \n";
   float maxValue = 0;
-  for (int i = 0; i < currentSolution.getSolution().size(); i++) {
-    std::cout << "\n[" << currentSolution.getSolution()[i] << "]: ";
+  std::vector <int> solution = currentSolution.getSolution();
+  for (int i = 0; i < solution.size(); i++) {
+    std::cout << "\n[" << solution[i] << "]: ";
     for (int j = 0; j < currentSolution.getInfo().getElementSize(i); j++) {
-      std::cout << currentSolution.getInfo().getDataValue(currentSolution.getSolution()[i],j) << " ";
+      std::cout << currentSolution.getInfo().getDataValue(solution[i],j) << " ";
     }
   }
   std::cout << "\n";
 
   float distance = 0;
-  for(int i = 0; i < currentSolution.getSolution().size(); i++) {
-    for(int j = i + 1; j < currentSolution.getSolution().size(); j++) {
-      distance += currentSolution.getInfo().getEuclideanDistance(currentSolution.getSolution()[i], currentSolution.getSolution()[j]);
+  for(int i = 0; i < solution.size(); i++) {
+    for(int j = i + 1; j < solution.size(); j++) {
+      distance += currentSolution.getInfo().getEuclideanDistance(solution[i], solution[j]);
     }
   }
 

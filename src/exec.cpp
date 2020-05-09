@@ -51,7 +51,6 @@ std::chrono::time_point<std::chrono::system_clock> Exec::getRunTime() {
 void Exec::solve() {
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = getRunTime();
-  algorithm->setInfo(getData());
   Solution solution = algorithm->run();
   end = getRunTime();
   solution.setRunTime(std::chrono::duration_cast<std::chrono::microseconds>(end-start).count());

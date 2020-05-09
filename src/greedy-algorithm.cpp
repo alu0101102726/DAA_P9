@@ -1,41 +1,54 @@
 #include "greedy-algorithm.hpp"
 
-GreedyAlgorithm::GreedyAlgorithm(std::string newName, int newM):
-  currentVectors() {
+/**
+ * @brief Construye el algoritmo greedy con un nombre asociado, además
+ * de una dimensión que es la que va a tener los vectores
+ * 
+ * @param newName Nuevo nombre del algoritmo
+ * @param newM Tamaño de la solución
+ */
+GreedyAlgorithm::GreedyAlgorithm(std::string newName, int newM) {
   name = newName;
   m = newM;
 }
 
-int GreedyAlgorithm::getMvalue() {
-  return m;
-}
-
-std::string GreedyAlgorithm::getAlgorithmName() {
-  return name;
-}
-
-void GreedyAlgorithm::setInfo(Vectors newVector) {
-  currentVectors = newVector;
-}
-
+/**
+ * @brief Se encarga de ejecutar el algoritmo Greedy. Para ello lo que hace es crear
+ * un vector con todos los candidatos. Calcula el centro de gravedad respecto a todos
+ * los elementos del vector. Luego se van a hacer tantas iteraciones hasta que el vector
+ * de solución tenga el tamaño que le hemos definido. En todo este proceso, se va a obtener
+ * el punto más lejano respecto al centro y se añade al vector de solución, quitándolo a su
+ * vez del vector con todos los elementos. Para acabar se calcula el centro de gravedad de
+ * la nueva solución (esto ocurre hasta que la solución tenga el tamaño m definido).
+ * 
+ * @return Solution Devuelve la solución al problema en formato Solucion
+ */
 Solution GreedyAlgorithm::run() {
   std::vector <int> Elem;
   std::vector <int> S;
   for (int i = 0; i < currentVectors.getSize(); i++) {
     Elem.push_back(i);
   }
-  std::vector <float> SC = getGravityCenter(Elem, currentVectors);
-  while(S.size() != getMvalue()) {
+  std::vector <float> SC = getGravityCenter(Elem);
+  while(S.size() != m) {
     int furthest = getFurthestElement(Elem, SC);
     S.push_back(furthest);
     Elem.erase(std::find(Elem.begin(), Elem.end(), furthest));
-    SC = getGravityCenter(S, currentVectors);
+    SC = getGravityCenter(S);
   }
 
-  Solution newSolution(currentVectors, S, getAlgorithmName());
+  Solution newSolution(currentVectors, S, name);
   return newSolution;
 }
 
+/**
+ * @brief Se encarga de obtener el elemento más alejado del centro (que contiene los elementos
+ * que no son solución)
+ * 
+ * @param currentElem Representa el vector que contiene los elementos restantes (no solución)
+ * @param currentSC Representa el vector con los valores
+ * @return int Devuelve el índice en la matriz del elemento más alejado.
+ */
 int GreedyAlgorithm::getFurthestElement(std::vector <int> currentElem, std::vector <float> currentSC) {
     float distance = 0;
     int sol;

@@ -46,12 +46,14 @@ int main(void) {
 
   Exec newExec(fileName);
   Algorithm* algoritmo = new GreedyAlgorithm("Greedy", 3);
+  algoritmo->setInfo(newExec.getData());
 
   newExec.changeAlgorithm(algoritmo);
   newExec.solve();
   delete algoritmo;
 
   algoritmo = new NewGreedyAlgorithm("New Greedy", 3);
+  algoritmo->setInfo(newExec.getData());
 
   newExec.changeAlgorithm(algoritmo);
   newExec.solve();

@@ -10,7 +10,12 @@
  */
 class Algorithm {
 
+    protected:
+        Vectors currentVectors;
+
 	public:
+        Algorithm() {}
+    
     /**
     * @brief Representa el método que es virtual y nulo que va a ser
     * sobreescrito por las clases hijas, debido a que todos los algoritmos
@@ -19,8 +24,8 @@ class Algorithm {
     * @return int Que contiene la mejor solucion
     */
     virtual Solution run() = 0;
-    virtual void setInfo(Vectors newVector) = 0;
+    void setInfo(Vectors newVector);
     float getMaxDiversity(Vectors currentVectors);
-    std::vector <float> getGravityCenter(std::vector <int> currentElement, Vectors currentVector);
+    std::vector <float> getGravityCenter(std::vector <int> currentElement);
     float getEuclideanDistance(int firstVect, int secondVect, std::vector < std::vector <float> > data);
 };
