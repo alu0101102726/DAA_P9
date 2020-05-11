@@ -29,3 +29,23 @@ std::vector <float> Algorithm::getGravityCenter(std::vector <int> currentElement
 void Algorithm::setInfo(Vectors newVector) {
   currentVectors = newVector;
 }
+
+float Algorithm::getTotalDistance(std::vector<int> solution) {
+  float distance = 0;
+  for(int i = 0; i < solution.size(); i++) {
+    for(int j = i + 1; j < solution.size(); j++) {
+      distance += currentVectors.getEuclideanDistance(solution[i], solution[j]);
+    }
+  }
+  return distance;
+}
+
+std::vector<int> Algorithm::getCandidates(std::vector<int> checkSelected) {
+  std::vector<int> candidates;
+  for (int currentElement = 0; currentElement < currentVectors.getSize(); currentElement++) {
+    if (std::find(checkSelected.begin(), checkSelected.end(), currentElement) == checkSelected.end()) {
+      candidates.push_back(currentElement);
+    }
+  }
+  return candidates;
+}

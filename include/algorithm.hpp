@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <cmath>
+#include <algorithm>
 #include "vectors.hpp"
 #include "solution.hpp"
 
@@ -25,7 +26,7 @@ class Algorithm {
     */
     virtual Solution run() = 0;
     void setInfo(Vectors newVector);
-    float getMaxDiversity(Vectors currentVectors);
+    float getTotalDistance(std::vector<int> solution);
     std::vector <float> getGravityCenter(std::vector <int> currentElement);
-    float getEuclideanDistance(int firstVect, int secondVect, std::vector < std::vector <float> > data);
+    std::vector<int> getCandidates(std::vector<int> checkSelected);
 };

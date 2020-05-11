@@ -8,6 +8,7 @@
 #include "algorithm.hpp"
 #include "greedy-algorithm.hpp"
 #include "greedy-algorithm-2.hpp"
+#include "grasp-algorithm.hpp"
 
 /**
  * @brief Función principal del programa que se encarga de hacer
@@ -26,23 +27,23 @@ int main(void) {
   
   int totalIterations, noImprovementIterations = 100, improvementIterations = 1000, env = 3, defaultValues;
   int localSearch = 0;
-  std::string fileName = "../ejemplos/";
-  std::string newFileName;
-  system("clear");
-  std::cout << "Introduce el grafo a ejecutar: \n";
-  std::cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
-  std::cout << "Grafos disponibles: \n";
-  system("ls ../ejemplos");
-  std::cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
-  std::cout << " >> "; std::cin >> newFileName;
-  fileName += newFileName;
+  std::string fileName = "../ejemplos/max_div_15_2.txt";
+  // std::string newFileName;
+  // system("clear");
+  // std::cout << "Introduce el grafo a ejecutar: \n";
+  // std::cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
+  // std::cout << "Grafos disponibles: \n";
+  // system("ls ../ejemplos");
+  // std::cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
+  // std::cout << " >> "; std::cin >> newFileName;
+  // fileName += newFileName;
 
-  try {
-    File file(fileName);
-  }
-  catch (const std::exception& e) {
-     std::cout << e.what();   
-  }
+  // try {
+  //   File file(fileName);
+  // }
+  // catch (const std::exception& e) {
+  //    std::cout << e.what();   
+  // }
 
   Exec newExec(fileName);
   Algorithm* algoritmo = new GreedyAlgorithm("Greedy", 3);
@@ -53,6 +54,13 @@ int main(void) {
   delete algoritmo;
 
   algoritmo = new NewGreedyAlgorithm("New Greedy", 3);
+  algoritmo->setInfo(newExec.getData());
+
+  newExec.changeAlgorithm(algoritmo);
+  newExec.solve();
+  delete algoritmo;
+
+  algoritmo = new GraspAlgorithm("Grasp", 10, 3, 2);
   algoritmo->setInfo(newExec.getData());
 
   newExec.changeAlgorithm(algoritmo);
