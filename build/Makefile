@@ -6,12 +6,12 @@ ODIR=../src
 
 LIBS=-lm
 
-_OBJ = main.o file.o solution.o vectors.o exec.o greedy-algorithm-2.o grasp-algorithm.o greedy-algorithm.o algorithm.o
+_OBJ = main.o file.o solution.o vectors.o exec.o local-search-algorithm.o greedy-algorithm-2.o grasp-algorithm.o greedy-algorithm.o algorithm.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 all: main
 
-$(ODIR)/main.o: $(ODIR)/main.cpp $(IDIR)/solution.hpp $(IDIR)/file.hpp $(IDIR)/vectors.hpp $(IDIR)/exec.hpp $(IDIR)/grasp-algorithm.hpp $(IDIR)/greedy-algorithm-2.hpp $(IDIR)/greedy-algorithm.hpp $(IDIR)/algorithm.hpp 
+$(ODIR)/main.o: $(ODIR)/main.cpp $(IDIR)/solution.hpp $(IDIR)/file.hpp $(IDIR)/vectors.hpp $(IDIR)/exec.hpp $(IDIR)/local-search-algorithm.hpp $(IDIR)/grasp-algorithm.hpp $(IDIR)/greedy-algorithm-2.hpp $(IDIR)/greedy-algorithm.hpp $(IDIR)/algorithm.hpp 
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(ODIR)/file.o: $(ODIR)/file.cpp $(IDIR)/file.hpp 
@@ -30,6 +30,9 @@ $(ODIR)/algorithm.o: $(ODIR)/algorithm.cpp $(IDIR)/algorithm.hpp
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(ODIR)/greedy-algorithm.o: $(ODIR)/greedy-algorithm.cpp $(IDIR)/greedy-algorithm.hpp 
+		$(CC) -c -o $@ $< $(CFLAGS)
+
+$(ODIR)/local-search-algorithm.o: $(ODIR)/local-search-algorithm.cpp $(IDIR)/local-search-algorithm.hpp 
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(ODIR)/greedy-algorithm-2.o: $(ODIR)/greedy-algorithm-2.cpp $(IDIR)/greedy-algorithm-2.hpp 
