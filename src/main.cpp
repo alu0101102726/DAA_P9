@@ -3,12 +3,14 @@
 #include <vector>
 #include <chrono>
 #include <ctime>
+#include "solution.hpp"
 #include "file.hpp"
 #include "exec.hpp"
 #include "algorithm.hpp"
-#include "greedy-algorithm.hpp"
 #include "greedy-algorithm-2.hpp"
 #include "grasp-algorithm.hpp"
+#include "local-search-algorithm.hpp"
+#include "branching-pruning-algorithm.hpp"
 
 /**
  * @brief Función principal del programa que se encarga de hacer
@@ -46,11 +48,11 @@ int main(void) {
   // }
 
   Exec newExec(fileName);
-  Algorithm* algoritmo = new GreedyAlgorithm("Greedy", 3);
+  Algorithm* algoritmo = new GreedyAlgorithm("Greedy", 6);
   algoritmo->setInfo(newExec.getData());
 
   newExec.changeAlgorithm(algoritmo);
-  newExec.solve();
+  Solution Greedy = newExec.solve();
   delete algoritmo;
 
   algoritmo = new NewGreedyAlgorithm("New Greedy", 3);
@@ -61,6 +63,20 @@ int main(void) {
   delete algoritmo;
 
   algoritmo = new GraspAlgorithm("Grasp", 10, 3, 2);
+  algoritmo->setInfo(newExec.getData());
+
+  newExec.changeAlgorithm(algoritmo);
+  newExec.solve();
+  delete algoritmo;
+
+  algoritmo = new LocalSearch("Local Search", 3, "Greedy", Greedy);
+  algoritmo->setInfo(newExec.getData());
+
+  newExec.changeAlgorithm(algoritmo);
+  newExec.solve();
+  delete algoritmo;
+
+  algoritmo = new BranchingPruningAlgorithm("BPA", 6, Greedy, true);
   algoritmo->setInfo(newExec.getData());
 
   newExec.changeAlgorithm(algoritmo);

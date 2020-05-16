@@ -7,22 +7,53 @@
  * @param newName Nuevo nombre del algoritmo
  * @param newM Tamaño de la solución
  */
-LocalSearch::LocalSearch(std::string newName, int newM) {
+LocalSearch::LocalSearch(std::string newName, int newM, std::string otherAlgorithm, Solution Greedy){
   name = newName;
   m = newM;
-}
-
-std::vector<int> LocalSearch::randomSolution() {
-  std::vector<int> auxSolution;
-  for (int currentSolution = 0; currentSolution < m; currentSolution++) {
-    int randomSol = rand() % currentVectors.getSize();
-    auxSolution.push_back(randomSol);
-  }
-  return auxSolution;
+  greedy.setAtributtes(otherAlgorithm, newM);
+  sol = Greedy.getSolution();
 }
 
 Solution LocalSearch::run() {
-  std::vector<int> solution = randomSolution();
-  float distance = getTotalDistance(solution);
-  std::vector<int> bestSolution = solution;
+  std::vector<int> solution = sol;
+  float distance = getTotalDistance(sol);
+  bool isEqual = true;
+  while (isEqual) {
+    std::vector<int> bestSolution = localSearch(solution);
+    if (getTotalDistance(bestSolution) > distance) {
+      solution = bestSolution;
+      distance = getTotalDistance(bestSolution);
+    }
+    else {
+      isEqual = false;
+    }
+  }
+
+  Solution newSolution(currentVectors, solution, name);
+  return newSolution;
+}
+
+std::vector <int> LocalSearch::localSearch(std::vector <int> solution) {
+    float distance = getTotalDistance(sol);
+    std::vector<int> optimum;
+    std::vector<int> aux = sol;
+    bool change = false;
+    do {
+      std::vector<int> cand = getCandidates(aux);
+      change = false;
+      for(int i = 0; i < aux.size(); i++){
+        int auxItem = aux[i];
+        for (int j = 0; j < cand.size(); j++){
+          aux[i] = cand[j];
+          float auxDistance = getTotalDistance(aux);
+          if (auxDistance > distance) {
+            distance = auxDistance;
+            optimum = aux;
+            change = true;
+          }
+        }
+        aux[i] = auxItem;
+      }
+    } while (change);
+    return optimum;
 }

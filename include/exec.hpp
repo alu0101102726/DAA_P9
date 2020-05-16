@@ -24,6 +24,6 @@ class Exec {
 
     void changeAlgorithm(Algorithm *newAlgorithm);
     Vectors getData();
-    void solve();
+    Solution solve();
     std::chrono::time_point<std::chrono::system_clock> getRunTime();
 };

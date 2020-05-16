@@ -48,12 +48,12 @@ std::chrono::time_point<std::chrono::system_clock> Exec::getRunTime() {
  * el tiempo que ha tardado en ejecutarlo
  * 
  */
-void Exec::solve() {
+Solution Exec::solve() {
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = getRunTime();
   Solution solution = algorithm->run();
   end = getRunTime();
   solution.setRunTime(std::chrono::duration_cast<std::chrono::microseconds>(end-start).count());
   std::cout << solution;
-  
+  return solution;  
 }

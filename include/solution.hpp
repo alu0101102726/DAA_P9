@@ -23,6 +23,7 @@ class Solution {
 
   public:
     Solution(Vectors currentSolution, std::vector<int> newSolution, std::string newAlgorithmName);
+    Solution() {}
     ~Solution() {}
 
     Vectors getInfo();
