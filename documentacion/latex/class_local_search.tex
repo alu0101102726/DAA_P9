@@ -1,0 +1,57 @@
+\hypertarget{class_local_search}{}\doxysection{Local\+Search Class Reference}
+\label{class_local_search}\index{LocalSearch@{LocalSearch}}
+
+
+Esta clase representa el algoritmo \mbox{\hyperlink{class_local_search}{Local\+Search}}, que realiza una búsqueda local a partir de una solución obtenida por otro algoritmo, intentando mejorarla.  
+
+
+
+
+{\ttfamily \#include $<$local-\/search-\/algorithm.\+hpp$>$}
+
+Inheritance diagram for Local\+Search\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_local_search}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_local_search_aca99754f4f18bdc813f1bd3e80c319c5}\label{class_local_search_aca99754f4f18bdc813f1bd3e80c319c5}} 
+{\bfseries Local\+Search} (std\+::string new\+Name, int newM, std\+::string other\+Algorithm, \mbox{\hyperlink{class_solution}{Solution}} Greedy)
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}{run}} ()
+\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_search_ac207fc8d6d5230dcf17c8e380fce5a59}\label{class_local_search_ac207fc8d6d5230dcf17c8e380fce5a59}} 
+std\+::vector$<$ int $>$ {\bfseries local\+Search} (std\+::vector$<$ int $>$ solution)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Esta clase representa el algoritmo \mbox{\hyperlink{class_local_search}{Local\+Search}}, que realiza una búsqueda local a partir de una solución obtenida por otro algoritmo, intentando mejorarla. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}\label{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}} 
+\index{LocalSearch@{LocalSearch}!run@{run}}
+\index{run@{run}!LocalSearch@{LocalSearch}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_solution}{Solution}} Local\+Search\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+
+\begin{DoxyReturn}{Returns}
+int Que contiene la mejor solucion 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{Algorithm}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/local-\/search-\/algorithm.\+hpp\end{DoxyCompactItemize}

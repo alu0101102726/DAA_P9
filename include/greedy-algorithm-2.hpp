@@ -2,6 +2,10 @@
 #include "vectors.hpp"
 #include <algorithm>
 
+/**
+ * @brief Esta clase representa el algoritmo Greedy que se va a aplicar.
+ * Es una versión destructiva del algoritmo Greedy del pseudocódigo
+ */
 class NewGreedyAlgorithm : public Algorithm {
 
   private:

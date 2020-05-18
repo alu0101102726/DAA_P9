@@ -2,6 +2,10 @@
 #include "vectors.hpp"
 #include <algorithm>
 
+/**
+ * @brief Esta clase representa el algoritmo Greedy que se va a aplicar,
+ * obtenido a partir del pseudocódigo
+ */
 class GreedyAlgorithm : public Algorithm {
 
   private:
@@ -14,7 +18,6 @@ class GreedyAlgorithm : public Algorithm {
     ~GreedyAlgorithm() {}
 
     float get_total(std::vector<int> sol);
-    void setAtributtes(std::string name, int m);
 
     Solution run();
     int getFurthestElement(std::vector <int> currentElem, std::vector <float> currentSC);

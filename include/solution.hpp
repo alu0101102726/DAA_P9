@@ -20,6 +20,7 @@ class Solution {
     int runTime;
     std::string algorithmName;
     float distance;
+    int gNodes;
 
   public:
     Solution(Vectors currentSolution, std::vector<int> newSolution, std::string newAlgorithmName);
@@ -32,6 +33,8 @@ class Solution {
     void setRunTime(int newRunTime);
     std::string getAlgorithmName();
     int getSolutionValue(int position);
+    void setNodes(int node);
+    int getNodes();
 
     friend std::ostream& operator <<(std::ostream& os, Solution currentSolution);
 

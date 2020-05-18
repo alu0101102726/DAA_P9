@@ -1,0 +1,76 @@
+\hypertarget{class_grasp_algorithm}{}\doxysection{Grasp\+Algorithm Class Reference}
+\label{class_grasp_algorithm}\index{GraspAlgorithm@{GraspAlgorithm}}
+
+
+Esta clase representa el algoritmo G\+R\+A\+SP que se va a aplicar, vamos a tener tres fases en el mismo\+:  
+
+
+
+
+{\ttfamily \#include $<$grasp-\/algorithm.\+hpp$>$}
+
+Inheritance diagram for Grasp\+Algorithm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grasp_algorithm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}\label{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}} 
+{\bfseries Grasp\+Algorithm} (std\+::string new\+Name, int new\+Iterations\+Limit, int newM, int new\+R\+C\+Lsize)
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}{run}} ()
+\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a27b06068a4dfc172558594761fd7828b}\label{class_grasp_algorithm_a27b06068a4dfc172558594761fd7828b}} 
+std\+::vector$<$ int $>$ {\bfseries preprocessing} ()
+\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a8d386251f6a101e3434d02d44cf5a32b}\label{class_grasp_algorithm_a8d386251f6a101e3434d02d44cf5a32b}} 
+std\+::vector$<$ int $>$ {\bfseries construct\+Solution} ()
+\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a0249edc96caba4f9570fbfc19e32cb59}\label{class_grasp_algorithm_a0249edc96caba4f9570fbfc19e32cb59}} 
+std\+::vector$<$ int $>$ {\bfseries make\+R\+CL} (std\+::vector$<$ int $>$ current\+Solution)
+\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a8ae226f7fe0e8185dd1cf84dd148d57a}\label{class_grasp_algorithm_a8ae226f7fe0e8185dd1cf84dd148d57a}} 
+std\+::vector$<$ int $>$ {\bfseries local\+Search} (std\+::vector$<$ int $>$ solution)
+\item 
+\mbox{\Hypertarget{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}\label{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}} 
+std\+::vector$<$ int $>$ {\bfseries not\+Selected\+Nodes} (std\+::vector$<$ int $>$ check\+Selected, int node\+Number)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Esta clase representa el algoritmo G\+R\+A\+SP que se va a aplicar, vamos a tener tres fases en el mismo\+: 
+
+
+\begin{DoxyItemize}
+\item Preprocesamiento
+\item Construcción
+\item Búsqueda 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}\label{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!run@{run}}
+\index{run@{run}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_solution}{Solution}} Grasp\+Algorithm\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+
+\begin{DoxyReturn}{Returns}
+int Que contiene la mejor solucion 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{Algorithm}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/grasp-\/algorithm.\+hpp\end{DoxyCompactItemize}

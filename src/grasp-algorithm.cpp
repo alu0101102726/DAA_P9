@@ -19,12 +19,11 @@ GraspAlgorithm::GraspAlgorithm(std::string newName, int newIterationsLimit, int 
 /**
  * @brief Este método se encarga de ejecutar el algoritmo grasp,
  * para ello se hace un preprocesamiento, teniendo un conjunto de candidatos.
- * Una vez esto, se definen como condiciones de parada las iteraciones con y
- * sin mejora, y luego en cada iteración se va construyendo la solución, se hace
+ * Una vez esto, se definen como condiciones de parada las iteraciones, 
+ * y luego en cada iteración se va construyendo la solución, se hace
  * la búsqueda local y se asigna al máximo la solución que tenga mayor
- * dispersión media.
+ * distancia.
  * 
- * @param currentGraph Representa el grafo actual
  * @return Solution Solucion del problema
  */
 Solution GraspAlgorithm::run() {
@@ -33,7 +32,6 @@ Solution GraspAlgorithm::run() {
   int iterations = 0;
   std::vector <int> bestSolution = candidates;
   while(iterations < iterationsLimit) {
-    iterations++;
     std::vector<int> solution = constructSolution();
     solution = localSearch(solution);
     float newMax = getTotalDistance(solution);
@@ -41,6 +39,7 @@ Solution GraspAlgorithm::run() {
       max = newMax;
       bestSolution = solution;
     }
+    iterations++;
   }
 
   Solution newSolution(currentVectors, bestSolution, name);
@@ -85,10 +84,9 @@ std::vector <int> GraspAlgorithm::constructSolution() {
 
 /**
  * @brief Crea el RCL, para ello se le pasa un vector que es del que va a partir
- * para obtener el RCL. En nuestro caso, se ha decidido, que se escojan aquellos valores
- * que sean mayores al 80 % del valor máximo.
+ * para obtener el RCL. 
  * 
- * @param RCL Vector del que se va a hallar el RCL
+ * @param currentSolution Vector del que se va a hallar el RCL
  * @return std::vector <int> Nuevo RCL que se ha creado
  */
 std::vector <int> GraspAlgorithm::makeRCL(std::vector<int> currentSolution) {
@@ -119,11 +117,10 @@ std::vector <int> GraspAlgorithm::makeRCL(std::vector<int> currentSolution) {
 }
 
 /**
- * @brief Representa la búsqueda local
+ * @brief Representa la búsqueda local, esta se va realizar haciendo un
+ * intercambio entre los nodos que están en la solución y aquellos que no.
  * 
- * @param solution Representa el vector sobre el que vamos a generar la
- * búsqueda local
- * @param currentGraph Grafo con la información de las distacias entre nodos
+ * @param solution Solución sobre la que se va a realizar la búsqueda local.
  * @return std::vector <int> Valor del vector
  */
 std::vector <int> GraspAlgorithm::localSearch(std::vector <int> solution) {

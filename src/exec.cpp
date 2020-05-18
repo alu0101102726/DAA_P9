@@ -46,7 +46,7 @@ std::chrono::time_point<std::chrono::system_clock> Exec::getRunTime() {
  * @brief Programa principal que se encarga de calcular el tiempo de ejecución
  * de un determinado algoritmo, realizar el mismo e imprimir su solución, así como
  * el tiempo que ha tardado en ejecutarlo
- * 
+ * @return Devuelve la solución que ha obtenido del algoritmo. * 
  */
 Solution Exec::solve() {
   std::chrono::time_point<std::chrono::system_clock> start, end;

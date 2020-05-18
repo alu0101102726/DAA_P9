@@ -34,6 +34,14 @@ int Solution::getSolutionValue(int position) {
   return solution[position];
 }
 
+void Solution::setNodes(int nodes) {
+  gNodes = nodes;
+}
+
+int Solution::getNodes() {
+  return gNodes;
+}
+
 /**
  * @brief Devuelve el tiempo de ejecución 
  * 
@@ -43,6 +51,11 @@ int Solution::getRunTime() {
   return runTime;
 }
 
+/**
+ * @brief Devuelve la información del fichero
+ * 
+ * @return Vectors Valor de la información del fichero
+ */
 Vectors Solution::getInfo() {
   return data;
 }
@@ -78,7 +91,7 @@ std::ostream& operator <<(std::ostream& os, Solution currentSolution) {
   float maxValue = 0;
   std::vector <int> solution = currentSolution.getSolution();
   for (int i = 0; i < solution.size(); i++) {
-    std::cout << "\n[" << solution[i] << "]: ";
+    std::cout << "\n[" << solution[i] + 1 << "]: ";
     for (int j = 0; j < currentSolution.getInfo().getElementSize(i); j++) {
       std::cout << currentSolution.getInfo().getDataValue(solution[i],j) << " ";
     }
@@ -91,6 +104,9 @@ std::ostream& operator <<(std::ostream& os, Solution currentSolution) {
       distance += currentSolution.getInfo().getEuclideanDistance(solution[i], solution[j]);
     }
   }
+
+  if (currentSolution.getAlgorithmName() == "Branching and Pruning")
+    std::cout << "Nodos generados: " << currentSolution.getNodes() << "\n";
 
   std::cout << "Distancia: " << distance << "\n";  
   std::cout << "Run Time: " << currentSolution.getRunTime() << " microseconds \n";

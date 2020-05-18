@@ -6,14 +6,24 @@
  * 
  * @param newName Nuevo nombre del algoritmo
  * @param newM Tamaño de la solución
+ * @param otherAlgorithm Nombre del algoritmo que da el valor de la solución inicial
+ * @param algSolution Solución proporcionada por otro algoritmo
  */
-LocalSearch::LocalSearch(std::string newName, int newM, std::string otherAlgorithm, Solution Greedy){
+LocalSearch::LocalSearch(std::string newName, int newM, std::string otherAlgorithm, Solution algSolution){
   name = newName;
   m = newM;
-  greedy.setAtributtes(otherAlgorithm, newM);
-  sol = Greedy.getSolution();
+  sol = algSolution.getSolution();
 }
 
+/**
+ * @brief Algoritmo que se encarga de hacer la búsqueda local. Parte de una
+ * solución inicial proporcionada por otro algoritmo. A partir de esta va haciendo
+ * búsquedas locales hasta que la solución que obtenga sea peor a la mejor obtenida.
+ * La búsqueda local se basa en un intercambio de los elementos que se encuentran en
+ * la solución y aquellos que no lo están.
+ * 
+ * @return Solution Valor de la solución del algoritmo
+ */
 Solution LocalSearch::run() {
   std::vector<int> solution = sol;
   float distance = getTotalDistance(sol);
@@ -33,6 +43,14 @@ Solution LocalSearch::run() {
   return newSolution;
 }
 
+/**
+ * @brief La búsqueda local se basa en un intercambio de los elementos que se encuentran en
+ * la solución y aquellos que no lo están. En caso de que mejore se modifica la mejor
+ * solución.
+ * 
+ * @param solution Vector sobre el que se va a hacer la búsqueda local.
+ * @return std::vector <int> Nueva solución obtenida
+ */
 std::vector <int> LocalSearch::localSearch(std::vector <int> solution) {
     float distance = getTotalDistance(sol);
     std::vector<int> optimum;

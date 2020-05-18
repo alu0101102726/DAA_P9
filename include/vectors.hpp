@@ -4,6 +4,10 @@
 #include <cmath>
 #include "file.hpp"
 
+/**
+ * @brief Esta clase representa la información que se ha obtenido
+ * del fichero
+ */
 class Vectors {
 
   private:

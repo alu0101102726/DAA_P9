@@ -1,7 +1,7 @@
 #include "vectors.hpp"
 
 /**
- * @brief Construct a new Vectors:: Vectors object
+ * @brief Construye el objeto donde vamos a guardar la información del fichero
  * 
  * @param fileName Nombre del fichero
  */
@@ -18,6 +18,11 @@ Vectors::Vectors(std::vector < std::vector < float > > otherVect) {
   data = otherVect;
 }
 
+/**
+ * @brief Devuelve el valor de la dimensión
+ * 
+ * @return int Valor de la dimensión
+ */
 int Vectors::getDimension() {
   return dimension;
 }
@@ -42,6 +47,11 @@ int Vectors::getSize() {
   return data.size();
 }
 
+/**
+ * @brief Devuelve el vector que contiene la información
+ * 
+ * @return std::vector < std::vector < float > > vector con la información
+ */
 std::vector < std::vector < float > > Vectors::getData() {
   return data;
 }

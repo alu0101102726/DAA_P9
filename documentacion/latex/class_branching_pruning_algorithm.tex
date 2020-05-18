@@ -1,0 +1,66 @@
+\hypertarget{class_branching_pruning_algorithm}{}\doxysection{Branching\+Pruning\+Algorithm Class Reference}
+\label{class_branching_pruning_algorithm}\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+
+
+Representa una clase que va a aplicar el algoritmo de expansion y poda.  
+
+
+
+
+{\ttfamily \#include $<$branching-\/pruning-\/algorithm.\+hpp$>$}
+
+Inheritance diagram for Branching\+Pruning\+Algorithm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_branching_pruning_algorithm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}\label{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}} 
+{\bfseries Branching\+Pruning\+Algorithm} (std\+::string new\+Name, int m, \mbox{\hyperlink{class_solution}{Solution}} alg, bool mode)
+\item 
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}\label{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}} 
+void {\bfseries initialize\+Tree} ()
+\item 
+\mbox{\Hypertarget{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}\label{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}} 
+float {\bfseries get\+Upper\+Bound} (std\+::vector$<$ int $>$ solution)
+\item 
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}\label{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}} 
+void {\bfseries expand} (int position)
+\item 
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}\label{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}} 
+int {\bfseries get\+Min} ()
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}{run}} ()
+\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Representa una clase que va a aplicar el algoritmo de expansion y poda. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}\label{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!run@{run}}
+\index{run@{run}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_solution}{Solution}} Branching\+Pruning\+Algorithm\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+
+\begin{DoxyReturn}{Returns}
+int Que contiene la mejor solucion 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{Algorithm}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/branching-\/pruning-\/algorithm.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{class_algorithm}{}\doxysection{Algorithm Class Reference}
+\label{class_algorithm}\index{Algorithm@{Algorithm}}
+
+
+Representa una clase que va a permitir aplicar el patrón estrategia.  
+
+
+
+
+{\ttfamily \#include $<$algorithm.\+hpp$>$}
+
+Inheritance diagram for Algorithm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.280000cm]{class_algorithm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{run}} ()=0
+\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}\label{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}} 
+void {\bfseries set\+Info} (\mbox{\hyperlink{class_vectors}{Vectors}} new\+Vector)
+\item 
+\mbox{\Hypertarget{class_algorithm_a2db7703ee0d4177478259e6f41d69549}\label{class_algorithm_a2db7703ee0d4177478259e6f41d69549}} 
+float {\bfseries get\+Total\+Distance} (std\+::vector$<$ int $>$ solution)
+\item 
+\mbox{\Hypertarget{class_algorithm_a1043fc258dd10c6b65a32151b0e3399d}\label{class_algorithm_a1043fc258dd10c6b65a32151b0e3399d}} 
+std\+::vector$<$ float $>$ {\bfseries get\+Gravity\+Center} (std\+::vector$<$ int $>$ current\+Element)
+\item 
+\mbox{\Hypertarget{class_algorithm_a76864d98d1fe76e021461ce430dacb3f}\label{class_algorithm_a76864d98d1fe76e021461ce430dacb3f}} 
+std\+::vector$<$ int $>$ {\bfseries get\+Candidates} (std\+::vector$<$ int $>$ check\+Selected)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_algorithm_a7438318d02e9af3a23a1971f7559682b}\label{class_algorithm_a7438318d02e9af3a23a1971f7559682b}} 
+\mbox{\hyperlink{class_vectors}{Vectors}} {\bfseries current\+Vectors}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa una clase que va a permitir aplicar el patrón estrategia. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}\label{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}} 
+\index{Algorithm@{Algorithm}!run@{run}}
+\index{run@{run}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_solution}{Solution}} Algorithm\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+
+\begin{DoxyReturn}{Returns}
+int Que contiene la mejor solucion 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}{Branching\+Pruning\+Algorithm}}, \mbox{\hyperlink{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}{Grasp\+Algorithm}}, \mbox{\hyperlink{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}{Local\+Search}}, \mbox{\hyperlink{class_greedy_algorithm_a04f5e4e6ad7d0d68089a750d71efef3f}{Greedy\+Algorithm}}, and \mbox{\hyperlink{class_new_greedy_algorithm_a5dc4a4d0521ffcd374ac27cdd2c7a56e}{New\+Greedy\+Algorithm}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/algorithm.\+hpp\end{DoxyCompactItemize}

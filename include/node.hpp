@@ -3,6 +3,10 @@
 #include <algorithm>
 #include <iostream>
 
+/**
+ * @brief Esta clase representa un nodo del árbol para representar
+ * el algoritmo de extension y poda
+ */
 class Node {
 
   private:
@@ -31,8 +35,6 @@ class Node {
 
     std::vector<int> getVector();
     void setVector(std::vector<int> newVect);
-
-    void addChilds(int newNode);
     
     friend std::ostream& operator<<(std::ostream& os, Node otherNode);
 };

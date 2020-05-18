@@ -3,8 +3,8 @@
 #include "node.hpp"
 
 /**
- * @brief Representa una clase que va a permitir aplicar
- * el patrón estrategia 
+ * @brief Representa una clase que va a aplicar el algoritmo
+ * de expansion y poda. 
  */
 class BranchingPruningAlgorithm : public Algorithm {
 
@@ -15,6 +15,7 @@ class BranchingPruningAlgorithm : public Algorithm {
         float lowerBound;
         std::vector <Node> tree;
         bool isDepth;
+        int expandNodes;
 
 	public:
         BranchingPruningAlgorithm(std::string newName, int m, Solution alg, bool mode);

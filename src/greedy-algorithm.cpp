@@ -77,8 +77,3 @@ int GreedyAlgorithm::getFurthestElement(std::vector <int> currentElem, std::vect
     }
     return sol;
 }
-
-void GreedyAlgorithm::setAtributtes(std::string newName, int newm) {
-  name = newName;
-  m = newm;
-}
