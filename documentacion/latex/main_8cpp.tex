@@ -1,0 +1,40 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include \char`\"{}solution.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}exec.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}greedy-\/algorithm-\/2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grasp-\/algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}local-\/search-\/algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}branching-\/pruning-\/algorithm.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Función principal del programa que se encarga de hacer la lectura del fichero (creando el pertinente objeto y haciendo una llamada a un método definido en el mismo que lo gestiona), luego crea exec, que es un objeto que se encarga de gestionar los algoritmos, impresiones, etc. Y para acabar va llamando a los diferentes algoritmos, ejecutándolos. Los métodos Grasp, \mbox{\hyperlink{class_local_search}{Local\+Search}} y Branching and Pruning tienen algunos atributos añadidos, como lo son el tamaño del L\+RC, el tamaño de la solución y el numero de iteraciones. Además para el algoritmo de ramificación y poda hay un booleano que determina si se coge la menor cota (booleano a false) o si se utiliza la función de profundidad (booleano a true). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Función principal del programa que se encarga de hacer la lectura del fichero (creando el pertinente objeto y haciendo una llamada a un método definido en el mismo que lo gestiona), luego crea exec, que es un objeto que se encarga de gestionar los algoritmos, impresiones, etc. Y para acabar va llamando a los diferentes algoritmos, ejecutándolos. Los métodos Grasp, \mbox{\hyperlink{class_local_search}{Local\+Search}} y Branching and Pruning tienen algunos atributos añadidos, como lo son el tamaño del L\+RC, el tamaño de la solución y el numero de iteraciones. Además para el algoritmo de ramificación y poda hay un booleano que determina si se coge la menor cota (booleano a false) o si se utiliza la función de profundidad (booleano a true). 
+
+\begin{DoxyReturn}{Returns}
+int Devuelvve un 0 si el programa se ha ejecutado correctamente. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file main.\+cpp.
+

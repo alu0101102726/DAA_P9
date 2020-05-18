@@ -18,30 +18,129 @@ Inheritance diagram for Branching\+Pruning\+Algorithm\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}\label{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}} 
-{\bfseries Branching\+Pruning\+Algorithm} (std\+::string new\+Name, int m, \mbox{\hyperlink{class_solution}{Solution}} alg, bool mode)
-\item 
-\mbox{\Hypertarget{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}\label{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}} 
-void {\bfseries initialize\+Tree} ()
-\item 
-\mbox{\Hypertarget{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}\label{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}} 
-float {\bfseries get\+Upper\+Bound} (std\+::vector$<$ int $>$ solution)
-\item 
-\mbox{\Hypertarget{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}\label{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}} 
-void {\bfseries expand} (int position)
-\item 
-\mbox{\Hypertarget{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}\label{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}} 
-int {\bfseries get\+Min} ()
-\item 
+\mbox{\hyperlink{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}{Branching\+Pruning\+Algorithm}} (std\+::string new\+Name, int m, \mbox{\hyperlink{class_solution}{Solution}} alg, bool mode)
+\begin{DoxyCompactList}\small\item\em Construye el algoritmo de ramificación y poda con un nombre, un valor m que representa el tamaño de la solucióm, una solución inicial de la que va a partir el algoritmo y un booleano que indica cual va a la función de exploración (cota mínima o profundidad). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}{initialize\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Este método se encarga de inicializar el árbol, para ello se centra en crear los nodos que se encuentran en el primer nivel del arbol, añadiendolos al árbol. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}{get\+Upper\+Bound}} (std\+::vector$<$ int $>$ solution)
+\begin{DoxyCompactList}\small\item\em Esta función se encarga de determinar la cota superior, para ello hay que tener en cuenta, que U\+P\+B2 va a formarse a partir de las p mejores aristas que est ́an entre sel y unsel y U\+P\+B3 van a ser las mejores aristas de unsel y unsel. Con esto en mente, sabemos que nuestra cota superior va a ser la suma de U\+P\+B2 Y U\+P\+B3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}{expand}} (int position)
+\begin{DoxyCompactList}\small\item\em Funcion que se encarga de expandir el nodo que se ha seleccionado, para ello, pone el mismo a visitado y se pasa a generar los nodos hijos del mismo (teniendo en cuenta que partimos de la idea de que se ha implementado un arbol mejorado, es decir, impide que hayan nodos duplicados), creando cada nodo y añadiendolo al arbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}{get\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que se encarga de determinar cual es el siguiente nodo a escoger para luego expandir, en el caso de que se den las condiciones. Depende de la función de exploración asignada, se hará con cota mínima o por profundidad. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}{run}} ()
-\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Función principal del algoritmo, esta se encarga de asignar la cota inferior al valor de la distancia de la solución inicial, inicializar el arbol e iterar en un bucle que se haya recorrido todo el árbol, en cada iteracion se determina el nodo con el menor valor y este se comprueba si mejora la solución, en caso de que lo haga y no esté visitado se expande. Si con la solución parcial actual, el valor de la distancia es superior a la cota inferior esta se actualiza. Además si se ha llegado al tamaño de la solución indicado se almacena dicha solución y retorna. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Representa una clase que va a aplicar el algoritmo de expansion y poda. 
 
+Definition at line 9 of file branching-\/pruning-\/algorithm.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}\label{class_branching_pruning_algorithm_af5dd885c99c56c7e841e947d3a5042da}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{BranchingPruningAlgorithm()}{BranchingPruningAlgorithm()}}
+{\footnotesize\ttfamily Branching\+Pruning\+Algorithm\+::\+Branching\+Pruning\+Algorithm (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name,  }\item[{int}]{newM,  }\item[{\mbox{\hyperlink{class_solution}{Solution}}}]{alg,  }\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+
+
+Construye el algoritmo de ramificación y poda con un nombre, un valor m que representa el tamaño de la solucióm, una solución inicial de la que va a partir el algoritmo y un booleano que indica cual va a la función de exploración (cota mínima o profundidad). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & Representa el nombre del algoritmo \\
+\hline
+{\em newM} & Representa el valor del tamaño de la solución \\
+\hline
+{\em alg} & Solución que es obtenida de otro algoritmo que va a ser la solución inicial de este. \\
+\hline
+{\em mode} & Representa cual va a la función de exploración (cota mínima o profundidad). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file branching-\/pruning-\/algorithm.\+cpp.
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}\label{class_branching_pruning_algorithm_a0c5f31dfc1eb79130f55a7ca708380a8}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!expand@{expand}}
+\index{expand@{expand}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{expand()}{expand()}}
+{\footnotesize\ttfamily void Branching\+Pruning\+Algorithm\+::expand (\begin{DoxyParamCaption}\item[{int}]{node\+To\+Expand }\end{DoxyParamCaption})}
+
+
+
+Funcion que se encarga de expandir el nodo que se ha seleccionado, para ello, pone el mismo a visitado y se pasa a generar los nodos hijos del mismo (teniendo en cuenta que partimos de la idea de que se ha implementado un arbol mejorado, es decir, impide que hayan nodos duplicados), creando cada nodo y añadiendolo al arbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+To\+Expand} & Representa el nodo elegido que se va a expander \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file branching-\/pruning-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}\label{class_branching_pruning_algorithm_a252084974f86d1aadd4b916508a77d73}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!getMin@{getMin}}
+\index{getMin@{getMin}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{getMin()}{getMin()}}
+{\footnotesize\ttfamily int Branching\+Pruning\+Algorithm\+::get\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que se encarga de determinar cual es el siguiente nodo a escoger para luego expandir, en el caso de que se den las condiciones. Depende de la función de exploración asignada, se hará con cota mínima o por profundidad. 
+
+\begin{DoxyReturn}{Returns}
+int Valor del nodo a escoger 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file branching-\/pruning-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}\label{class_branching_pruning_algorithm_ab9157bf2cff571f8dbfa6c794e880979}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!getUpperBound@{getUpperBound}}
+\index{getUpperBound@{getUpperBound}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{getUpperBound()}{getUpperBound()}}
+{\footnotesize\ttfamily float Branching\+Pruning\+Algorithm\+::get\+Upper\+Bound (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{current\+Solution }\end{DoxyParamCaption})}
+
+
+
+Esta función se encarga de determinar la cota superior, para ello hay que tener en cuenta, que U\+P\+B2 va a formarse a partir de las p mejores aristas que est ́an entre sel y unsel y U\+P\+B3 van a ser las mejores aristas de unsel y unsel. Con esto en mente, sabemos que nuestra cota superior va a ser la suma de U\+P\+B2 Y U\+P\+B3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Solution} & Representa la solución parcial que tenemos en este momento y sobre la que se va a determinar la cota superior. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Representa el valor de la cota superior 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file branching-\/pruning-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}\label{class_branching_pruning_algorithm_a46f5de69f9f03aaf35267d17d454d0bd}} 
+\index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!initializeTree@{initializeTree}}
+\index{initializeTree@{initializeTree}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
+\doxysubsubsection{\texorpdfstring{initializeTree()}{initializeTree()}}
+{\footnotesize\ttfamily void Branching\+Pruning\+Algorithm\+::initialize\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Este método se encarga de inicializar el árbol, para ello se centra en crear los nodos que se encuentran en el primer nivel del arbol, añadiendolos al árbol. 
+
+
+
+Definition at line 27 of file branching-\/pruning-\/algorithm.\+cpp.
+
 \mbox{\Hypertarget{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}\label{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}} 
 \index{BranchingPruningAlgorithm@{BranchingPruningAlgorithm}!run@{run}}
 \index{run@{run}!BranchingPruningAlgorithm@{BranchingPruningAlgorithm}}
@@ -50,10 +149,10 @@ Representa una clase que va a aplicar el algoritmo de expansion y poda.
 
 
 
-Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+Función principal del algoritmo, esta se encarga de asignar la cota inferior al valor de la distancia de la solución inicial, inicializar el arbol e iterar en un bucle que se haya recorrido todo el árbol, en cada iteracion se determina el nodo con el menor valor y este se comprueba si mejora la solución, en caso de que lo haga y no esté visitado se expande. Si con la solución parcial actual, el valor de la distancia es superior a la cota inferior esta se actualiza. Además si se ha llegado al tamaño de la solución indicado se almacena dicha solución y retorna. 
 
 \begin{DoxyReturn}{Returns}
-int Que contiene la mejor solucion 
+\mbox{\hyperlink{class_solution}{Solution}} Representa la solución del algoritmo 
 \end{DoxyReturn}
 
 
@@ -61,6 +160,11 @@ Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{A
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 150 of file branching-\/pruning-\/algorithm.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/branching-\/pruning-\/algorithm.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{branching-pruning-algorithm_8hpp}{branching-\/pruning-\/algorithm.\+hpp}}\item 
+src/\mbox{\hyperlink{branching-pruning-algorithm_8cpp}{branching-\/pruning-\/algorithm.\+cpp}}\end{DoxyCompactItemize}

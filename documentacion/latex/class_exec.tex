@@ -12,21 +12,18 @@ Al aplicar el patrón Strategy, es necesario tener una clase que actúe como con
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_exec_ae42ab9087e6b93405927e010a12f178c}\label{class_exec_ae42ab9087e6b93405927e010a12f178c}} 
-{\bfseries Exec} (std\+::string file\+Name)
+\mbox{\hyperlink{class_exec_ae42ab9087e6b93405927e010a12f178c}{Exec}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Construye un nuevo exec, llama al constructor del grafo que se va a encargar de llamar al fichero y gestionar todo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_exec_acbbd7d801a7387440497243dbaefa145}{$\sim$\+Exec}} ()
 \item 
-\mbox{\Hypertarget{class_exec_a43a9d949a97dbe46c9346b8d8efeae7d}\label{class_exec_a43a9d949a97dbe46c9346b8d8efeae7d}} 
-void {\bfseries change\+Algorithm} (\mbox{\hyperlink{class_algorithm}{Algorithm}} $\ast$new\+Algorithm)
-\item 
-\mbox{\Hypertarget{class_exec_a20ccc8eb119e2fb91825200156af56df}\label{class_exec_a20ccc8eb119e2fb91825200156af56df}} 
-\mbox{\hyperlink{class_vectors}{Vectors}} {\bfseries get\+Data} ()
-\item 
-\mbox{\Hypertarget{class_exec_afecaa5bf6a08db20e799d3165657be16}\label{class_exec_afecaa5bf6a08db20e799d3165657be16}} 
-\mbox{\hyperlink{class_solution}{Solution}} {\bfseries solve} ()
-\item 
-\mbox{\Hypertarget{class_exec_a97ae5ac6df3bc37ff3c015ccaad361fa}\label{class_exec_a97ae5ac6df3bc37ff3c015ccaad361fa}} 
-std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ {\bfseries get\+Run\+Time} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_exec_a43a9d949a97dbe46c9346b8d8efeae7d}{change\+Algorithm}} (\mbox{\hyperlink{class_algorithm}{Algorithm}} $\ast$new\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Se encarga de cambiar el algoritmo con el que se pasa por parámetro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vectors}{Vectors}} \mbox{\hyperlink{class_exec_a20ccc8eb119e2fb91825200156af56df}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve un vector con la información. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_exec_afecaa5bf6a08db20e799d3165657be16}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo, realizar el mismo e imprimir su solución, así como el tiempo que ha tardado en ejecutarlo. \end{DoxyCompactList}\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{class_exec_adbbf0db08479905330f6c980b680e1fd}{get\+Run\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el tiempo de ejecución actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -34,6 +31,116 @@ Al aplicar el patrón Strategy, es necesario tener una clase que actúe como con
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 16 of file exec.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_exec_ae42ab9087e6b93405927e010a12f178c}\label{class_exec_ae42ab9087e6b93405927e010a12f178c}} 
+\index{Exec@{Exec}!Exec@{Exec}}
+\index{Exec@{Exec}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{Exec()}{Exec()}}
+{\footnotesize\ttfamily Exec\+::\+Exec (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Construye un nuevo exec, llama al constructor del grafo que se va a encargar de llamar al fichero y gestionar todo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Nombre del fichero \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file exec.\+cpp.
+
+\mbox{\Hypertarget{class_exec_acbbd7d801a7387440497243dbaefa145}\label{class_exec_acbbd7d801a7387440497243dbaefa145}} 
+\index{Exec@{Exec}!````~Exec@{$\sim$Exec}}
+\index{````~Exec@{$\sim$Exec}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{$\sim$Exec()}{~Exec()}}
+{\footnotesize\ttfamily Exec\+::$\sim$\+Exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file exec.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exec_a43a9d949a97dbe46c9346b8d8efeae7d}\label{class_exec_a43a9d949a97dbe46c9346b8d8efeae7d}} 
+\index{Exec@{Exec}!changeAlgorithm@{changeAlgorithm}}
+\index{changeAlgorithm@{changeAlgorithm}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{changeAlgorithm()}{changeAlgorithm()}}
+{\footnotesize\ttfamily void Exec\+::change\+Algorithm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_algorithm}{Algorithm}} $\ast$}]{new\+Algorithm }\end{DoxyParamCaption})}
+
+
+
+Se encarga de cambiar el algoritmo con el que se pasa por parámetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Algorithm} & Representa el algoritmo al que se va a cambiar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file exec.\+cpp.
+
+\mbox{\Hypertarget{class_exec_a20ccc8eb119e2fb91825200156af56df}\label{class_exec_a20ccc8eb119e2fb91825200156af56df}} 
+\index{Exec@{Exec}!getData@{getData}}
+\index{getData@{getData}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vectors}{Vectors}} Exec\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve un vector con la información. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vectors}{Vectors}} 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file exec.\+cpp.
+
+\mbox{\Hypertarget{class_exec_adbbf0db08479905330f6c980b680e1fd}\label{class_exec_adbbf0db08479905330f6c980b680e1fd}} 
+\index{Exec@{Exec}!getRunTime@{getRunTime}}
+\index{getRunTime@{getRunTime}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{getRunTime()}{getRunTime()}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ Exec\+::get\+Run\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el tiempo de ejecución actual. 
+
+\begin{DoxyReturn}{Returns}
+std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::system\+\_\+clock$>$ Tiempo actual 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file exec.\+cpp.
+
+\mbox{\Hypertarget{class_exec_afecaa5bf6a08db20e799d3165657be16}\label{class_exec_afecaa5bf6a08db20e799d3165657be16}} 
+\index{Exec@{Exec}!solve@{solve}}
+\index{solve@{solve}!Exec@{Exec}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_solution}{Solution}} Exec\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo, realizar el mismo e imprimir su solución, así como el tiempo que ha tardado en ejecutarlo. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve la solución que ha obtenido del algoritmo. $\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file exec.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/exec.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{exec_8hpp}{exec.\+hpp}}\item 
+src/\mbox{\hyperlink{exec_8cpp}{exec.\+cpp}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/greedy-algorithm-2.hpp Source File</title>
+<title>Maximum diversity problem: include/greedy-algorithm-2.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -85,8 +85,8 @@ $(document).ready(function(){initNavTree('greedy-algorithm-2_8hpp_source.html','
 <div class="title">greedy-algorithm-2.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;algorithm.hpp&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;vectors.hpp&quot;</span></div>
+<a href="greedy-algorithm-2_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vectors_8hpp.html">vectors.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_new_greedy_algorithm.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_new_greedy_algorithm.html">NewGreedyAlgorithm</a> : <span class="keyword">public</span> <a class="code" href="class_algorithm.html">Algorithm</a> {</div>
@@ -96,24 +96,30 @@ $(document).ready(function(){initNavTree('greedy-algorithm-2_8hpp_source.html','
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> m;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_new_greedy_algorithm.html">NewGreedyAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> newM);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="class_new_greedy_algorithm.html">NewGreedyAlgorithm</a>() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_new_greedy_algorithm.html#ac83b4339742ddabf35600bf01e48a609">NewGreedyAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> newM);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_new_greedy_algorithm.html#a44b2d02e3e60bd42100a3f31348b1a51">   17</a></span>&#160;    <a class="code" href="class_new_greedy_algorithm.html#a44b2d02e3e60bd42100a3f31348b1a51">~NewGreedyAlgorithm</a>() {}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">float</span> get_total(std::vector&lt;int&gt; sol);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_new_greedy_algorithm.html#aecafc5ac1a4dcd982bd39c70a8739899">   19</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_new_greedy_algorithm.html#aecafc5ac1a4dcd982bd39c70a8739899">get_total</a>(std::vector&lt;int&gt; sol);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_new_greedy_algorithm.html#a5dc4a4d0521ffcd374ac27cdd2c7a56e">   21</a></span>&#160;    <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_new_greedy_algorithm.html#a5dc4a4d0521ffcd374ac27cdd2c7a56e">run</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> getClosestElement(std::vector &lt;int&gt; currentElem, std::vector &lt;float&gt; currentSC);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_new_greedy_algorithm.html#a5dc4a4d0521ffcd374ac27cdd2c7a56e">run</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_new_greedy_algorithm.html#af978f6183383fe547e0511b777f1543a">getClosestElement</a>(std::vector &lt;int&gt; currentElem, std::vector &lt;float&gt; currentSC);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_new_greedy_algorithm_html"><div class="ttname"><a href="class_new_greedy_algorithm.html">NewGreedyAlgorithm</a></div><div class="ttdoc">Esta clase representa el algoritmo Greedy que se va a aplicar. Es una versión destructiva del algorit...</div><div class="ttdef"><b>Definition:</b> greedy-algorithm-2.hpp:9</div></div>
-<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:12</div></div>
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:15</div></div>
-<div class="ttc" id="aclass_new_greedy_algorithm_html_a5dc4a4d0521ffcd374ac27cdd2c7a56e"><div class="ttname"><a href="class_new_greedy_algorithm.html#a5dc4a4d0521ffcd374ac27cdd2c7a56e">NewGreedyAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas,...</div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html_aecafc5ac1a4dcd982bd39c70a8739899"><div class="ttname"><a href="class_new_greedy_algorithm.html#aecafc5ac1a4dcd982bd39c70a8739899">NewGreedyAlgorithm::get_total</a></div><div class="ttdeci">float get_total(std::vector&lt; int &gt; sol)</div></div>
+<div class="ttc" id="aalgorithm_8hpp_html"><div class="ttname"><a href="algorithm_8hpp.html">algorithm.hpp</a></div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html_af978f6183383fe547e0511b777f1543a"><div class="ttname"><a href="class_new_greedy_algorithm.html#af978f6183383fe547e0511b777f1543a">NewGreedyAlgorithm::getClosestElement</a></div><div class="ttdeci">int getClosestElement(std::vector&lt; int &gt; currentElem, std::vector&lt; float &gt; currentSC)</div><div class="ttdoc">Se encarga de obtener el elemento más cerca del centro (que contiene los elementos que no son solució...</div><div class="ttdef"><b>Definition:</b> <a href="greedy-algorithm-2_8cpp_source.html#l00053">greedy-algorithm-2.cpp:53</a></div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html"><div class="ttname"><a href="class_new_greedy_algorithm.html">NewGreedyAlgorithm</a></div><div class="ttdoc">Esta clase representa el algoritmo Greedy que se va a aplicar. Es una versión destructiva del algorit...</div><div class="ttdef"><b>Definition:</b> <a href="greedy-algorithm-2_8hpp_source.html#l00009">greedy-algorithm-2.hpp:9</a></div></div>
+<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> <a href="algorithm_8hpp_source.html#l00012">algorithm.hpp:12</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00015">solution.hpp:15</a></div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html_a5dc4a4d0521ffcd374ac27cdd2c7a56e"><div class="ttname"><a href="class_new_greedy_algorithm.html#a5dc4a4d0521ffcd374ac27cdd2c7a56e">NewGreedyAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Se encarga de ejecutar el segundo algoritmo Greedy. Para ello lo que hace es crear un vector con todo...</div><div class="ttdef"><b>Definition:</b> <a href="greedy-algorithm-2_8cpp_source.html#l00027">greedy-algorithm-2.cpp:27</a></div></div>
+<div class="ttc" id="avectors_8hpp_html"><div class="ttname"><a href="vectors_8hpp.html">vectors.hpp</a></div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html_ac83b4339742ddabf35600bf01e48a609"><div class="ttname"><a href="class_new_greedy_algorithm.html#ac83b4339742ddabf35600bf01e48a609">NewGreedyAlgorithm::NewGreedyAlgorithm</a></div><div class="ttdeci">NewGreedyAlgorithm(std::string newName, int newM)</div><div class="ttdoc">Construye la segunda version del algoritmo greedy con un nombre asociado, además de una dimensión que...</div><div class="ttdef"><b>Definition:</b> <a href="greedy-algorithm-2_8cpp_source.html#l00010">greedy-algorithm-2.cpp:10</a></div></div>
+<div class="ttc" id="aclass_new_greedy_algorithm_html_a44b2d02e3e60bd42100a3f31348b1a51"><div class="ttname"><a href="class_new_greedy_algorithm.html#a44b2d02e3e60bd42100a3f31348b1a51">NewGreedyAlgorithm::~NewGreedyAlgorithm</a></div><div class="ttdeci">~NewGreedyAlgorithm()</div><div class="ttdef"><b>Definition:</b> <a href="greedy-algorithm-2_8hpp_source.html#l00017">greedy-algorithm-2.hpp:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>greedy-algorithm-2.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="greedy-algorithm-2_8hpp.html">greedy-algorithm-2.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

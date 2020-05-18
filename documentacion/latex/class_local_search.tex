@@ -18,21 +18,85 @@ Inheritance diagram for Local\+Search\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_local_search_aca99754f4f18bdc813f1bd3e80c319c5}\label{class_local_search_aca99754f4f18bdc813f1bd3e80c319c5}} 
-{\bfseries Local\+Search} (std\+::string new\+Name, int newM, std\+::string other\+Algorithm, \mbox{\hyperlink{class_solution}{Solution}} Greedy)
+\mbox{\hyperlink{class_local_search_a5439dea9ac7f0f68a7f231dde12c760d}{Local\+Search}} (std\+::string new\+Name, int newM, std\+::string other\+Algorithm, \mbox{\hyperlink{class_solution}{Solution}} alg\+Solution)
+\begin{DoxyCompactList}\small\item\em Construye la segunda version del algoritmo greedy con un nombre asociado, además de una dimensión que es la que va a tener los vectores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_local_search_a0906ae8853119815b823ddec0779f8ac}{$\sim$\+Local\+Search}} ()
 \item 
 \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}{run}} ()
-\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_local_search_ac207fc8d6d5230dcf17c8e380fce5a59}\label{class_local_search_ac207fc8d6d5230dcf17c8e380fce5a59}} 
-std\+::vector$<$ int $>$ {\bfseries local\+Search} (std\+::vector$<$ int $>$ solution)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Algoritmo que se encarga de hacer la búsqueda local. Parte de una solución inicial proporcionada por otro algoritmo. A partir de esta va haciendo búsquedas locales hasta que la solución que obtenga sea peor a la mejor obtenida. La búsqueda local se basa en un intercambio de los elementos que se encuentran en la solución y aquellos que no lo están. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_local_search_aade067331a4e485f57459d8af15c3739}{local\+Search}} (std\+::vector$<$ int $>$ solution)
+\begin{DoxyCompactList}\small\item\em La búsqueda local se basa en un intercambio de los elementos que se encuentran en la solución y aquellos que no lo están. En caso de que mejore se modifica la mejor solución. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Esta clase representa el algoritmo \mbox{\hyperlink{class_local_search}{Local\+Search}}, que realiza una búsqueda local a partir de una solución obtenida por otro algoritmo, intentando mejorarla. 
 
+Definition at line 12 of file local-\/search-\/algorithm.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_local_search_a5439dea9ac7f0f68a7f231dde12c760d}\label{class_local_search_a5439dea9ac7f0f68a7f231dde12c760d}} 
+\index{LocalSearch@{LocalSearch}!LocalSearch@{LocalSearch}}
+\index{LocalSearch@{LocalSearch}!LocalSearch@{LocalSearch}}
+\doxysubsubsection{\texorpdfstring{LocalSearch()}{LocalSearch()}}
+{\footnotesize\ttfamily Local\+Search\+::\+Local\+Search (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name,  }\item[{int}]{newM,  }\item[{std\+::string}]{other\+Algorithm,  }\item[{\mbox{\hyperlink{class_solution}{Solution}}}]{alg\+Solution }\end{DoxyParamCaption})}
+
+
+
+Construye la segunda version del algoritmo greedy con un nombre asociado, además de una dimensión que es la que va a tener los vectores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & Nuevo nombre del algoritmo \\
+\hline
+{\em newM} & Tamaño de la solución \\
+\hline
+{\em other\+Algorithm} & Nombre del algoritmo que da el valor de la solución inicial \\
+\hline
+{\em alg\+Solution} & Solución proporcionada por otro algoritmo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file local-\/search-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_local_search_a0906ae8853119815b823ddec0779f8ac}\label{class_local_search_a0906ae8853119815b823ddec0779f8ac}} 
+\index{LocalSearch@{LocalSearch}!````~LocalSearch@{$\sim$LocalSearch}}
+\index{````~LocalSearch@{$\sim$LocalSearch}!LocalSearch@{LocalSearch}}
+\doxysubsubsection{\texorpdfstring{$\sim$LocalSearch()}{~LocalSearch()}}
+{\footnotesize\ttfamily Local\+Search\+::$\sim$\+Local\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file local-\/search-\/algorithm.\+hpp.
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_local_search_aade067331a4e485f57459d8af15c3739}\label{class_local_search_aade067331a4e485f57459d8af15c3739}} 
+\index{LocalSearch@{LocalSearch}!localSearch@{localSearch}}
+\index{localSearch@{localSearch}!LocalSearch@{LocalSearch}}
+\doxysubsubsection{\texorpdfstring{localSearch()}{localSearch()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Local\+Search\+::local\+Search (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+La búsqueda local se basa en un intercambio de los elementos que se encuentran en la solución y aquellos que no lo están. En caso de que mejore se modifica la mejor solución. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & Vector sobre el que se va a hacer la búsqueda local. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Nueva solución obtenida 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file local-\/search-\/algorithm.\+cpp.
+
 \mbox{\Hypertarget{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}\label{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}} 
 \index{LocalSearch@{LocalSearch}!run@{run}}
 \index{run@{run}!LocalSearch@{LocalSearch}}
@@ -41,10 +105,10 @@ Esta clase representa el algoritmo \mbox{\hyperlink{class_local_search}{Local\+S
 
 
 
-Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+Algoritmo que se encarga de hacer la búsqueda local. Parte de una solución inicial proporcionada por otro algoritmo. A partir de esta va haciendo búsquedas locales hasta que la solución que obtenga sea peor a la mejor obtenida. La búsqueda local se basa en un intercambio de los elementos que se encuentran en la solución y aquellos que no lo están. 
 
 \begin{DoxyReturn}{Returns}
-int Que contiene la mejor solucion 
+\mbox{\hyperlink{class_solution}{Solution}} Valor de la solución del algoritmo 
 \end{DoxyReturn}
 
 
@@ -52,6 +116,11 @@ Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{A
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 27 of file local-\/search-\/algorithm.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/local-\/search-\/algorithm.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{local-search-algorithm_8hpp}{local-\/search-\/algorithm.\+hpp}}\item 
+src/\mbox{\hyperlink{local-search-algorithm_8cpp}{local-\/search-\/algorithm.\+cpp}}\end{DoxyCompactItemize}

@@ -18,32 +18,112 @@ Inheritance diagram for Algorithm\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_algorithm_a472bdce2086324f49da7794e27ccaa54}{Algorithm}} ()
+\item 
 virtual \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{run}} ()=0
 \begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}\label{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}} 
-void {\bfseries set\+Info} (\mbox{\hyperlink{class_vectors}{Vectors}} new\+Vector)
-\item 
-\mbox{\Hypertarget{class_algorithm_a2db7703ee0d4177478259e6f41d69549}\label{class_algorithm_a2db7703ee0d4177478259e6f41d69549}} 
-float {\bfseries get\+Total\+Distance} (std\+::vector$<$ int $>$ solution)
-\item 
-\mbox{\Hypertarget{class_algorithm_a1043fc258dd10c6b65a32151b0e3399d}\label{class_algorithm_a1043fc258dd10c6b65a32151b0e3399d}} 
-std\+::vector$<$ float $>$ {\bfseries get\+Gravity\+Center} (std\+::vector$<$ int $>$ current\+Element)
-\item 
-\mbox{\Hypertarget{class_algorithm_a76864d98d1fe76e021461ce430dacb3f}\label{class_algorithm_a76864d98d1fe76e021461ce430dacb3f}} 
-std\+::vector$<$ int $>$ {\bfseries get\+Candidates} (std\+::vector$<$ int $>$ check\+Selected)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}{set\+Info}} (\mbox{\hyperlink{class_vectors}{Vectors}} new\+Vector)
+\begin{DoxyCompactList}\small\item\em Se encarga de inicializar la información recogida del fichero, es decir, los vectores y asignarlos al atributo de la clase que lo va a almacenar. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_algorithm_a2db7703ee0d4177478259e6f41d69549}{get\+Total\+Distance}} (std\+::vector$<$ int $>$ solution)
+\begin{DoxyCompactList}\small\item\em Este método se encarga de hacer un sumatorio de todas las distancias de los nodos que se encuentran en el vector que se pasa como argumento. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_algorithm_a15f1aad1909e1b1a78c354e92d16abc3}{get\+Gravity\+Center}} (std\+::vector$<$ int $>$ current\+Element)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del centro de gravedad del vector actual. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_algorithm_a379b9bf8eb00aa7584d5537c6314197d}{get\+Candidates}} (std\+::vector$<$ int $>$ check\+Selected)
+\begin{DoxyCompactList}\small\item\em Se encarga de determinar los candidatos a partir de un vector. Es decir, devuelve los elementos que no se encuentran en el vector que se pasa como parámetro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_algorithm_a7438318d02e9af3a23a1971f7559682b}\label{class_algorithm_a7438318d02e9af3a23a1971f7559682b}} 
-\mbox{\hyperlink{class_vectors}{Vectors}} {\bfseries current\+Vectors}
+\mbox{\hyperlink{class_vectors}{Vectors}} \mbox{\hyperlink{class_algorithm_a7438318d02e9af3a23a1971f7559682b}{current\+Vectors}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Representa una clase que va a permitir aplicar el patrón estrategia. 
 
+Definition at line 12 of file algorithm.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_algorithm_a472bdce2086324f49da7794e27ccaa54}\label{class_algorithm_a472bdce2086324f49da7794e27ccaa54}} 
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{Algorithm()}{Algorithm()}}
+{\footnotesize\ttfamily Algorithm\+::\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file algorithm.\+hpp.
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_algorithm_a379b9bf8eb00aa7584d5537c6314197d}\label{class_algorithm_a379b9bf8eb00aa7584d5537c6314197d}} 
+\index{Algorithm@{Algorithm}!getCandidates@{getCandidates}}
+\index{getCandidates@{getCandidates}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getCandidates()}{getCandidates()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Algorithm\+::get\+Candidates (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{check\+Selected }\end{DoxyParamCaption})}
+
+
+
+Se encarga de determinar los candidatos a partir de un vector. Es decir, devuelve los elementos que no se encuentran en el vector que se pasa como parámetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em check\+Selected} & Representa el vector sobre el que se quieren determinar los elementos que no pertenecen al mismo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ Vector con los elementos que no pertenecen al vector check\+Selected. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_algorithm_a15f1aad1909e1b1a78c354e92d16abc3}\label{class_algorithm_a15f1aad1909e1b1a78c354e92d16abc3}} 
+\index{Algorithm@{Algorithm}!getGravityCenter@{getGravityCenter}}
+\index{getGravityCenter@{getGravityCenter}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getGravityCenter()}{getGravityCenter()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Algorithm\+::get\+Gravity\+Center (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{current\+Element }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor del centro de gravedad del vector actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Element} & Representa el vector del que se va a calcular el centro de gravedad (este también es un vector) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$float$>$ Valor del centro de gravedad calculado 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_algorithm_a2db7703ee0d4177478259e6f41d69549}\label{class_algorithm_a2db7703ee0d4177478259e6f41d69549}} 
+\index{Algorithm@{Algorithm}!getTotalDistance@{getTotalDistance}}
+\index{getTotalDistance@{getTotalDistance}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{getTotalDistance()}{getTotalDistance()}}
+{\footnotesize\ttfamily float Algorithm\+::get\+Total\+Distance (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+Este método se encarga de hacer un sumatorio de todas las distancias de los nodos que se encuentran en el vector que se pasa como argumento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & Vector que contiene los distintos nodos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Valor de la distancia entre los nodos 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file algorithm.\+cpp.
+
 \mbox{\Hypertarget{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}\label{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}} 
 \index{Algorithm@{Algorithm}!run@{run}}
 \index{run@{run}!Algorithm@{Algorithm}}
@@ -61,8 +141,41 @@ int Que contiene la mejor solucion
 
 Implemented in \mbox{\hyperlink{class_branching_pruning_algorithm_ad80a8fba560dc660dd19925a7c83dadb}{Branching\+Pruning\+Algorithm}}, \mbox{\hyperlink{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}{Grasp\+Algorithm}}, \mbox{\hyperlink{class_local_search_a68e4ce8eda5685a4b2ba31b9d23f6581}{Local\+Search}}, \mbox{\hyperlink{class_greedy_algorithm_a04f5e4e6ad7d0d68089a750d71efef3f}{Greedy\+Algorithm}}, and \mbox{\hyperlink{class_new_greedy_algorithm_a5dc4a4d0521ffcd374ac27cdd2c7a56e}{New\+Greedy\+Algorithm}}.
 
+\mbox{\Hypertarget{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}\label{class_algorithm_a671b9c245fc5d9e49ca942372e03febc}} 
+\index{Algorithm@{Algorithm}!setInfo@{setInfo}}
+\index{setInfo@{setInfo}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{setInfo()}{setInfo()}}
+{\footnotesize\ttfamily void Algorithm\+::set\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vectors}{Vectors}}}]{new\+Vector }\end{DoxyParamCaption})}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Se encarga de inicializar la información recogida del fichero, es decir, los vectores y asignarlos al atributo de la clase que lo va a almacenar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Vector} & El elemento que se va a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file algorithm.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_algorithm_a7438318d02e9af3a23a1971f7559682b}\label{class_algorithm_a7438318d02e9af3a23a1971f7559682b}} 
+\index{Algorithm@{Algorithm}!currentVectors@{currentVectors}}
+\index{currentVectors@{currentVectors}!Algorithm@{Algorithm}}
+\doxysubsubsection{\texorpdfstring{currentVectors}{currentVectors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vectors}{Vectors}} Algorithm\+::current\+Vectors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file algorithm.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/algorithm.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{algorithm_8hpp}{algorithm.\+hpp}}\item 
+src/\mbox{\hyperlink{algorithm_8cpp}{algorithm.\+cpp}}\end{DoxyCompactItemize}

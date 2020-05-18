@@ -12,26 +12,22 @@ Esta clase se va a encargar del manejo de ficheros asi como su análisis y extra
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_file_a2545bf798523e9d226f7d1823dda185a}\label{class_file_a2545bf798523e9d226f7d1823dda185a}} 
-{\bfseries File} (std\+::string file\+Name)
-\item 
-\mbox{\Hypertarget{class_file_a47bd565afb52298608eb00f5e152db3f}\label{class_file_a47bd565afb52298608eb00f5e152db3f}} 
-int {\bfseries close\+File} ()
-\item 
-\mbox{\Hypertarget{class_file_a81746c83d7fc37f503b5abf4cf3cabce}\label{class_file_a81746c83d7fc37f503b5abf4cf3cabce}} 
-std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries check\+File\+Syntax} ()
-\item 
-\mbox{\Hypertarget{class_file_a6d55243a7a9e7879f0982d63336781c8}\label{class_file_a6d55243a7a9e7879f0982d63336781c8}} 
-int {\bfseries get\+Number\+Nodes} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_file_a2545bf798523e9d226f7d1823dda185a}{File}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Construye un fichero y lo abre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_file_ac704ebdf5f57d7a1c5ddf409d797fb69}{$\sim$\+File}} ()
+\begin{DoxyCompactList}\small\item\em En caso de que el fichero esté abierto, lo cierra. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_file_a47bd565afb52298608eb00f5e152db3f}{close\+File}} ()
+\begin{DoxyCompactList}\small\item\em Cierra el fichero y devuelve un 0 en caso de que se haya cerrado correctamente. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_file_aa8c6dd438d8e2b7b3a02e264fc8d94dd}{check\+File\+Syntax}} ()
+\begin{DoxyCompactList}\small\item\em Comprueba si la sintaxis del fichero es la correcta. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_file_a6d55243a7a9e7879f0982d63336781c8}{get\+Number\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Este método se encarga de devolver el número de nodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_file_a481e3cef45abf6b46eaca89cc0443040}\label{class_file_a481e3cef45abf6b46eaca89cc0443040}} 
-std\+::ifstream {\bfseries file\+Graph}
+std\+::ifstream \mbox{\hyperlink{class_file_a481e3cef45abf6b46eaca89cc0443040}{file\+Graph}}
 \item 
-\mbox{\Hypertarget{class_file_ab80e2a4aede8b8c74299edae0e658b91}\label{class_file_ab80e2a4aede8b8c74299edae0e658b91}} 
-int {\bfseries node\+Number}
+int \mbox{\hyperlink{class_file_ab80e2a4aede8b8c74299edae0e658b91}{node\+Number}}
 \end{DoxyCompactItemize}
 
 
@@ -40,6 +36,124 @@ Esta clase se va a encargar del manejo de ficheros asi como su análisis y extra
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 14 of file file.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_file_a2545bf798523e9d226f7d1823dda185a}\label{class_file_a2545bf798523e9d226f7d1823dda185a}} 
+\index{File@{File}!File@{File}}
+\index{File@{File}!File@{File}}
+\doxysubsubsection{\texorpdfstring{File()}{File()}}
+{\footnotesize\ttfamily File\+::\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Construye un fichero y lo abre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Fichero} & Representa el nombre del fichero a abrir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file file.\+cpp.
+
+\mbox{\Hypertarget{class_file_ac704ebdf5f57d7a1c5ddf409d797fb69}\label{class_file_ac704ebdf5f57d7a1c5ddf409d797fb69}} 
+\index{File@{File}!````~File@{$\sim$File}}
+\index{````~File@{$\sim$File}!File@{File}}
+\doxysubsubsection{\texorpdfstring{$\sim$File()}{~File()}}
+{\footnotesize\ttfamily File\+::$\sim$\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+En caso de que el fichero esté abierto, lo cierra. 
+
+
+
+Definition at line 18 of file file.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_aa8c6dd438d8e2b7b3a02e264fc8d94dd}\label{class_file_aa8c6dd438d8e2b7b3a02e264fc8d94dd}} 
+\index{File@{File}!checkFileSyntax@{checkFileSyntax}}
+\index{checkFileSyntax@{checkFileSyntax}!File@{File}}
+\doxysubsubsection{\texorpdfstring{checkFileSyntax()}{checkFileSyntax()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ float $>$ $>$ File\+::check\+File\+Syntax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprueba si la sintaxis del fichero es la correcta. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$std\+::vector $<$ std\+::pair $<$int, float$>$ $>$ $>$ Devuelve un vector con la matriz diagonal de la representación del grafo. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file file.\+cpp.
+
+\mbox{\Hypertarget{class_file_a47bd565afb52298608eb00f5e152db3f}\label{class_file_a47bd565afb52298608eb00f5e152db3f}} 
+\index{File@{File}!closeFile@{closeFile}}
+\index{closeFile@{closeFile}!File@{File}}
+\doxysubsubsection{\texorpdfstring{closeFile()}{closeFile()}}
+{\footnotesize\ttfamily int File\+::close\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cierra el fichero y devuelve un 0 en caso de que se haya cerrado correctamente. 
+
+\begin{DoxyReturn}{Returns}
+int Representa el error, si es 0 quiere decir que todo está correcto, en otro caso salta error. 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file file.\+cpp.
+
+\mbox{\Hypertarget{class_file_a6d55243a7a9e7879f0982d63336781c8}\label{class_file_a6d55243a7a9e7879f0982d63336781c8}} 
+\index{File@{File}!getNumberNodes@{getNumberNodes}}
+\index{getNumberNodes@{getNumberNodes}!File@{File}}
+\doxysubsubsection{\texorpdfstring{getNumberNodes()}{getNumberNodes()}}
+{\footnotesize\ttfamily int File\+::get\+Number\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Este método se encarga de devolver el número de nodos. 
+
+\begin{DoxyReturn}{Returns}
+int Valor del número de nodos 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file file.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_file_a481e3cef45abf6b46eaca89cc0443040}\label{class_file_a481e3cef45abf6b46eaca89cc0443040}} 
+\index{File@{File}!fileGraph@{fileGraph}}
+\index{fileGraph@{fileGraph}!File@{File}}
+\doxysubsubsection{\texorpdfstring{fileGraph}{fileGraph}}
+{\footnotesize\ttfamily std\+::ifstream File\+::file\+Graph}
+
+
+
+Definition at line 17 of file file.\+hpp.
+
+\mbox{\Hypertarget{class_file_ab80e2a4aede8b8c74299edae0e658b91}\label{class_file_ab80e2a4aede8b8c74299edae0e658b91}} 
+\index{File@{File}!nodeNumber@{nodeNumber}}
+\index{nodeNumber@{nodeNumber}!File@{File}}
+\doxysubsubsection{\texorpdfstring{nodeNumber}{nodeNumber}}
+{\footnotesize\ttfamily int File\+::node\+Number}
+
+
+
+Definition at line 18 of file file.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/file.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{file_8hpp}{file.\+hpp}}\item 
+src/\mbox{\hyperlink{file_8cpp}{file.\+cpp}}\end{DoxyCompactItemize}

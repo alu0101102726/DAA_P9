@@ -18,25 +18,21 @@ Inheritance diagram for Grasp\+Algorithm\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}\label{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}} 
-{\bfseries Grasp\+Algorithm} (std\+::string new\+Name, int new\+Iterations\+Limit, int newM, int new\+R\+C\+Lsize)
+\mbox{\hyperlink{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}{Grasp\+Algorithm}} (std\+::string new\+Name, int new\+Iterations\+Limit, int newM, int new\+R\+C\+Lsize)
+\begin{DoxyCompactList}\small\item\em Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_grasp_algorithm_a8b89070f37435a4d32206b2bd10b90e8}{$\sim$\+Grasp\+Algorithm}} ()
 \item 
 \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}{run}} ()
-\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_grasp_algorithm_a27b06068a4dfc172558594761fd7828b}\label{class_grasp_algorithm_a27b06068a4dfc172558594761fd7828b}} 
-std\+::vector$<$ int $>$ {\bfseries preprocessing} ()
-\item 
-\mbox{\Hypertarget{class_grasp_algorithm_a8d386251f6a101e3434d02d44cf5a32b}\label{class_grasp_algorithm_a8d386251f6a101e3434d02d44cf5a32b}} 
-std\+::vector$<$ int $>$ {\bfseries construct\+Solution} ()
-\item 
-\mbox{\Hypertarget{class_grasp_algorithm_a0249edc96caba4f9570fbfc19e32cb59}\label{class_grasp_algorithm_a0249edc96caba4f9570fbfc19e32cb59}} 
-std\+::vector$<$ int $>$ {\bfseries make\+R\+CL} (std\+::vector$<$ int $>$ current\+Solution)
-\item 
-\mbox{\Hypertarget{class_grasp_algorithm_a8ae226f7fe0e8185dd1cf84dd148d57a}\label{class_grasp_algorithm_a8ae226f7fe0e8185dd1cf84dd148d57a}} 
-std\+::vector$<$ int $>$ {\bfseries local\+Search} (std\+::vector$<$ int $>$ solution)
-\item 
-\mbox{\Hypertarget{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}\label{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}} 
-std\+::vector$<$ int $>$ {\bfseries not\+Selected\+Nodes} (std\+::vector$<$ int $>$ check\+Selected, int node\+Number)
+\begin{DoxyCompactList}\small\item\em Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local y se asigna al máximo la solución que tenga mayor distancia. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_grasp_algorithm_a5c2d8817b0e868b7677d0b697c3f35b1}{preprocessing}} ()
+\begin{DoxyCompactList}\small\item\em Esta funcion se encarga de hacer el preprocesamiento, para ello, se va a escoger de forma aleatoria una solución inicial de acuerdo al tamaño de m. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_grasp_algorithm_a6dc6a34bd19bd73b470fa3f3832ed5d5}{construct\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, creando el R\+CL, luego cogiendo un elemento aleatorio del R\+CL y por último añadiendo a la solucion. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_grasp_algorithm_a8da5eb6c8b6d35080feb28f118f0f6c8}{make\+R\+CL}} (std\+::vector$<$ int $>$ current\+Solution)
+\begin{DoxyCompactList}\small\item\em Crea el R\+CL, para ello se le pasa un vector que es del que va a partir para obtener el R\+CL. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_grasp_algorithm_a3ee8a6f45d142a2069063061f3668a16}{local\+Search}} (std\+::vector$<$ int $>$ solution)
+\begin{DoxyCompactList}\small\item\em Representa la búsqueda local, esta se va realizar haciendo un intercambio entre los nodos que están en la solución y aquellos que no. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}{not\+Selected\+Nodes}} (std\+::vector$<$ int $>$ check\+Selected, int node\+Number)
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -51,7 +47,132 @@ Esta clase representa el algoritmo G\+R\+A\+SP que se va a aplicar, vamos a tene
 \item Búsqueda 
 \end{DoxyItemize}
 
+Definition at line 13 of file grasp-\/algorithm.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}\label{class_grasp_algorithm_a149590d592f15125c5b5a323a8f5aeab}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!GraspAlgorithm@{GraspAlgorithm}}
+\index{GraspAlgorithm@{GraspAlgorithm}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{GraspAlgorithm()}{GraspAlgorithm()}}
+{\footnotesize\ttfamily Grasp\+Algorithm\+::\+Grasp\+Algorithm (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name,  }\item[{int}]{new\+Iterations\+Limit,  }\item[{int}]{newM,  }\item[{int}]{new\+R\+C\+Lsize }\end{DoxyParamCaption})}
+
+
+
+Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada, el número de iteraciones con y sin mejora. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & Nuevo nombre del algoritmo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file grasp-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_grasp_algorithm_a8b89070f37435a4d32206b2bd10b90e8}\label{class_grasp_algorithm_a8b89070f37435a4d32206b2bd10b90e8}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!````~GraspAlgorithm@{$\sim$GraspAlgorithm}}
+\index{````~GraspAlgorithm@{$\sim$GraspAlgorithm}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{$\sim$GraspAlgorithm()}{~GraspAlgorithm()}}
+{\footnotesize\ttfamily Grasp\+Algorithm\+::$\sim$\+Grasp\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file grasp-\/algorithm.\+hpp.
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_grasp_algorithm_a6dc6a34bd19bd73b470fa3f3832ed5d5}\label{class_grasp_algorithm_a6dc6a34bd19bd73b470fa3f3832ed5d5}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!constructSolution@{constructSolution}}
+\index{constructSolution@{constructSolution}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{constructSolution()}{constructSolution()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Grasp\+Algorithm\+::construct\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número total de nodos y luego hace tantas iteraciones como de grande sea ese elemento, creando el R\+CL, luego cogiendo un elemento aleatorio del R\+CL y por último añadiendo a la solucion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidates} & Vector del que se parte para construir la solución \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Vector con la solución construida 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file grasp-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_grasp_algorithm_a3ee8a6f45d142a2069063061f3668a16}\label{class_grasp_algorithm_a3ee8a6f45d142a2069063061f3668a16}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!localSearch@{localSearch}}
+\index{localSearch@{localSearch}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{localSearch()}{localSearch()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Grasp\+Algorithm\+::local\+Search (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{solution }\end{DoxyParamCaption})}
+
+
+
+Representa la búsqueda local, esta se va realizar haciendo un intercambio entre los nodos que están en la solución y aquellos que no. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & Solución sobre la que se va a realizar la búsqueda local. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Valor del vector 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file grasp-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_grasp_algorithm_a8da5eb6c8b6d35080feb28f118f0f6c8}\label{class_grasp_algorithm_a8da5eb6c8b6d35080feb28f118f0f6c8}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!makeRCL@{makeRCL}}
+\index{makeRCL@{makeRCL}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{makeRCL()}{makeRCL()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Grasp\+Algorithm\+::make\+R\+CL (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{current\+Solution }\end{DoxyParamCaption})}
+
+
+
+Crea el R\+CL, para ello se le pasa un vector que es del que va a partir para obtener el R\+CL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Solution} & Vector del que se va a hallar el R\+CL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Nuevo R\+CL que se ha creado 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file grasp-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}\label{class_grasp_algorithm_a08f9f06863ffbc46dd3854f82a348d7b}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!notSelectedNodes@{notSelectedNodes}}
+\index{notSelectedNodes@{notSelectedNodes}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{notSelectedNodes()}{notSelectedNodes()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Grasp\+Algorithm\+::not\+Selected\+Nodes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{check\+Selected,  }\item[{int}]{node\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_grasp_algorithm_a5c2d8817b0e868b7677d0b697c3f35b1}\label{class_grasp_algorithm_a5c2d8817b0e868b7677d0b697c3f35b1}} 
+\index{GraspAlgorithm@{GraspAlgorithm}!preprocessing@{preprocessing}}
+\index{preprocessing@{preprocessing}!GraspAlgorithm@{GraspAlgorithm}}
+\doxysubsubsection{\texorpdfstring{preprocessing()}{preprocessing()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Grasp\+Algorithm\+::preprocessing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta funcion se encarga de hacer el preprocesamiento, para ello, se va a escoger de forma aleatoria una solución inicial de acuerdo al tamaño de m. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Representa un vector con el resultado del preprocesamiento 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file grasp-\/algorithm.\+cpp.
+
 \mbox{\Hypertarget{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}\label{class_grasp_algorithm_a48c69839e34f54e5c5520b43911d3a1c}} 
 \index{GraspAlgorithm@{GraspAlgorithm}!run@{run}}
 \index{run@{run}!GraspAlgorithm@{GraspAlgorithm}}
@@ -60,10 +181,10 @@ Esta clase representa el algoritmo G\+R\+A\+SP que se va a aplicar, vamos a tene
 
 
 
-Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento, teniendo un conjunto de candidatos. Una vez esto, se definen como condiciones de parada las iteraciones, y luego en cada iteración se va construyendo la solución, se hace la búsqueda local y se asigna al máximo la solución que tenga mayor distancia. 
 
 \begin{DoxyReturn}{Returns}
-int Que contiene la mejor solucion 
+\mbox{\hyperlink{class_solution}{Solution}} Solucion del problema 
 \end{DoxyReturn}
 
 
@@ -71,6 +192,11 @@ Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{A
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 29 of file grasp-\/algorithm.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/grasp-\/algorithm.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{grasp-algorithm_8hpp}{grasp-\/algorithm.\+hpp}}\item 
+src/\mbox{\hyperlink{grasp-algorithm_8cpp}{grasp-\/algorithm.\+cpp}}\end{DoxyCompactItemize}

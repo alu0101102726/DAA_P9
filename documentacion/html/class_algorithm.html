@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Algorithm Class Reference</title>
+<title>Maximum diversity problem: Algorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -110,31 +110,149 @@ Inheritance diagram for Algorithm:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a472bdce2086324f49da7794e27ccaa54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a472bdce2086324f49da7794e27ccaa54">Algorithm</a> ()</td></tr>
+<tr class="separator:a472bdce2086324f49da7794e27ccaa54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ecc951b95131db9ea40b58c6605ac8b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_solution.html">Solution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a9ecc951b95131db9ea40b58c6605ac8b">run</a> ()=0</td></tr>
 <tr class="memdesc:a9ecc951b95131db9ea40b58c6605ac8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta.  <a href="class_algorithm.html#a9ecc951b95131db9ea40b58c6605ac8b">More...</a><br /></td></tr>
 <tr class="separator:a9ecc951b95131db9ea40b58c6605ac8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a671b9c245fc5d9e49ca942372e03febc"><td class="memItemLeft" align="right" valign="top"><a id="a671b9c245fc5d9e49ca942372e03febc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setInfo</b> (<a class="el" href="class_vectors.html">Vectors</a> newVector)</td></tr>
+<tr class="memitem:a671b9c245fc5d9e49ca942372e03febc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a671b9c245fc5d9e49ca942372e03febc">setInfo</a> (<a class="el" href="class_vectors.html">Vectors</a> newVector)</td></tr>
+<tr class="memdesc:a671b9c245fc5d9e49ca942372e03febc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se encarga de inicializar la información recogida del fichero, es decir, los vectores y asignarlos al atributo de la clase que lo va a almacenar.  <a href="class_algorithm.html#a671b9c245fc5d9e49ca942372e03febc">More...</a><br /></td></tr>
 <tr class="separator:a671b9c245fc5d9e49ca942372e03febc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db7703ee0d4177478259e6f41d69549"><td class="memItemLeft" align="right" valign="top"><a id="a2db7703ee0d4177478259e6f41d69549"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getTotalDistance</b> (std::vector&lt; int &gt; solution)</td></tr>
+<tr class="memitem:a2db7703ee0d4177478259e6f41d69549"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a2db7703ee0d4177478259e6f41d69549">getTotalDistance</a> (std::vector&lt; int &gt; solution)</td></tr>
+<tr class="memdesc:a2db7703ee0d4177478259e6f41d69549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método se encarga de hacer un sumatorio de todas las distancias de los nodos que se encuentran en el vector que se pasa como argumento.  <a href="class_algorithm.html#a2db7703ee0d4177478259e6f41d69549">More...</a><br /></td></tr>
 <tr class="separator:a2db7703ee0d4177478259e6f41d69549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1043fc258dd10c6b65a32151b0e3399d"><td class="memItemLeft" align="right" valign="top"><a id="a1043fc258dd10c6b65a32151b0e3399d"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getGravityCenter</b> (std::vector&lt; int &gt; currentElement)</td></tr>
-<tr class="separator:a1043fc258dd10c6b65a32151b0e3399d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76864d98d1fe76e021461ce430dacb3f"><td class="memItemLeft" align="right" valign="top"><a id="a76864d98d1fe76e021461ce430dacb3f"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCandidates</b> (std::vector&lt; int &gt; checkSelected)</td></tr>
-<tr class="separator:a76864d98d1fe76e021461ce430dacb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f1aad1909e1b1a78c354e92d16abc3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a15f1aad1909e1b1a78c354e92d16abc3">getGravityCenter</a> (std::vector&lt; int &gt; currentElement)</td></tr>
+<tr class="memdesc:a15f1aad1909e1b1a78c354e92d16abc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el valor del centro de gravedad del vector actual.  <a href="class_algorithm.html#a15f1aad1909e1b1a78c354e92d16abc3">More...</a><br /></td></tr>
+<tr class="separator:a15f1aad1909e1b1a78c354e92d16abc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379b9bf8eb00aa7584d5537c6314197d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a379b9bf8eb00aa7584d5537c6314197d">getCandidates</a> (std::vector&lt; int &gt; checkSelected)</td></tr>
+<tr class="memdesc:a379b9bf8eb00aa7584d5537c6314197d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se encarga de determinar los candidatos a partir de un vector. Es decir, devuelve los elementos que no se encuentran en el vector que se pasa como parámetro.  <a href="class_algorithm.html#a379b9bf8eb00aa7584d5537c6314197d">More...</a><br /></td></tr>
+<tr class="separator:a379b9bf8eb00aa7584d5537c6314197d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7438318d02e9af3a23a1971f7559682b"><td class="memItemLeft" align="right" valign="top"><a id="a7438318d02e9af3a23a1971f7559682b"></a>
-<a class="el" href="class_vectors.html">Vectors</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentVectors</b></td></tr>
+<tr class="memitem:a7438318d02e9af3a23a1971f7559682b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vectors.html">Vectors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_algorithm.html#a7438318d02e9af3a23a1971f7559682b">currentVectors</a></td></tr>
 <tr class="separator:a7438318d02e9af3a23a1971f7559682b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representa una clase que va a permitir aplicar el patrón estrategia. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8hpp_source.html#l00012">12</a> of file <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a472bdce2086324f49da7794e27ccaa54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472bdce2086324f49da7794e27ccaa54">&#9670;&nbsp;</a></span>Algorithm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Algorithm::Algorithm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8hpp_source.html#l00018">18</a> of file <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a379b9bf8eb00aa7584d5537c6314197d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379b9bf8eb00aa7584d5537c6314197d">&#9670;&nbsp;</a></span>getCandidates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; Algorithm::getCandidates </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>checkSelected</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se encarga de determinar los candidatos a partir de un vector. Es decir, devuelve los elementos que no se encuentran en el vector que se pasa como parámetro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checkSelected</td><td>Representa el vector sobre el que se quieren determinar los elementos que no pertenecen al mismo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;int&gt; Vector con los elementos que no pertenecen al vector checkSelected. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00061">61</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a15f1aad1909e1b1a78c354e92d16abc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f1aad1909e1b1a78c354e92d16abc3">&#9670;&nbsp;</a></span>getGravityCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; float &gt; Algorithm::getGravityCenter </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>currentElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el valor del centro de gravedad del vector actual. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentElement</td><td>Representa el vector del que se va a calcular el centro de gravedad (este también es un vector) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector &lt;float&gt; Valor del centro de gravedad calculado </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00010">10</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2db7703ee0d4177478259e6f41d69549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db7703ee0d4177478259e6f41d69549">&#9670;&nbsp;</a></span>getTotalDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Algorithm::getTotalDistance </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>solution</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Este método se encarga de hacer un sumatorio de todas las distancias de los nodos que se encuentran en el vector que se pasa como argumento. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solution</td><td>Vector que contiene los distintos nodos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float Valor de la distancia entre los nodos </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00041">41</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a9ecc951b95131db9ea40b58c6605ac8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ecc951b95131db9ea40b58c6605ac8b">&#9670;&nbsp;</a></span>run()</h2>
 
@@ -165,8 +283,62 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a671b9c245fc5d9e49ca942372e03febc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671b9c245fc5d9e49ca942372e03febc">&#9670;&nbsp;</a></span>setInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Algorithm::setInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vectors.html">Vectors</a>&#160;</td>
+          <td class="paramname"><em>newVector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Se encarga de inicializar la información recogida del fichero, es decir, los vectores y asignarlos al atributo de la clase que lo va a almacenar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newVector</td><td>El elemento que se va a asignar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8cpp_source.html#l00029">29</a> of file <a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7438318d02e9af3a23a1971f7559682b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7438318d02e9af3a23a1971f7559682b">&#9670;&nbsp;</a></span>currentVectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vectors.html">Vectors</a> Algorithm::currentVectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="algorithm_8hpp_source.html#l00015">15</a> of file <a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="algorithm_8hpp_source.html">algorithm.hpp</a></li>
+<li>src/<a class="el" href="algorithm_8cpp_source.html">algorithm.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/solution.hpp Source File</title>
+<title>Maximum diversity problem: include/solution.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -85,14 +85,14 @@ $(document).ready(function(){initNavTree('solution_8hpp_source.html',''); initRe
 <div class="title">solution.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="solution_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;vectors.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vectors_8hpp.html">vectors.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_solution.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_solution.html">Solution</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
@@ -102,30 +102,45 @@ $(document).ready(function(){initNavTree('solution_8hpp_source.html',''); initRe
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> runTime;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string algorithmName;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> distance;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_solution.html">Solution</a>(<a class="code" href="class_vectors.html">Vectors</a> currentSolution, std::vector&lt;int&gt; newSolution, std::string newAlgorithmName);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_solution.html">Solution</a>() {}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ~<a class="code" href="class_solution.html">Solution</a>() {}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vectors.html">Vectors</a> getInfo();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector &lt;int&gt; getSolution();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> getRunTime();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> setRunTime(<span class="keywordtype">int</span> newRunTime);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string getAlgorithmName();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> getSolutionValue(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt;(std::ostream&amp; os, <a class="code" href="class_solution.html">Solution</a> currentSolution);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> gNodes;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution</a>(<a class="code" href="class_vectors.html">Vectors</a> currentSolution, std::vector&lt;int&gt; newSolution, std::string newAlgorithmName);</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">   27</a></span>&#160;    <a class="code" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution</a>() {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_solution.html#a5d245f7409aacf6ace5e965b7879a580">   28</a></span>&#160;    <a class="code" href="class_solution.html#a5d245f7409aacf6ace5e965b7879a580">~Solution</a>() {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_vectors.html">Vectors</a> <a class="code" href="class_solution.html#aa8cca14b69d98d34a828c1698b50c884">getInfo</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_solution.html#a1af7d8c158d7c2655561edecd2ae11c5">getSolution</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_solution.html#a942fa7f01670cbe1dfb6a4f0f3bb148e">getRunTime</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_solution.html#a2a7fe426df2bb50f69f55084b4e99f85">setRunTime</a>(<span class="keywordtype">int</span> newRunTime);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string <a class="code" href="class_solution.html#ac09a3a13f29fe252e220a215f341a95e">getAlgorithmName</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_solution.html#a02d51bbbffdd65f73c1ef8e8c946fafe">getSolutionValue</a>(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_solution.html#ac17592460d749911490ff6a7723a0255">setNodes</a>(<span class="keywordtype">int</span> node);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_solution.html#aa1e15af17f8e71e3873f9282203bcc6f">getNodes</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_solution.html#ad400127785a150945093e58505afc375">operator &lt;&lt;</a>(std::ostream&amp; os, <a class="code" href="class_solution.html">Solution</a> currentSolution);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:15</div></div>
-<div class="ttc" id="aclass_vectors_html"><div class="ttname"><a href="class_vectors.html">Vectors</a></div><div class="ttdoc">Esta clase representa la información que se ha obtenido del fichero.</div><div class="ttdef"><b>Definition:</b> vectors.hpp:11</div></div>
+<div class="ttc" id="aclass_solution_html_aa8cca14b69d98d34a828c1698b50c884"><div class="ttname"><a href="class_solution.html#aa8cca14b69d98d34a828c1698b50c884">Solution::getInfo</a></div><div class="ttdeci">Vectors getInfo()</div><div class="ttdoc">Devuelve la información del fichero.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00059">solution.cpp:59</a></div></div>
+<div class="ttc" id="aclass_solution_html_a942fa7f01670cbe1dfb6a4f0f3bb148e"><div class="ttname"><a href="class_solution.html#a942fa7f01670cbe1dfb6a4f0f3bb148e">Solution::getRunTime</a></div><div class="ttdeci">int getRunTime()</div><div class="ttdoc">Devuelve el tiempo de ejecución.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00050">solution.cpp:50</a></div></div>
+<div class="ttc" id="aclass_solution_html_aa1e15af17f8e71e3873f9282203bcc6f"><div class="ttname"><a href="class_solution.html#aa1e15af17f8e71e3873f9282203bcc6f">Solution::getNodes</a></div><div class="ttdeci">int getNodes()</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00041">solution.cpp:41</a></div></div>
+<div class="ttc" id="aclass_solution_html_a2a7fe426df2bb50f69f55084b4e99f85"><div class="ttname"><a href="class_solution.html#a2a7fe426df2bb50f69f55084b4e99f85">Solution::setRunTime</a></div><div class="ttdeci">void setRunTime(int newRunTime)</div><div class="ttdoc">Modifica el valor de tiempo de ejecución.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00077">solution.cpp:77</a></div></div>
+<div class="ttc" id="aclass_solution_html_a1af7d8c158d7c2655561edecd2ae11c5"><div class="ttname"><a href="class_solution.html#a1af7d8c158d7c2655561edecd2ae11c5">Solution::getSolution</a></div><div class="ttdeci">std::vector&lt; int &gt; getSolution()</div><div class="ttdoc">Devuelve el vector de solución.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00022">solution.cpp:22</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00015">solution.hpp:15</a></div></div>
+<div class="ttc" id="aclass_vectors_html"><div class="ttname"><a href="class_vectors.html">Vectors</a></div><div class="ttdoc">Esta clase representa la información que se ha obtenido del fichero.</div><div class="ttdef"><b>Definition:</b> <a href="vectors_8hpp_source.html#l00011">vectors.hpp:11</a></div></div>
+<div class="ttc" id="aclass_solution_html_ac09a3a13f29fe252e220a215f341a95e"><div class="ttname"><a href="class_solution.html#ac09a3a13f29fe252e220a215f341a95e">Solution::getAlgorithmName</a></div><div class="ttdeci">std::string getAlgorithmName()</div><div class="ttdoc">Devuelve el nombre del algoritmo de la solución.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00068">solution.cpp:68</a></div></div>
+<div class="ttc" id="aclass_solution_html_ac17592460d749911490ff6a7723a0255"><div class="ttname"><a href="class_solution.html#ac17592460d749911490ff6a7723a0255">Solution::setNodes</a></div><div class="ttdeci">void setNodes(int node)</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00037">solution.cpp:37</a></div></div>
+<div class="ttc" id="aclass_solution_html_ad400127785a150945093e58505afc375"><div class="ttname"><a href="class_solution.html#ad400127785a150945093e58505afc375">Solution::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, Solution currentSolution)</div><div class="ttdoc">Representa la sobrecarga del operador &lt;&lt;, que va a hacer la impresión de la solución.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00089">solution.cpp:89</a></div></div>
+<div class="ttc" id="avectors_8hpp_html"><div class="ttname"><a href="vectors_8hpp.html">vectors.hpp</a></div></div>
+<div class="ttc" id="aclass_solution_html_ab55bd4b023d596ce11aaf737b9a6123b"><div class="ttname"><a href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution::Solution</a></div><div class="ttdeci">Solution()</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00027">solution.hpp:27</a></div></div>
+<div class="ttc" id="aclass_solution_html_a5d245f7409aacf6ace5e965b7879a580"><div class="ttname"><a href="class_solution.html#a5d245f7409aacf6ace5e965b7879a580">Solution::~Solution</a></div><div class="ttdeci">~Solution()</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00028">solution.hpp:28</a></div></div>
+<div class="ttc" id="aclass_solution_html_a02d51bbbffdd65f73c1ef8e8c946fafe"><div class="ttname"><a href="class_solution.html#a02d51bbbffdd65f73c1ef8e8c946fafe">Solution::getSolutionValue</a></div><div class="ttdeci">int getSolutionValue(int position)</div><div class="ttdoc">Devuelve el valor de la solución en la posición que se haya obtenido por parámetro.</div><div class="ttdef"><b>Definition:</b> <a href="solution_8cpp_source.html#l00033">solution.cpp:33</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>solution.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="solution_8hpp.html">solution.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localsearch_18',['LocalSearch',['../class_local_search.html',1,'']]]
+  ['localsearch_107',['LocalSearch',['../class_local_search.html',1,'']]]
 ];

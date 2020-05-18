@@ -18,27 +18,103 @@ Inheritance diagram for Greedy\+Algorithm\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_greedy_algorithm_a80f11c004add7a89e5d038313de91c88}\label{class_greedy_algorithm_a80f11c004add7a89e5d038313de91c88}} 
-{\bfseries Greedy\+Algorithm} (std\+::string new\+Name, int newM)
+\mbox{\hyperlink{class_greedy_algorithm_a6ecad20da57210db721e44af597bd757}{Greedy\+Algorithm}} ()
 \item 
-\mbox{\Hypertarget{class_greedy_algorithm_a5c8c3ef91f7ca602218e0e4122a82989}\label{class_greedy_algorithm_a5c8c3ef91f7ca602218e0e4122a82989}} 
-float {\bfseries get\+\_\+total} (std\+::vector$<$ int $>$ sol)
+\mbox{\hyperlink{class_greedy_algorithm_a80f11c004add7a89e5d038313de91c88}{Greedy\+Algorithm}} (std\+::string new\+Name, int newM)
+\begin{DoxyCompactList}\small\item\em Construye el algoritmo greedy con un nombre asociado, además de una dimensión que es la que va a tener los vectores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_greedy_algorithm_ae98ec07185ac82619125181610e03891}{$\sim$\+Greedy\+Algorithm}} ()
 \item 
-\mbox{\Hypertarget{class_greedy_algorithm_a8685caa398aaf7dcdd7f75a8fe239226}\label{class_greedy_algorithm_a8685caa398aaf7dcdd7f75a8fe239226}} 
-void {\bfseries set\+Atributtes} (std\+::string name, int m)
+float \mbox{\hyperlink{class_greedy_algorithm_a5c8c3ef91f7ca602218e0e4122a82989}{get\+\_\+total}} (std\+::vector$<$ int $>$ sol)
 \item 
 \mbox{\hyperlink{class_solution}{Solution}} \mbox{\hyperlink{class_greedy_algorithm_a04f5e4e6ad7d0d68089a750d71efef3f}{run}} ()
-\begin{DoxyCompactList}\small\item\em Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_greedy_algorithm_a29694e96f6949b5c5b552e20c047190f}\label{class_greedy_algorithm_a29694e96f6949b5c5b552e20c047190f}} 
-int {\bfseries get\+Furthest\+Element} (std\+::vector$<$ int $>$ current\+Elem, std\+::vector$<$ float $>$ current\+SC)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Se encarga de ejecutar el algoritmo Greedy. Para ello lo que hace es crear un vector con todos los candidatos. Calcula el centro de gravedad respecto a todos los elementos del vector. Luego se van a hacer tantas iteraciones hasta que el vector de solución tenga el tamaño que le hemos definido. En todo este proceso, se va a obtener el punto más lejano respecto al centro y se añade al vector de solución, quitándolo a su vez del vector con todos los elementos. Para acabar se calcula el centro de gravedad de la nueva solución (esto ocurre hasta que la solución tenga el tamaño m definido). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_greedy_algorithm_a29694e96f6949b5c5b552e20c047190f}{get\+Furthest\+Element}} (std\+::vector$<$ int $>$ current\+Elem, std\+::vector$<$ float $>$ current\+SC)
+\begin{DoxyCompactList}\small\item\em Se encarga de obtener el elemento más alejado del centro (que contiene los elementos que no son solución) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Esta clase representa el algoritmo Greedy que se va a aplicar, obtenido a partir del pseudocódigo. 
 
+Definition at line 9 of file greedy-\/algorithm.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_greedy_algorithm_a6ecad20da57210db721e44af597bd757}\label{class_greedy_algorithm_a6ecad20da57210db721e44af597bd757}} 
+\index{GreedyAlgorithm@{GreedyAlgorithm}!GreedyAlgorithm@{GreedyAlgorithm}}
+\index{GreedyAlgorithm@{GreedyAlgorithm}!GreedyAlgorithm@{GreedyAlgorithm}}
+\doxysubsubsection{\texorpdfstring{GreedyAlgorithm()}{GreedyAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Greedy\+Algorithm\+::\+Greedy\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file greedy-\/algorithm.\+hpp.
+
+\mbox{\Hypertarget{class_greedy_algorithm_a80f11c004add7a89e5d038313de91c88}\label{class_greedy_algorithm_a80f11c004add7a89e5d038313de91c88}} 
+\index{GreedyAlgorithm@{GreedyAlgorithm}!GreedyAlgorithm@{GreedyAlgorithm}}
+\index{GreedyAlgorithm@{GreedyAlgorithm}!GreedyAlgorithm@{GreedyAlgorithm}}
+\doxysubsubsection{\texorpdfstring{GreedyAlgorithm()}{GreedyAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Greedy\+Algorithm\+::\+Greedy\+Algorithm (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name,  }\item[{int}]{newM }\end{DoxyParamCaption})}
+
+
+
+Construye el algoritmo greedy con un nombre asociado, además de una dimensión que es la que va a tener los vectores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & Nuevo nombre del algoritmo \\
+\hline
+{\em newM} & Tamaño de la solución \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file greedy-\/algorithm.\+cpp.
+
+\mbox{\Hypertarget{class_greedy_algorithm_ae98ec07185ac82619125181610e03891}\label{class_greedy_algorithm_ae98ec07185ac82619125181610e03891}} 
+\index{GreedyAlgorithm@{GreedyAlgorithm}!````~GreedyAlgorithm@{$\sim$GreedyAlgorithm}}
+\index{````~GreedyAlgorithm@{$\sim$GreedyAlgorithm}!GreedyAlgorithm@{GreedyAlgorithm}}
+\doxysubsubsection{\texorpdfstring{$\sim$GreedyAlgorithm()}{~GreedyAlgorithm()}}
+{\footnotesize\ttfamily Greedy\+Algorithm\+::$\sim$\+Greedy\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file greedy-\/algorithm.\+hpp.
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_greedy_algorithm_a5c8c3ef91f7ca602218e0e4122a82989}\label{class_greedy_algorithm_a5c8c3ef91f7ca602218e0e4122a82989}} 
+\index{GreedyAlgorithm@{GreedyAlgorithm}!get\_total@{get\_total}}
+\index{get\_total@{get\_total}!GreedyAlgorithm@{GreedyAlgorithm}}
+\doxysubsubsection{\texorpdfstring{get\_total()}{get\_total()}}
+{\footnotesize\ttfamily float Greedy\+Algorithm\+::get\+\_\+total (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{sol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_greedy_algorithm_a29694e96f6949b5c5b552e20c047190f}\label{class_greedy_algorithm_a29694e96f6949b5c5b552e20c047190f}} 
+\index{GreedyAlgorithm@{GreedyAlgorithm}!getFurthestElement@{getFurthestElement}}
+\index{getFurthestElement@{getFurthestElement}!GreedyAlgorithm@{GreedyAlgorithm}}
+\doxysubsubsection{\texorpdfstring{getFurthestElement()}{getFurthestElement()}}
+{\footnotesize\ttfamily int Greedy\+Algorithm\+::get\+Furthest\+Element (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{current\+Elem,  }\item[{std\+::vector$<$ float $>$}]{current\+SC }\end{DoxyParamCaption})}
+
+
+
+Se encarga de obtener el elemento más alejado del centro (que contiene los elementos que no son solución) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Elem} & Representa el vector que contiene los elementos restantes (no solución) \\
+\hline
+{\em current\+SC} & Representa el vector con los valores \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Devuelve el índice en la matriz del elemento más alejado. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file greedy-\/algorithm.\+cpp.
+
 \mbox{\Hypertarget{class_greedy_algorithm_a04f5e4e6ad7d0d68089a750d71efef3f}\label{class_greedy_algorithm_a04f5e4e6ad7d0d68089a750d71efef3f}} 
 \index{GreedyAlgorithm@{GreedyAlgorithm}!run@{run}}
 \index{run@{run}!GreedyAlgorithm@{GreedyAlgorithm}}
@@ -47,10 +123,10 @@ Esta clase representa el algoritmo Greedy que se va a aplicar, obtenido a partir
 
 
 
-Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas, debido a que todos los algoritmos que se van a ejecutar son similares pero funcionan de forma distinta. 
+Se encarga de ejecutar el algoritmo Greedy. Para ello lo que hace es crear un vector con todos los candidatos. Calcula el centro de gravedad respecto a todos los elementos del vector. Luego se van a hacer tantas iteraciones hasta que el vector de solución tenga el tamaño que le hemos definido. En todo este proceso, se va a obtener el punto más lejano respecto al centro y se añade al vector de solución, quitándolo a su vez del vector con todos los elementos. Para acabar se calcula el centro de gravedad de la nueva solución (esto ocurre hasta que la solución tenga el tamaño m definido). 
 
 \begin{DoxyReturn}{Returns}
-int Que contiene la mejor solucion 
+\mbox{\hyperlink{class_solution}{Solution}} Devuelve la solución al problema en formato Solucion 
 \end{DoxyReturn}
 
 
@@ -58,6 +134,11 @@ Implements \mbox{\hyperlink{class_algorithm_a9ecc951b95131db9ea40b58c6605ac8b}{A
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 26 of file greedy-\/algorithm.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/greedy-\/algorithm.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{greedy-algorithm_8hpp}{greedy-\/algorithm.\+hpp}}\item 
+src/\mbox{\hyperlink{greedy-algorithm_8cpp}{greedy-\/algorithm.\+cpp}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/branching-pruning-algorithm.hpp Source File</title>
+<title>Maximum diversity problem: include/branching-pruning-algorithm.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -85,9 +85,9 @@ $(document).ready(function(){initNavTree('branching-pruning-algorithm_8hpp_sourc
 <div class="title">branching-pruning-algorithm.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;algorithm.hpp&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;node.hpp&quot;</span></div>
+<a href="branching-pruning-algorithm_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="node_8hpp.html">node.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_branching_pruning_algorithm.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_branching_pruning_algorithm.html">BranchingPruningAlgorithm</a> : <span class="keyword">public</span> <a class="code" href="class_algorithm.html">Algorithm</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
@@ -98,25 +98,33 @@ $(document).ready(function(){initNavTree('branching-pruning-algorithm_8hpp_sourc
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">float</span> lowerBound;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::vector &lt;Node&gt; tree;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">bool</span> isDepth;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_branching_pruning_algorithm.html">BranchingPruningAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> m, <a class="code" href="class_solution.html">Solution</a> alg, <span class="keywordtype">bool</span> mode);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> initializeTree();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">float</span> getUpperBound(std::vector&lt;int&gt; solution);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> expand(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> getMin();</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_branching_pruning_algorithm.html#ad80a8fba560dc660dd19925a7c83dadb">   25</a></span>&#160;        <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_branching_pruning_algorithm.html#ad80a8fba560dc660dd19925a7c83dadb">run</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> expandNodes;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_branching_pruning_algorithm.html#af5dd885c99c56c7e841e947d3a5042da">BranchingPruningAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> m, <a class="code" href="class_solution.html">Solution</a> alg, <span class="keywordtype">bool</span> mode);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_branching_pruning_algorithm.html#a46f5de69f9f03aaf35267d17d454d0bd">initializeTree</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_branching_pruning_algorithm.html#ab9157bf2cff571f8dbfa6c794e880979">getUpperBound</a>(std::vector&lt;int&gt; solution);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_branching_pruning_algorithm.html#a0c5f31dfc1eb79130f55a7ca708380a8">expand</a>(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_branching_pruning_algorithm.html#a252084974f86d1aadd4b916508a77d73">getMin</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_branching_pruning_algorithm.html#ad80a8fba560dc660dd19925a7c83dadb">run</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_branching_pruning_algorithm_html"><div class="ttname"><a href="class_branching_pruning_algorithm.html">BranchingPruningAlgorithm</a></div><div class="ttdoc">Representa una clase que va a aplicar el algoritmo de expansion y poda.</div><div class="ttdef"><b>Definition:</b> branching-pruning-algorithm.hpp:9</div></div>
-<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:12</div></div>
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:15</div></div>
-<div class="ttc" id="aclass_branching_pruning_algorithm_html_ad80a8fba560dc660dd19925a7c83dadb"><div class="ttname"><a href="class_branching_pruning_algorithm.html#ad80a8fba560dc660dd19925a7c83dadb">BranchingPruningAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas,...</div></div>
+<div class="ttc" id="aalgorithm_8hpp_html"><div class="ttname"><a href="algorithm_8hpp.html">algorithm.hpp</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_a46f5de69f9f03aaf35267d17d454d0bd"><div class="ttname"><a href="class_branching_pruning_algorithm.html#a46f5de69f9f03aaf35267d17d454d0bd">BranchingPruningAlgorithm::initializeTree</a></div><div class="ttdeci">void initializeTree()</div><div class="ttdoc">Este método se encarga de inicializar el árbol, para ello se centra en crear los nodos que se encuent...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00027">branching-pruning-algorithm.cpp:27</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_ab9157bf2cff571f8dbfa6c794e880979"><div class="ttname"><a href="class_branching_pruning_algorithm.html#ab9157bf2cff571f8dbfa6c794e880979">BranchingPruningAlgorithm::getUpperBound</a></div><div class="ttdeci">float getUpperBound(std::vector&lt; int &gt; solution)</div><div class="ttdoc">Esta función se encarga de determinar la cota superior, para ello hay que tener en cuenta,...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00073">branching-pruning-algorithm.cpp:73</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html"><div class="ttname"><a href="class_branching_pruning_algorithm.html">BranchingPruningAlgorithm</a></div><div class="ttdoc">Representa una clase que va a aplicar el algoritmo de expansion y poda.</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8hpp_source.html#l00009">branching-pruning-algorithm.hpp:9</a></div></div>
+<div class="ttc" id="anode_8hpp_html"><div class="ttname"><a href="node_8hpp.html">node.hpp</a></div></div>
+<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> <a href="algorithm_8hpp_source.html#l00012">algorithm.hpp:12</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00015">solution.hpp:15</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_a0c5f31dfc1eb79130f55a7ca708380a8"><div class="ttname"><a href="class_branching_pruning_algorithm.html#a0c5f31dfc1eb79130f55a7ca708380a8">BranchingPruningAlgorithm::expand</a></div><div class="ttdeci">void expand(int position)</div><div class="ttdoc">Funcion que se encarga de expandir el nodo que se ha seleccionado, para ello, pone el mismo a visitad...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00046">branching-pruning-algorithm.cpp:46</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_ad80a8fba560dc660dd19925a7c83dadb"><div class="ttname"><a href="class_branching_pruning_algorithm.html#ad80a8fba560dc660dd19925a7c83dadb">BranchingPruningAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Función principal del algoritmo, esta se encarga de asignar la cota inferior al valor de la distancia...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00150">branching-pruning-algorithm.cpp:150</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_af5dd885c99c56c7e841e947d3a5042da"><div class="ttname"><a href="class_branching_pruning_algorithm.html#af5dd885c99c56c7e841e947d3a5042da">BranchingPruningAlgorithm::BranchingPruningAlgorithm</a></div><div class="ttdeci">BranchingPruningAlgorithm(std::string newName, int m, Solution alg, bool mode)</div><div class="ttdoc">Construye el algoritmo de ramificación y poda con un nombre, un valor m que representa el tamaño de l...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00013">branching-pruning-algorithm.cpp:13</a></div></div>
+<div class="ttc" id="aclass_branching_pruning_algorithm_html_a252084974f86d1aadd4b916508a77d73"><div class="ttname"><a href="class_branching_pruning_algorithm.html#a252084974f86d1aadd4b916508a77d73">BranchingPruningAlgorithm::getMin</a></div><div class="ttdeci">int getMin()</div><div class="ttdoc">Funcion que se encarga de determinar cual es el siguiente nodo a escoger para luego expandir,...</div><div class="ttdef"><b>Definition:</b> <a href="branching-pruning-algorithm_8cpp_source.html#l00192">branching-pruning-algorithm.cpp:192</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>branching-pruning-algorithm.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="branching-pruning-algorithm_8hpp.html">branching-pruning-algorithm.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

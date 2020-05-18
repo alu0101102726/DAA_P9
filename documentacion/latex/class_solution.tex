@@ -12,33 +12,33 @@ Representa una solucion, que va a contener el vector donde se almacena la misma 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_solution_ab84b090531f9585a0a6b445719a7fb77}\label{class_solution_ab84b090531f9585a0a6b445719a7fb77}} 
-{\bfseries Solution} (\mbox{\hyperlink{class_vectors}{Vectors}} current\+Solution, std\+::vector$<$ int $>$ new\+Solution, std\+::string new\+Algorithm\+Name)
+\mbox{\hyperlink{class_solution_ab84b090531f9585a0a6b445719a7fb77}{Solution}} (\mbox{\hyperlink{class_vectors}{Vectors}} current\+Solution, std\+::vector$<$ int $>$ new\+Solution, std\+::string new\+Algorithm\+Name)
+\begin{DoxyCompactList}\small\item\em Construye la solución, a partir de un vector, un valor y un nombre de un algoritmo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution}} ()
 \item 
-\mbox{\Hypertarget{class_solution_aa8cca14b69d98d34a828c1698b50c884}\label{class_solution_aa8cca14b69d98d34a828c1698b50c884}} 
-\mbox{\hyperlink{class_vectors}{Vectors}} {\bfseries get\+Info} ()
+\mbox{\hyperlink{class_solution_a5d245f7409aacf6ace5e965b7879a580}{$\sim$\+Solution}} ()
 \item 
-\mbox{\Hypertarget{class_solution_a748c05d17c68daf5e28f1ce7208bd3a0}\label{class_solution_a748c05d17c68daf5e28f1ce7208bd3a0}} 
-std\+::vector$<$ int $>$ {\bfseries get\+Solution} ()
+\mbox{\hyperlink{class_vectors}{Vectors}} \mbox{\hyperlink{class_solution_aa8cca14b69d98d34a828c1698b50c884}{get\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la información del fichero. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_solution_a1af7d8c158d7c2655561edecd2ae11c5}{get\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el vector de solución. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_solution_a942fa7f01670cbe1dfb6a4f0f3bb148e}{get\+Run\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el tiempo de ejecución. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_solution_a2a7fe426df2bb50f69f55084b4e99f85}{set\+Run\+Time}} (int new\+Run\+Time)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de tiempo de ejecución. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_solution_ac09a3a13f29fe252e220a215f341a95e}{get\+Algorithm\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre del algoritmo de la solución. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_solution_a02d51bbbffdd65f73c1ef8e8c946fafe}{get\+Solution\+Value}} (int position)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la solución en la posición que se haya obtenido por parámetro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_solution_ac17592460d749911490ff6a7723a0255}{set\+Nodes}} (int node)
 \item 
-\mbox{\Hypertarget{class_solution_a942fa7f01670cbe1dfb6a4f0f3bb148e}\label{class_solution_a942fa7f01670cbe1dfb6a4f0f3bb148e}} 
-int {\bfseries get\+Run\+Time} ()
-\item 
-\mbox{\Hypertarget{class_solution_a2a7fe426df2bb50f69f55084b4e99f85}\label{class_solution_a2a7fe426df2bb50f69f55084b4e99f85}} 
-void {\bfseries set\+Run\+Time} (int new\+Run\+Time)
-\item 
-\mbox{\Hypertarget{class_solution_ac09a3a13f29fe252e220a215f341a95e}\label{class_solution_ac09a3a13f29fe252e220a215f341a95e}} 
-std\+::string {\bfseries get\+Algorithm\+Name} ()
-\item 
-\mbox{\Hypertarget{class_solution_a02d51bbbffdd65f73c1ef8e8c946fafe}\label{class_solution_a02d51bbbffdd65f73c1ef8e8c946fafe}} 
-int {\bfseries get\+Solution\+Value} (int position)
+int \mbox{\hyperlink{class_solution_aa1e15af17f8e71e3873f9282203bcc6f}{get\+Nodes}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_solution_ad400127785a150945093e58505afc375}\label{class_solution_ad400127785a150945093e58505afc375}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_solution}{Solution}} current\+Solution)
-\end{DoxyCompactItemize}
+std\+::ostream \& \mbox{\hyperlink{class_solution_ad400127785a150945093e58505afc375}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_solution}{Solution}} current\+Solution)
+\begin{DoxyCompactList}\small\item\em Representa la sobrecarga del operador $<$$<$, que va a hacer la impresión de la solución. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +46,216 @@ Representa una solucion, que va a contener el vector donde se almacena la misma 
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 15 of file solution.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_solution_ab84b090531f9585a0a6b445719a7fb77}\label{class_solution_ab84b090531f9585a0a6b445719a7fb77}} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vectors}{Vectors}}}]{new\+Data,  }\item[{std\+::vector$<$ int $>$}]{current\+Solution,  }\item[{std\+::string}]{new\+Algorithm\+Name }\end{DoxyParamCaption})}
+
+
+
+Construye la solución, a partir de un vector, un valor y un nombre de un algoritmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Solution} & Representa el vector que contiene la solución \\
+\hline
+{\em current\+Media} & Representa el valor de la media de dispersión de la solución \\
+\hline
+{\em new\+Algorithm\+Name} & Representa el nombre del algoritmo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}\label{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file solution.\+hpp.
+
+\mbox{\Hypertarget{class_solution_a5d245f7409aacf6ace5e965b7879a580}\label{class_solution_a5d245f7409aacf6ace5e965b7879a580}} 
+\index{Solution@{Solution}!````~Solution@{$\sim$Solution}}
+\index{````~Solution@{$\sim$Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{$\sim$Solution()}{~Solution()}}
+{\footnotesize\ttfamily Solution\+::$\sim$\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 28 of file solution.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_solution_ac09a3a13f29fe252e220a215f341a95e}\label{class_solution_ac09a3a13f29fe252e220a215f341a95e}} 
+\index{Solution@{Solution}!getAlgorithmName@{getAlgorithmName}}
+\index{getAlgorithmName@{getAlgorithmName}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getAlgorithmName()}{getAlgorithmName()}}
+{\footnotesize\ttfamily std\+::string Solution\+::get\+Algorithm\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el nombre del algoritmo de la solución. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Valor del nombre del nombre del algoritmo 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_aa8cca14b69d98d34a828c1698b50c884}\label{class_solution_aa8cca14b69d98d34a828c1698b50c884}} 
+\index{Solution@{Solution}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vectors}{Vectors}} Solution\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve la información del fichero. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vectors}{Vectors}} Valor de la información del fichero 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_aa1e15af17f8e71e3873f9282203bcc6f}\label{class_solution_aa1e15af17f8e71e3873f9282203bcc6f}} 
+\index{Solution@{Solution}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily int Solution\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_a942fa7f01670cbe1dfb6a4f0f3bb148e}\label{class_solution_a942fa7f01670cbe1dfb6a4f0f3bb148e}} 
+\index{Solution@{Solution}!getRunTime@{getRunTime}}
+\index{getRunTime@{getRunTime}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getRunTime()}{getRunTime()}}
+{\footnotesize\ttfamily int Solution\+::get\+Run\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el tiempo de ejecución. 
+
+\begin{DoxyReturn}{Returns}
+int Valor del tiempo de ejecución 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_a1af7d8c158d7c2655561edecd2ae11c5}\label{class_solution_a1af7d8c158d7c2655561edecd2ae11c5}} 
+\index{Solution@{Solution}!getSolution@{getSolution}}
+\index{getSolution@{getSolution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getSolution()}{getSolution()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Solution\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el vector de solución. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$int$>$ Vector de solución 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_a02d51bbbffdd65f73c1ef8e8c946fafe}\label{class_solution_a02d51bbbffdd65f73c1ef8e8c946fafe}} 
+\index{Solution@{Solution}!getSolutionValue@{getSolutionValue}}
+\index{getSolutionValue@{getSolutionValue}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getSolutionValue()}{getSolutionValue()}}
+{\footnotesize\ttfamily int Solution\+::get\+Solution\+Value (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la solución en la posición que se haya obtenido por parámetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posición a buscar en el vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Valor en la posición del vector 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_ac17592460d749911490ff6a7723a0255}\label{class_solution_ac17592460d749911490ff6a7723a0255}} 
+\index{Solution@{Solution}!setNodes@{setNodes}}
+\index{setNodes@{setNodes}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{setNodes()}{setNodes()}}
+{\footnotesize\ttfamily void Solution\+::set\+Nodes (\begin{DoxyParamCaption}\item[{int}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file solution.\+cpp.
+
+\mbox{\Hypertarget{class_solution_a2a7fe426df2bb50f69f55084b4e99f85}\label{class_solution_a2a7fe426df2bb50f69f55084b4e99f85}} 
+\index{Solution@{Solution}!setRunTime@{setRunTime}}
+\index{setRunTime@{setRunTime}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{setRunTime()}{setRunTime()}}
+{\footnotesize\ttfamily void Solution\+::set\+Run\+Time (\begin{DoxyParamCaption}\item[{int}]{new\+Run\+Time }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de tiempo de ejecución. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Run\+Time} & Nuevo tiempo de ejecución \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file solution.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_solution_ad400127785a150945093e58505afc375}\label{class_solution_ad400127785a150945093e58505afc375}} 
+\index{Solution@{Solution}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_solution}{Solution}}}]{current\+Solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Representa la sobrecarga del operador $<$$<$, que va a hacer la impresión de la solución. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Ostream para imprimir \\
+\hline
+{\em current\+Solution} & Solución que se va aimprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& valor de impresión 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file solution.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/solution.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{solution_8hpp}{solution.\+hpp}}\item 
+src/\mbox{\hyperlink{solution_8cpp}{solution.\+cpp}}\end{DoxyCompactItemize}

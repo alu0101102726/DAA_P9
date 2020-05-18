@@ -12,53 +12,305 @@ Esta clase representa un nodo del árbol para representar el algoritmo de extens
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_node_a0339106150ffe3d0249634c35f3b1d5a}\label{class_node_a0339106150ffe3d0249634c35f3b1d5a}} 
-{\bfseries Node} (float new\+Value, float new\+Upper\+Bound)
+\mbox{\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
 \item 
-\mbox{\Hypertarget{class_node_a1b9646ec8660e43b3b91a5991caf8f7f}\label{class_node_a1b9646ec8660e43b3b91a5991caf8f7f}} 
-float {\bfseries get\+Upper\+Bound} ()
+\mbox{\hyperlink{class_node_a0339106150ffe3d0249634c35f3b1d5a}{Node}} (float new\+Value, float new\+Upper\+Bound)
+\begin{DoxyCompactList}\small\item\em Construye un objeto node a partir del valor de la distancia del nodo y el valor de la cota superior. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node}} ()
 \item 
-\mbox{\Hypertarget{class_node_a1c8e0804b07c55672d29ef70f90d292d}\label{class_node_a1c8e0804b07c55672d29ef70f90d292d}} 
-void {\bfseries set\+Upper\+Bound} (float new\+Upper\+Bound)
-\item 
-\mbox{\Hypertarget{class_node_a13d555c5a90a42350f92fc8fe81c7f5b}\label{class_node_a13d555c5a90a42350f92fc8fe81c7f5b}} 
-float {\bfseries get\+Value} ()
-\item 
-\mbox{\Hypertarget{class_node_a75a97d1f4629f1820e845b2d6febbfb5}\label{class_node_a75a97d1f4629f1820e845b2d6febbfb5}} 
-void {\bfseries set\+Value} (float new\+Value)
-\item 
-\mbox{\Hypertarget{class_node_a2ebc6564d156faeef4170b03400fc7cf}\label{class_node_a2ebc6564d156faeef4170b03400fc7cf}} 
-bool {\bfseries is\+Prun} ()
-\item 
-\mbox{\Hypertarget{class_node_a53ee1569a5d8fb8558d3682f2592101d}\label{class_node_a53ee1569a5d8fb8558d3682f2592101d}} 
-void {\bfseries set\+Pruned} (bool new\+Value)
-\item 
-\mbox{\Hypertarget{class_node_a91d335587ff4158d88771feccf361b74}\label{class_node_a91d335587ff4158d88771feccf361b74}} 
-bool {\bfseries is\+Visited} ()
-\item 
-\mbox{\Hypertarget{class_node_a280965c05e4a5d63f5cc93cf1678f23f}\label{class_node_a280965c05e4a5d63f5cc93cf1678f23f}} 
-void {\bfseries set\+Visited} (bool new\+Value)
-\item 
-\mbox{\Hypertarget{class_node_a480ddfd84000a4d9dc0c6c590be9ae26}\label{class_node_a480ddfd84000a4d9dc0c6c590be9ae26}} 
-std\+::vector$<$ int $>$ {\bfseries get\+Vector} ()
-\item 
-\mbox{\Hypertarget{class_node_ab08e9c412cae343b2e1216d704c7c9f3}\label{class_node_ab08e9c412cae343b2e1216d704c7c9f3}} 
-void {\bfseries set\+Vector} (std\+::vector$<$ int $>$ new\+Vect)
-\item 
-\mbox{\Hypertarget{class_node_a76d6535e08f4ccd0068b1e5603edb376}\label{class_node_a76d6535e08f4ccd0068b1e5603edb376}} 
-void {\bfseries add\+Childs} (int new\+Node)
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{class_node_a1b9646ec8660e43b3b91a5991caf8f7f}{get\+Upper\+Bound}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la cota superior del nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a1c8e0804b07c55672d29ef70f90d292d}{set\+Upper\+Bound}} (float new\+Upper\+Bound)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de la cota superior del nodo. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_node_a13d555c5a90a42350f92fc8fe81c7f5b}{get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la distancia del nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a75a97d1f4629f1820e845b2d6febbfb5}{set\+Value}} (float new\+Value)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de la distancia del nodo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_node_a2ebc6564d156faeef4170b03400fc7cf}{is\+Prun}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve si el nodo está podado o no. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a53ee1569a5d8fb8558d3682f2592101d}{set\+Pruned}} (bool new\+Value)
+\begin{DoxyCompactList}\small\item\em Modifica el estado de poda del nodo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_node_a91d335587ff4158d88771feccf361b74}{is\+Visited}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve si el nodo está visitado o no. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a280965c05e4a5d63f5cc93cf1678f23f}{set\+Visited}} (bool new\+Value)
+\begin{DoxyCompactList}\small\item\em Modifica el estado de visitado del nodo. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_node_a54a0680f20a0a2f82f51d8683bef5999}{get\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve la solución parcial asociada al nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_ab08e9c412cae343b2e1216d704c7c9f3}{set\+Vector}} (std\+::vector$<$ int $>$ new\+Vect)
+\begin{DoxyCompactList}\small\item\em Modifica la solución parcial asociada al nodo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_node_a965e92de3b2713bca04801af3ca42b38}\label{class_node_a965e92de3b2713bca04801af3ca42b38}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_node}{Node}} other\+Node)
-\end{DoxyCompactItemize}
+std\+::ostream \& \mbox{\hyperlink{class_node_a965e92de3b2713bca04801af3ca42b38}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_node}{Node}} other\+Node)
+\begin{DoxyCompactList}\small\item\em Representa la impresión del nodo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Esta clase representa un nodo del árbol para representar el algoritmo de extension y poda. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 10 of file node.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{class_node_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file node.\+hpp.
+
+\mbox{\Hypertarget{class_node_a0339106150ffe3d0249634c35f3b1d5a}\label{class_node_a0339106150ffe3d0249634c35f3b1d5a}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{float}]{new\+Value,  }\item[{float}]{new\+Upper\+Bound }\end{DoxyParamCaption})}
+
+
+
+Construye un objeto node a partir del valor de la distancia del nodo y el valor de la cota superior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Valor nuevo de la distancia del nodo \\
+\hline
+{\em new\+Upper\+Bound} & Valor de la cota superior \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_aa0840c3cb5c7159be6d992adecd2097c}\label{class_node_aa0840c3cb5c7159be6d992adecd2097c}} 
+\index{Node@{Node}!````~Node@{$\sim$Node}}
+\index{````~Node@{$\sim$Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{$\sim$Node()}{~Node()}}
+{\footnotesize\ttfamily Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 22 of file node.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_a1b9646ec8660e43b3b91a5991caf8f7f}\label{class_node_a1b9646ec8660e43b3b91a5991caf8f7f}} 
+\index{Node@{Node}!getUpperBound@{getUpperBound}}
+\index{getUpperBound@{getUpperBound}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getUpperBound()}{getUpperBound()}}
+{\footnotesize\ttfamily float Node\+::get\+Upper\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la cota superior del nodo. 
+
+\begin{DoxyReturn}{Returns}
+float valor de la cota superior del nodo 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a13d555c5a90a42350f92fc8fe81c7f5b}\label{class_node_a13d555c5a90a42350f92fc8fe81c7f5b}} 
+\index{Node@{Node}!getValue@{getValue}}
+\index{getValue@{getValue}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily float Node\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la distancia del nodo. 
+
+\begin{DoxyReturn}{Returns}
+float valor de la distancia del nodo 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a54a0680f20a0a2f82f51d8683bef5999}\label{class_node_a54a0680f20a0a2f82f51d8683bef5999}} 
+\index{Node@{Node}!getVector@{getVector}}
+\index{getVector@{getVector}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getVector()}{getVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Node\+::get\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve la solución parcial asociada al nodo. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ Valor de la solución parcial del nodo 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a2ebc6564d156faeef4170b03400fc7cf}\label{class_node_a2ebc6564d156faeef4170b03400fc7cf}} 
+\index{Node@{Node}!isPrun@{isPrun}}
+\index{isPrun@{isPrun}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{isPrun()}{isPrun()}}
+{\footnotesize\ttfamily bool Node\+::is\+Prun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve si el nodo está podado o no. 
+
+\begin{DoxyReturn}{Returns}
+true El nodo se ha podado 
+
+false El nodo NO se ha podado 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a91d335587ff4158d88771feccf361b74}\label{class_node_a91d335587ff4158d88771feccf361b74}} 
+\index{Node@{Node}!isVisited@{isVisited}}
+\index{isVisited@{isVisited}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{isVisited()}{isVisited()}}
+{\footnotesize\ttfamily bool Node\+::is\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve si el nodo está visitado o no. 
+
+\begin{DoxyReturn}{Returns}
+true El nodo se ha visitado 
+
+false El nodo NO se ha visitado 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a53ee1569a5d8fb8558d3682f2592101d}\label{class_node_a53ee1569a5d8fb8558d3682f2592101d}} 
+\index{Node@{Node}!setPruned@{setPruned}}
+\index{setPruned@{setPruned}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setPruned()}{setPruned()}}
+{\footnotesize\ttfamily void Node\+::set\+Pruned (\begin{DoxyParamCaption}\item[{bool}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Modifica el estado de poda del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Nuevo valor de poda del nodo (true o false) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a1c8e0804b07c55672d29ef70f90d292d}\label{class_node_a1c8e0804b07c55672d29ef70f90d292d}} 
+\index{Node@{Node}!setUpperBound@{setUpperBound}}
+\index{setUpperBound@{setUpperBound}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setUpperBound()}{setUpperBound()}}
+{\footnotesize\ttfamily void Node\+::set\+Upper\+Bound (\begin{DoxyParamCaption}\item[{float}]{new\+Upper\+Bound }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de la cota superior del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Upper\+Bound} & Nuevo del valor de la cota superior del nodo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a75a97d1f4629f1820e845b2d6febbfb5}\label{class_node_a75a97d1f4629f1820e845b2d6febbfb5}} 
+\index{Node@{Node}!setValue@{setValue}}
+\index{setValue@{setValue}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Node\+::set\+Value (\begin{DoxyParamCaption}\item[{float}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de la distancia del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Nuevo valor de la distancia del nodo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_ab08e9c412cae343b2e1216d704c7c9f3}\label{class_node_ab08e9c412cae343b2e1216d704c7c9f3}} 
+\index{Node@{Node}!setVector@{setVector}}
+\index{setVector@{setVector}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setVector()}{setVector()}}
+{\footnotesize\ttfamily void Node\+::set\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{new\+Vect }\end{DoxyParamCaption})}
+
+
+
+Modifica la solución parcial asociada al nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Vect} & Nuevo valor de la solución parcial del nodo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file node.\+cpp.
+
+\mbox{\Hypertarget{class_node_a280965c05e4a5d63f5cc93cf1678f23f}\label{class_node_a280965c05e4a5d63f5cc93cf1678f23f}} 
+\index{Node@{Node}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Node\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Modifica el estado de visitado del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Nuevo valor de visitado del nodo (true o false) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file node.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_node_a965e92de3b2713bca04801af3ca42b38}\label{class_node_a965e92de3b2713bca04801af3ca42b38}} 
+\index{Node@{Node}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_node}{Node}}}]{other\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Representa la impresión del nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Objeto para la impresion ostream \\
+\hline
+{\em other\+Node} & Nodo que se va a imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& Objeto para la impresion ostream 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file node.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/node.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{node_8hpp}{node.\+hpp}}\item 
+src/\mbox{\hyperlink{node_8cpp}{node.\+cpp}}\end{DoxyCompactItemize}

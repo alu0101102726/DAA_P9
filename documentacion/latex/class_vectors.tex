@@ -12,41 +12,248 @@ Esta clase representa la información que se ha obtenido del fichero.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_vectors_a6902d1f4f9f647d5b3ed8186be4c3d74}\label{class_vectors_a6902d1f4f9f647d5b3ed8186be4c3d74}} 
-{\bfseries Vectors} (std\+::string file\+Name)
+\mbox{\hyperlink{class_vectors_a753911781e0e5f13a9306fb78328841b}{Vectors}} ()
 \item 
-\mbox{\Hypertarget{class_vectors_a015bde9d9f0ed28f51ae0f60e6c77b9d}\label{class_vectors_a015bde9d9f0ed28f51ae0f60e6c77b9d}} 
-{\bfseries Vectors} (std\+::vector$<$ std\+::vector$<$ float $>$ $>$ other\+Vect)
+\mbox{\hyperlink{class_vectors_a6902d1f4f9f647d5b3ed8186be4c3d74}{Vectors}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Construye el objeto donde vamos a guardar la información del fichero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vectors_a015bde9d9f0ed28f51ae0f60e6c77b9d}{Vectors}} (std\+::vector$<$ std\+::vector$<$ float $>$ $>$ other\+Vect)
+\begin{DoxyCompactList}\small\item\em Construct de copia \mbox{\hyperlink{class_vectors}{Vectors}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vectors_a508b2f445a9c446db4c9aa267b6247e3}{$\sim$\+Vectors}} ()
 \item 
-\mbox{\Hypertarget{class_vectors_a3b4f716faf5ade90b17593f9ba8902d4}\label{class_vectors_a3b4f716faf5ade90b17593f9ba8902d4}} 
-int {\bfseries get\+Dimension} ()
-\item 
-\mbox{\Hypertarget{class_vectors_a50c6777662c479e8cdede46f2705e50a}\label{class_vectors_a50c6777662c479e8cdede46f2705e50a}} 
-float {\bfseries get\+Data\+Value} (int current\+Element, int K)
-\item 
-\mbox{\Hypertarget{class_vectors_a09dce526bb5ea09c70cade7dcf36a00f}\label{class_vectors_a09dce526bb5ea09c70cade7dcf36a00f}} 
-std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries get\+Data} ()
-\item 
-\mbox{\Hypertarget{class_vectors_a414d2d646f0814b9207ddd04b04477db}\label{class_vectors_a414d2d646f0814b9207ddd04b04477db}} 
-int {\bfseries get\+Size} ()
-\item 
-\mbox{\Hypertarget{class_vectors_ab760fcab54a8b871e92d1ee0cf56f2a9}\label{class_vectors_ab760fcab54a8b871e92d1ee0cf56f2a9}} 
-int {\bfseries get\+Element\+Size} (int position)
-\item 
-\mbox{\Hypertarget{class_vectors_a539a25267f6b1e358146f638609a82fd}\label{class_vectors_a539a25267f6b1e358146f638609a82fd}} 
-float {\bfseries get\+Euclidean\+Distance} (int first\+Vect, int second\+Vect)
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_vectors_a3b4f716faf5ade90b17593f9ba8902d4}{get\+Dimension}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la dimensión. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vectors_a50c6777662c479e8cdede46f2705e50a}{get\+Data\+Value}} (int current\+Element, int K)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del vector en la posición current\+Element, K. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_vectors_a21502bd46a9deb2ad669dc2b16719327}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el vector que contiene la información. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vectors_a414d2d646f0814b9207ddd04b04477db}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el tamaño del vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vectors_ab760fcab54a8b871e92d1ee0cf56f2a9}{get\+Element\+Size}} (int position)
+\begin{DoxyCompactList}\small\item\em Devuelve el tamaño del vector en la posición pasada por parámetro. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_vectors_a539a25267f6b1e358146f638609a82fd}{get\+Euclidean\+Distance}} (int first\+Vect, int second\+Vect)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la distancia euclídea obtenida. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_vectors_ab5bb0f268d34dd229455a17d2ecde778}\label{class_vectors_ab5bb0f268d34dd229455a17d2ecde778}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_vectors}{Vectors}} current\+Data)
-\end{DoxyCompactItemize}
+std\+::ostream \& \mbox{\hyperlink{class_vectors_ab5bb0f268d34dd229455a17d2ecde778}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_vectors}{Vectors}} current\+Data)
+\begin{DoxyCompactList}\small\item\em Esta funcion se encarga de la impresion de la información almacenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Esta clase representa la información que se ha obtenido del fichero. 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 11 of file vectors.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vectors_a753911781e0e5f13a9306fb78328841b}\label{class_vectors_a753911781e0e5f13a9306fb78328841b}} 
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{Vectors()}{Vectors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vectors\+::\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file vectors.\+hpp.
+
+\mbox{\Hypertarget{class_vectors_a6902d1f4f9f647d5b3ed8186be4c3d74}\label{class_vectors_a6902d1f4f9f647d5b3ed8186be4c3d74}} 
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{Vectors()}{Vectors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vectors\+::\+Vectors (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Construye el objeto donde vamos a guardar la información del fichero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Nombre del fichero \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a015bde9d9f0ed28f51ae0f60e6c77b9d}\label{class_vectors_a015bde9d9f0ed28f51ae0f60e6c77b9d}} 
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\index{Vectors@{Vectors}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{Vectors()}{Vectors()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vectors\+::\+Vectors (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$}]{other\+Vect }\end{DoxyParamCaption})}
+
+
+
+Construct de copia \mbox{\hyperlink{class_vectors}{Vectors}} object. 
+
+
+
+Definition at line 17 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a508b2f445a9c446db4c9aa267b6247e3}\label{class_vectors_a508b2f445a9c446db4c9aa267b6247e3}} 
+\index{Vectors@{Vectors}!````~Vectors@{$\sim$Vectors}}
+\index{````~Vectors@{$\sim$Vectors}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vectors()}{~Vectors()}}
+{\footnotesize\ttfamily Vectors\+::$\sim$\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file vectors.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vectors_a21502bd46a9deb2ad669dc2b16719327}\label{class_vectors_a21502bd46a9deb2ad669dc2b16719327}} 
+\index{Vectors@{Vectors}!getData@{getData}}
+\index{getData@{getData}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ float $>$ $>$ Vectors\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el vector que contiene la información. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector $<$ std\+::vector $<$ float $>$ $>$ vector con la información 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a50c6777662c479e8cdede46f2705e50a}\label{class_vectors_a50c6777662c479e8cdede46f2705e50a}} 
+\index{Vectors@{Vectors}!getDataValue@{getDataValue}}
+\index{getDataValue@{getDataValue}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getDataValue()}{getDataValue()}}
+{\footnotesize\ttfamily float Vectors\+::get\+Data\+Value (\begin{DoxyParamCaption}\item[{int}]{current\+Element,  }\item[{int}]{K }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor del vector en la posición current\+Element, K. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Element} & Representa el vector a elegir \\
+\hline
+{\em K} & Representa dentro del vector el valor a obtener \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a3b4f716faf5ade90b17593f9ba8902d4}\label{class_vectors_a3b4f716faf5ade90b17593f9ba8902d4}} 
+\index{Vectors@{Vectors}!getDimension@{getDimension}}
+\index{getDimension@{getDimension}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getDimension()}{getDimension()}}
+{\footnotesize\ttfamily int Vectors\+::get\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la dimensión. 
+
+\begin{DoxyReturn}{Returns}
+int Valor de la dimensión 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_ab760fcab54a8b871e92d1ee0cf56f2a9}\label{class_vectors_ab760fcab54a8b871e92d1ee0cf56f2a9}} 
+\index{Vectors@{Vectors}!getElementSize@{getElementSize}}
+\index{getElementSize@{getElementSize}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getElementSize()}{getElementSize()}}
+{\footnotesize\ttfamily int Vectors\+::get\+Element\+Size (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Devuelve el tamaño del vector en la posición pasada por parámetro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posicion para elegir el vector del que se obtiene la distancia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Valor de la distancia 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a539a25267f6b1e358146f638609a82fd}\label{class_vectors_a539a25267f6b1e358146f638609a82fd}} 
+\index{Vectors@{Vectors}!getEuclideanDistance@{getEuclideanDistance}}
+\index{getEuclideanDistance@{getEuclideanDistance}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getEuclideanDistance()}{getEuclideanDistance()}}
+{\footnotesize\ttfamily float Vectors\+::get\+Euclidean\+Distance (\begin{DoxyParamCaption}\item[{int}]{first\+Vect,  }\item[{int}]{second\+Vect }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la distancia euclídea obtenida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Vect} & Representa el primer vector del que se va a calcular la distancia euclídea \\
+\hline
+{\em second\+Vect} & Representa el segundo vector del que se va a calcular la distancia euclídea \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Valor de la distancia euclídea 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file vectors.\+cpp.
+
+\mbox{\Hypertarget{class_vectors_a414d2d646f0814b9207ddd04b04477db}\label{class_vectors_a414d2d646f0814b9207ddd04b04477db}} 
+\index{Vectors@{Vectors}!getSize@{getSize}}
+\index{getSize@{getSize}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Vectors\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el tamaño del vector. 
+
+\begin{DoxyReturn}{Returns}
+int Valor de la distancia 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file vectors.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_vectors_ab5bb0f268d34dd229455a17d2ecde778}\label{class_vectors_ab5bb0f268d34dd229455a17d2ecde778}} 
+\index{Vectors@{Vectors}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vectors@{Vectors}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_vectors}{Vectors}}}]{current\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Esta funcion se encarga de la impresion de la información almacenada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Representa la salida \\
+\hline
+{\em current\+Data} & El elemento del que se va a imprimir su información \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file vectors.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/vectors.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{vectors_8hpp}{vectors.\+hpp}}\item 
+src/\mbox{\hyperlink{vectors_8cpp}{vectors.\+cpp}}\end{DoxyCompactItemize}

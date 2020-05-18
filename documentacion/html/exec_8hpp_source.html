@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/exec.hpp Source File</title>
+<title>Maximum diversity problem: include/exec.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -85,12 +85,12 @@ $(document).ready(function(){initNavTree('exec_8hpp_source.html',''); initResiza
 <div class="title">exec.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="exec_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;algorithm.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;vectors.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;file.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;solution.hpp&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vectors_8hpp.html">vectors.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="file_8hpp.html">file.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="solution_8hpp.html">solution.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
@@ -100,24 +100,34 @@ $(document).ready(function(){initNavTree('exec_8hpp_source.html',''); initResiza
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_algorithm.html">Algorithm</a> *algorithm;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_exec.html">Exec</a>(std::string fileName);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="class_exec.html">Exec</a>() {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_exec.html#ae42ab9087e6b93405927e010a12f178c">Exec</a>(std::string fileName);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_exec.html#acbbd7d801a7387440497243dbaefa145">   23</a></span>&#160;    <a class="code" href="class_exec.html#acbbd7d801a7387440497243dbaefa145">~Exec</a>() {}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> changeAlgorithm(<a class="code" href="class_algorithm.html">Algorithm</a> *newAlgorithm);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_vectors.html">Vectors</a> getData();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_solution.html">Solution</a> solve();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::chrono::time_point&lt;std::chrono::system_clock&gt; getRunTime();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_exec.html#a43a9d949a97dbe46c9346b8d8efeae7d">changeAlgorithm</a>(<a class="code" href="class_algorithm.html">Algorithm</a> *newAlgorithm);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_vectors.html">Vectors</a> <a class="code" href="class_exec.html#a20ccc8eb119e2fb91825200156af56df">getData</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_exec.html#afecaa5bf6a08db20e799d3165657be16">solve</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::chrono::time_point&lt;std::chrono::system_clock&gt; <a class="code" href="class_exec.html#adbbf0db08479905330f6c980b680e1fd">getRunTime</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_exec_html"><div class="ttname"><a href="class_exec.html">Exec</a></div><div class="ttdoc">Al aplicar el patrón Strategy, es necesario tener una clase que actúe como context y que gestione las...</div><div class="ttdef"><b>Definition:</b> exec.hpp:16</div></div>
-<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:12</div></div>
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:15</div></div>
-<div class="ttc" id="aclass_vectors_html"><div class="ttname"><a href="class_vectors.html">Vectors</a></div><div class="ttdoc">Esta clase representa la información que se ha obtenido del fichero.</div><div class="ttdef"><b>Definition:</b> vectors.hpp:11</div></div>
+<div class="ttc" id="aalgorithm_8hpp_html"><div class="ttname"><a href="algorithm_8hpp.html">algorithm.hpp</a></div></div>
+<div class="ttc" id="aclass_exec_html"><div class="ttname"><a href="class_exec.html">Exec</a></div><div class="ttdoc">Al aplicar el patrón Strategy, es necesario tener una clase que actúe como context y que gestione las...</div><div class="ttdef"><b>Definition:</b> <a href="exec_8hpp_source.html#l00016">exec.hpp:16</a></div></div>
+<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> <a href="algorithm_8hpp_source.html#l00012">algorithm.hpp:12</a></div></div>
+<div class="ttc" id="aclass_exec_html_afecaa5bf6a08db20e799d3165657be16"><div class="ttname"><a href="class_exec.html#afecaa5bf6a08db20e799d3165657be16">Exec::solve</a></div><div class="ttdeci">Solution solve()</div><div class="ttdoc">Programa principal que se encarga de calcular el tiempo de ejecución de un determinado algoritmo,...</div><div class="ttdef"><b>Definition:</b> <a href="exec_8cpp_source.html#l00051">exec.cpp:51</a></div></div>
+<div class="ttc" id="aclass_exec_html_a20ccc8eb119e2fb91825200156af56df"><div class="ttname"><a href="class_exec.html#a20ccc8eb119e2fb91825200156af56df">Exec::getData</a></div><div class="ttdeci">Vectors getData()</div><div class="ttdoc">Devuelve un vector con la información.</div><div class="ttdef"><b>Definition:</b> <a href="exec_8cpp_source.html#l00032">exec.cpp:32</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00015">solution.hpp:15</a></div></div>
+<div class="ttc" id="aclass_exec_html_adbbf0db08479905330f6c980b680e1fd"><div class="ttname"><a href="class_exec.html#adbbf0db08479905330f6c980b680e1fd">Exec::getRunTime</a></div><div class="ttdeci">std::chrono::time_point&lt; std::chrono::system_clock &gt; getRunTime()</div><div class="ttdoc">Devuelve el tiempo de ejecución actual.</div><div class="ttdef"><b>Definition:</b> <a href="exec_8cpp_source.html#l00041">exec.cpp:41</a></div></div>
+<div class="ttc" id="aclass_vectors_html"><div class="ttname"><a href="class_vectors.html">Vectors</a></div><div class="ttdoc">Esta clase representa la información que se ha obtenido del fichero.</div><div class="ttdef"><b>Definition:</b> <a href="vectors_8hpp_source.html#l00011">vectors.hpp:11</a></div></div>
+<div class="ttc" id="afile_8hpp_html"><div class="ttname"><a href="file_8hpp.html">file.hpp</a></div></div>
+<div class="ttc" id="aclass_exec_html_ae42ab9087e6b93405927e010a12f178c"><div class="ttname"><a href="class_exec.html#ae42ab9087e6b93405927e010a12f178c">Exec::Exec</a></div><div class="ttdeci">Exec(std::string fileName)</div><div class="ttdoc">Construye un nuevo exec, llama al constructor del grafo que se va a encargar de llamar al fichero y g...</div><div class="ttdef"><b>Definition:</b> <a href="exec_8cpp_source.html#l00011">exec.cpp:11</a></div></div>
+<div class="ttc" id="avectors_8hpp_html"><div class="ttname"><a href="vectors_8hpp.html">vectors.hpp</a></div></div>
+<div class="ttc" id="aclass_exec_html_acbbd7d801a7387440497243dbaefa145"><div class="ttname"><a href="class_exec.html#acbbd7d801a7387440497243dbaefa145">Exec::~Exec</a></div><div class="ttdeci">~Exec()</div><div class="ttdef"><b>Definition:</b> <a href="exec_8hpp_source.html#l00023">exec.hpp:23</a></div></div>
+<div class="ttc" id="aclass_exec_html_a43a9d949a97dbe46c9346b8d8efeae7d"><div class="ttname"><a href="class_exec.html#a43a9d949a97dbe46c9346b8d8efeae7d">Exec::changeAlgorithm</a></div><div class="ttdeci">void changeAlgorithm(Algorithm *newAlgorithm)</div><div class="ttdoc">Se encarga de cambiar el algoritmo con el que se pasa por parámetro.</div><div class="ttdef"><b>Definition:</b> <a href="exec_8cpp_source.html#l00023">exec.cpp:23</a></div></div>
+<div class="ttc" id="asolution_8hpp_html"><div class="ttname"><a href="solution_8hpp.html">solution.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>exec.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="exec_8hpp.html">exec.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/grasp-algorithm.hpp Source File</title>
+<title>Maximum diversity problem: include/grasp-algorithm.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Maximum diversity problem
    </div>
   </td>
  </tr>
@@ -85,10 +85,10 @@ $(document).ready(function(){initNavTree('grasp-algorithm_8hpp_source.html','');
 <div class="title">grasp-algorithm.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="grasp-algorithm_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;algorithm.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="algorithm_8hpp.html">algorithm.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_grasp_algorithm.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_grasp_algorithm.html">GraspAlgorithm</a> : <span class="keyword">public</span> <a class="code" href="class_algorithm.html">Algorithm</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
@@ -99,27 +99,35 @@ $(document).ready(function(){initNavTree('grasp-algorithm_8hpp_source.html','');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> RCLsize;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_grasp_algorithm.html">GraspAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> newIterationsLimit, <span class="keywordtype">int</span> newM, <span class="keywordtype">int</span> newRCLsize);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="class_grasp_algorithm.html">GraspAlgorithm</a>() {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_grasp_algorithm.html#a149590d592f15125c5b5a323a8f5aeab">GraspAlgorithm</a>(std::string newName, <span class="keywordtype">int</span> newIterationsLimit, <span class="keywordtype">int</span> newM, <span class="keywordtype">int</span> newRCLsize);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_grasp_algorithm.html#a8b89070f37435a4d32206b2bd10b90e8">   23</a></span>&#160;    <a class="code" href="class_grasp_algorithm.html#a8b89070f37435a4d32206b2bd10b90e8">~GraspAlgorithm</a>() {}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_grasp_algorithm.html#a48c69839e34f54e5c5520b43911d3a1c">   25</a></span>&#160;    <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_grasp_algorithm.html#a48c69839e34f54e5c5520b43911d3a1c">run</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector &lt;int&gt; preprocessing();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector &lt;int&gt; constructSolution();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::vector &lt;int&gt; makeRCL(std::vector&lt;int&gt; currentSolution);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector &lt;int&gt; localSearch(std::vector &lt;int&gt; solution);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_solution.html">Solution</a> <a class="code" href="class_grasp_algorithm.html#a48c69839e34f54e5c5520b43911d3a1c">run</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_grasp_algorithm.html#a5c2d8817b0e868b7677d0b697c3f35b1">preprocessing</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_grasp_algorithm.html#a6dc6a34bd19bd73b470fa3f3832ed5d5">constructSolution</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_grasp_algorithm.html#a8da5eb6c8b6d35080feb28f118f0f6c8">makeRCL</a>(std::vector&lt;int&gt; currentSolution);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_grasp_algorithm.html#a3ee8a6f45d142a2069063061f3668a16">localSearch</a>(std::vector &lt;int&gt; solution);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector &lt;int&gt; notSelectedNodes(std::vector&lt;int&gt; checkSelected, <span class="keywordtype">int</span> nodeNumber);</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_grasp_algorithm.html#a08f9f06863ffbc46dd3854f82a348d7b">   31</a></span>&#160;    std::vector &lt;int&gt; <a class="code" href="class_grasp_algorithm.html#a08f9f06863ffbc46dd3854f82a348d7b">notSelectedNodes</a>(std::vector&lt;int&gt; checkSelected, <span class="keywordtype">int</span> nodeNumber);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:12</div></div>
-<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> solution.hpp:15</div></div>
-<div class="ttc" id="aclass_grasp_algorithm_html"><div class="ttname"><a href="class_grasp_algorithm.html">GraspAlgorithm</a></div><div class="ttdoc">Esta clase representa el algoritmo GRASP que se va a aplicar, vamos a tener tres fases en el mismo:</div><div class="ttdef"><b>Definition:</b> grasp-algorithm.hpp:13</div></div>
-<div class="ttc" id="aclass_grasp_algorithm_html_a48c69839e34f54e5c5520b43911d3a1c"><div class="ttname"><a href="class_grasp_algorithm.html#a48c69839e34f54e5c5520b43911d3a1c">GraspAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Representa el método que es virtual y nulo que va a ser sobreescrito por las clases hijas,...</div></div>
+<div class="ttc" id="aalgorithm_8hpp_html"><div class="ttname"><a href="algorithm_8hpp.html">algorithm.hpp</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a5c2d8817b0e868b7677d0b697c3f35b1"><div class="ttname"><a href="class_grasp_algorithm.html#a5c2d8817b0e868b7677d0b697c3f35b1">GraspAlgorithm::preprocessing</a></div><div class="ttdeci">std::vector&lt; int &gt; preprocessing()</div><div class="ttdoc">Esta funcion se encarga de hacer el preprocesamiento, para ello, se va a escoger de forma aleatoria u...</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00054">grasp-algorithm.cpp:54</a></div></div>
+<div class="ttc" id="aclass_algorithm_html"><div class="ttname"><a href="class_algorithm.html">Algorithm</a></div><div class="ttdoc">Representa una clase que va a permitir aplicar el patrón estrategia.</div><div class="ttdef"><b>Definition:</b> <a href="algorithm_8hpp_source.html#l00012">algorithm.hpp:12</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a149590d592f15125c5b5a323a8f5aeab"><div class="ttname"><a href="class_grasp_algorithm.html#a149590d592f15125c5b5a323a8f5aeab">GraspAlgorithm::GraspAlgorithm</a></div><div class="ttdeci">GraspAlgorithm(std::string newName, int newIterationsLimit, int newM, int newRCLsize)</div><div class="ttdoc">Crea el objeto y le asigna un nombre del algoritmo, además de la búsqueda local seleccionada,...</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00012">grasp-algorithm.cpp:12</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a6dc6a34bd19bd73b470fa3f3832ed5d5"><div class="ttname"><a href="class_grasp_algorithm.html#a6dc6a34bd19bd73b470fa3f3832ed5d5">GraspAlgorithm::constructSolution</a></div><div class="ttdeci">std::vector&lt; int &gt; constructSolution()</div><div class="ttdoc">Se encarga de construir la solución, para ello se ha generado un número aleatorio entre el número tot...</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00072">grasp-algorithm.cpp:72</a></div></div>
+<div class="ttc" id="aclass_solution_html"><div class="ttname"><a href="class_solution.html">Solution</a></div><div class="ttdoc">Representa una solucion, que va a contener el vector donde se almacena la misma , la media y luego el...</div><div class="ttdef"><b>Definition:</b> <a href="solution_8hpp_source.html#l00015">solution.hpp:15</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a8da5eb6c8b6d35080feb28f118f0f6c8"><div class="ttname"><a href="class_grasp_algorithm.html#a8da5eb6c8b6d35080feb28f118f0f6c8">GraspAlgorithm::makeRCL</a></div><div class="ttdeci">std::vector&lt; int &gt; makeRCL(std::vector&lt; int &gt; currentSolution)</div><div class="ttdoc">Crea el RCL, para ello se le pasa un vector que es del que va a partir para obtener el RCL.</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00092">grasp-algorithm.cpp:92</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html"><div class="ttname"><a href="class_grasp_algorithm.html">GraspAlgorithm</a></div><div class="ttdoc">Esta clase representa el algoritmo GRASP que se va a aplicar, vamos a tener tres fases en el mismo:</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8hpp_source.html#l00013">grasp-algorithm.hpp:13</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a48c69839e34f54e5c5520b43911d3a1c"><div class="ttname"><a href="class_grasp_algorithm.html#a48c69839e34f54e5c5520b43911d3a1c">GraspAlgorithm::run</a></div><div class="ttdeci">Solution run()</div><div class="ttdoc">Este método se encarga de ejecutar el algoritmo grasp, para ello se hace un preprocesamiento,...</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00029">grasp-algorithm.cpp:29</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a08f9f06863ffbc46dd3854f82a348d7b"><div class="ttname"><a href="class_grasp_algorithm.html#a08f9f06863ffbc46dd3854f82a348d7b">GraspAlgorithm::notSelectedNodes</a></div><div class="ttdeci">std::vector&lt; int &gt; notSelectedNodes(std::vector&lt; int &gt; checkSelected, int nodeNumber)</div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a3ee8a6f45d142a2069063061f3668a16"><div class="ttname"><a href="class_grasp_algorithm.html#a3ee8a6f45d142a2069063061f3668a16">GraspAlgorithm::localSearch</a></div><div class="ttdeci">std::vector&lt; int &gt; localSearch(std::vector&lt; int &gt; solution)</div><div class="ttdoc">Representa la búsqueda local, esta se va realizar haciendo un intercambio entre los nodos que están e...</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8cpp_source.html#l00126">grasp-algorithm.cpp:126</a></div></div>
+<div class="ttc" id="aclass_grasp_algorithm_html_a8b89070f37435a4d32206b2bd10b90e8"><div class="ttname"><a href="class_grasp_algorithm.html#a8b89070f37435a4d32206b2bd10b90e8">GraspAlgorithm::~GraspAlgorithm</a></div><div class="ttdeci">~GraspAlgorithm()</div><div class="ttdef"><b>Definition:</b> <a href="grasp-algorithm_8hpp_source.html#l00023">grasp-algorithm.hpp:23</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>grasp-algorithm.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="grasp-algorithm_8hpp.html">grasp-algorithm.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
